@@ -1,0 +1,35 @@
+  
+@import "~gg-design-system/scss/themes/theme-blue";
+@import "~gg-design-system/scss/main";
+
+body {
+  background: #ffffff; 
+}
+
+.gds-spa-header {
+  background: $grayLight2Color;
+  box-shadow: none;
+  border: none;
+  height: 350px; 
+  width: 100%;
+} 
+
+.gds-layout-container{
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.logo {
+  height: 80px; 
+  margin-top: 150px; 
+}  
+
+// .gds-layout-container{
+//   min-height: 50vh; 
+// }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
