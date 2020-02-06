@@ -6,7 +6,7 @@ body {
   background: #ffffff; 
 }
 
-.gds-spa-header {
+.gds-page-header {
   background: $grayLight2Color;
   box-shadow: none;
   border: none;
@@ -17,16 +17,22 @@ body {
 .gds-layout-container{
   margin-left: auto; 
   margin-right: auto; 
+  width: 40%; 
 }
 
 .logo {
   height: 80px; 
-  margin-top: 150px; 
+  margin-top: 100px; 
+  width: 100%; 
 }  
 
-// .gds-layout-container{
-//   min-height: 50vh; 
-// }
+.gds-search__input-holder {
+  margin-top: 0; 
+}
+
+.gds-search__form-group {
+  box-shadow: none;  
+}
 
 footer {
   position: fixed;
