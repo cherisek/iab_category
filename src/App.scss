@@ -2,8 +2,13 @@
 @import "~gg-design-system/scss/themes/theme-blue";
 @import "~gg-design-system/scss/main";
 
+html {
+  height: 100%; 
+}
+
 body {
   background: #ffffff; 
+  height: 100vh;
 }
 
 .gds-page-header {
@@ -11,6 +16,7 @@ body {
   box-shadow: none;
   border: none;
   height: 350px; 
+  position: relative;
   width: 100%;
 } 
 
@@ -34,8 +40,33 @@ body {
   box-shadow: none;  
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.gds-flex{
+  max-width: 1200px; 
+  padding-left: 5rem; 
+  padding-right: 5rem; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
+
+.gds-flex-grid__row {
+  padding-right: 30px; 
+  margin-bottom: 50px; 
+  justify-content: center;
+}
+
+.gds-layout__row {
+  columns: 2 300px; 
+}
+
+.gds-text--header-xs {
+  margin-bottom: 20px; 
+  text-align: center;
+}
+
+footer {
+  flex-shrink: 0; 
+  background: $grayLight2Color;
+  display: flex; 
+  padding: 20px; 
+  text-align: center;
+ }

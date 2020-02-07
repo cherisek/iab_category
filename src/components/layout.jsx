@@ -1,38 +1,49 @@
 import React, { Fragment } from "react";
+import { withRouter } from "react-router-dom"; 
 import logo from '../images/logo-white.svg';
 
-function Layout(props) {
-    const children = props.children; 
+class Layout extends React.Component {
+  constructor(props) {
+    super(props); 
+    this.handleViewAll = this.handleViewAll.bind(this); 
+  } 
+  handleViewAll() {
+    this.props.history.push('/index');
+  } 
+
+  render() {
     return (
         <Fragment>
-          <header className="gds-page-header">
+          <header className="gds-page-header -m-b-5">
           <div className="gds-layout-container">
             <img className="logo" src={logo} alt="gumgum logo"/> 
             <div className="gds-form-group"> 
               <div className="gds-form-group__input-group">
                 <div className="gds-search-select__control -m-r-2" data-gds-search-select="single" style={{'display': 'flex', 'width': '100%'}}>
-                  <input className="gds-search-select__input--sm -m-r-1" type="text" placeholder="Search for Category"/> 
+                  <input className="gds-search-select__input--sm -m-r-1" type="text" placeholder="Search for Category" style={{'flex': '1 0 8em'}}/> 
                   <button className="gds-button gds-button--xs gds-button--primary -m-r-1">Search</button>
-                  <button className="gds-button gds-button--xs gds-button--primary">View All</button>
+                  <button className="gds-button gds-button--xs gds-button--primary"onClick={this.handleViewAll} >View All</button>
                 </div>
               </div>
             </div>
           </div>      
           </header>
-          <section className="gds-persist-nav__main-content">
-          <div className="gds-layout__container gds-layout__container--full-width -p-v-4">
-            {children}
-          </div>
-          <footer className="-m-h-4">
-            <div className="gds-flex gds-flex--justify-between -m-t-5">
-                <p className="gds-text--body-sm">
-                    Copyright © 2020 GumGum, Inc. All rights reserved.
-                </p>
+          <section className="gds-layout__row gds-flex" style={{'minHeight': '100%', 'margin': '0 auto 260px'}}>
+            <div className="gds-layout__container--xs-12 footer">
+              {this.props.children}
             </div>
-          </footer>
+            <div className="push" style={{'height': '50px'}}></div>
           </section>
+          <footer>
+              <div className="gds-layout__column--xs-12" style={{'textAlign': 'center'}}>
+                  <p className="gds-text--body-sm">
+                      Copyright © 2020 GumGum, Inc. All rights reserved.
+                  </p>
+              </div>
+            </footer>
         </Fragment>
     )
+  }
 }
 
-export default Layout; 
+export default withRouter(Layout); 
