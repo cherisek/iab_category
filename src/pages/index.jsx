@@ -6,12 +6,21 @@ import Footer from "../components/footer";
 
  
 class Index extends Component {
+  constructor(props) {
+    super(props); 
+    this.handleHomePage = this.handleHomePage.bind(this);
+  }
+
+  handleHomePage() {
+    this.props.history.push('/'); 
+  } 
+
   render() {
     return (
       <Fragment>
         <header className="gds-spa-header">
           <div className="gds-spa-header__primary-nav">
-            <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}}/> 
+            <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}} onClick={this.handleHomePage}/> 
           </div>
         </header>
         <div className="gds-persist-nav gds-persist-nav--page-header" style={{'paddingTop': '30px'}}>
