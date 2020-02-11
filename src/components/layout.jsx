@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { withRouter } from "react-router-dom"; 
-import logo from '../images/logo-white.svg';
+import logo from "../images/logo-white.svg";
+import Footer from "../components/footer";
 
 class Layout extends React.Component {
   constructor(props) {
@@ -34,13 +35,7 @@ class Layout extends React.Component {
             </div>
             <div className="push" style={{'height': '50px'}}></div>
           </section>
-          <footer>
-              <div className="gds-layout__column--xs-12" style={{'textAlign': 'center'}}>
-                  <p className="gds-text--body-sm">
-                      Copyright © 2020 GumGum, Inc. All rights reserved.
-                  </p>
-              </div>
-            </footer>
+          <Footer />
         </Fragment>
     )
   }

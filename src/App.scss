@@ -63,6 +63,27 @@ body {
   text-align: center;
 }
 
+.gds-persist-nav__link--expandable::before {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: .33rem solid transparent; 
+  border-bottom: .33rem solid transparent; 
+  border-left: .5rem solid #00a7cf; 
+  margin-left: -1rem; 
+  top: .75rem;
+}
+
+.gds-sub-item-level-2 {
+  padding-left: 2rem; 
+}
+
+.gds-tree__link {
+  font-size: 1rem; 
+}
+
+
 footer {
   flex-shrink: 0; 
   background: $grayLight2Color;

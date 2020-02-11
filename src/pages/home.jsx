@@ -1,8 +1,8 @@
 import React from "react"; 
-// import { Row, Column, FormGroupLabel } from "gumdrops";
 import Layout from "../components/layout"; 
 
-function Home() {
+class Home extends React.Component {
+  render() {
     return (
         <Layout>
             <div className="gds-flex-grid__container" style={{'marginBottom': '50px'}}>
@@ -38,7 +38,8 @@ function Home() {
               </div>
             </div>
         </Layout>
-    )
+    );
+  }
 }
 
 export default Home;
