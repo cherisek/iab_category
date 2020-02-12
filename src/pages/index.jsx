@@ -2,7 +2,9 @@ import React, { Fragment, Component } from "react";
 import logo from "../images/logo-white.svg";
 // import Data from "../components/data";
 // import { data }from "../components/data";
-import Footer from "../components/footer";
+import MainContent from "./maincontent";
+import SideNav from "./sidenav";
+import Footer from "./footer";
 
  
 class Index extends Component {
@@ -18,107 +20,26 @@ class Index extends Component {
   render() {
     return (
       <Fragment>
-        <header className="gds-spa-header">
+        <header className="gds-spa-header" style={{'padding': '0.5rem'}}>
           <div className="gds-spa-header__primary-nav">
             <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}} onClick={this.handleHomePage}/> 
           </div>
         </header>
-        <div className="gds-persist-nav gds-persist-nav--page-header" style={{'paddingTop': '30px'}}>
-          <aside className="gds-persist-nav__sidebar" style={{'height': '100vh'}}>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-down"></i>
-                    Automotive
-                </span>
-                <ul className="gds-tree__sub-nav">
-                  <li className="gds-sub-item">
-                  <i className="fal fa-fw fa-caret-down"></i>
-                    Auto Body Styles
-                  </li>
-                  <li className="gds-sub-item-level-2">
-                    Commercial Trucks 
-                  </li>
-                  <li className="gds-sub-item">
-                    Auto Type 
-                  </li>
-                  <li className="gds-sub-item">
-                   Car Culture
-                  </li>
-                  <li className="gds-sub-item">
-                    Dash Cam Videos 
-                  </li>
-                  <li className="gds-sub-item">
-                   Motorcycles 
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Books and Literature
-                </span>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Business and Finance 
-                </span>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Careers
-                </span>
-                <ul className="gds-tree__sub-nav">
-                  <li className="gds-sub-item">
-                    Apprenticeships
-                  </li>
-                  <li className="gds-sub-item">
-                    Career Advice
-                  </li>
-                  <li className="gds-sub-item">
-                    Career Planning
-                  </li>
-                  <li className="gds-sub-item">
-                  <i className="fal fa-fw fa-caret-down"></i>
-                   Job Search
-                  </li>
-                  <li className="gds-sub-item-level-2">
-                    Job Fairs 
-                  </li>
-                  <li className="gds-sub-item-level-2">
-                    Job Fairs 
-                  </li>
-                  <li className="gds-sub-item">
-                   Remote Working 
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Education
-                </span>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Events and Attractions
-                </span>
-              </li>
-            </ul>
-          </aside>
+        <div className="gds-persist-nav gds-persist-nav--page-header">
+        <SideNav />
+        <section className="gds-persist-nav__main-content"  style={{'paddingLeft': '4rem', 'paddingRight': '4rem'}}>
+        <div className="gds-layout__container" style={{'paddingTop': '4rem'}}>
+          <div className="gds-form-group"> 
+            <div className="gds-form-group__input-group -m-b-4">
+              <div className="gds-search-select__control -m-r-2" data-gds-search-select="single" style={{'display': 'flex', 'width': '100%'}}>
+                <input className="gds-search-select__input--sm -m-r-1" type="text" placeholder="Search for Category" style={{'flex': '1 0 8em', 'height': '30px'}}/> 
+                <button className="gds-button gds-button--xs gds-button--primary -m-r-1">Search</button>
+              </div>
+            </div>
+          </div>
+          <MainContent />
+        </div>
+        </section>
         </div>
         <Footer />
       </Fragment>
