@@ -21,8 +21,13 @@ class Index extends Component {
     return (
       <Fragment>
         <header className="gds-spa-header" style={{'padding': '0.5rem'}}>
-          <div className="gds-spa-header__primary-nav">
-            <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}} onClick={this.handleHomePage}/> 
+          <div className="gds-spa-header__primary-nav" style={{'maxWidth': '1200px', 'marginLeft': 'auto', 'marginRight': 'auto', 'width': '40%', 'paddingLeft': '2rem', 'paddingRight': '2rem'}}>
+            <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}} onClick={this.handleHomePage}/>
+            <nav className="gds_layout__column--md-6" style={{'display': 'flex', 'flex': '1', 'justifyContent': 'spaceEvenly'}}>
+              <a href="/" className="gds-persist-nav">Iab Category</a>
+              <a href="/" className="gds-persist-nav">Threats</a>
+              <a href="/" className="gds-persist-nav">Events</a>
+            </nav>
           </div>
         </header>
         <div className="gds-persist-nav gds-persist-nav--page-header">

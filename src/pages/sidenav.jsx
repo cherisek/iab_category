@@ -110,6 +110,14 @@ class SideNav extends Component {
                 </span>
               </li>
             </ul>
+            <ul>
+              <li>
+                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
+                  <i className="fal fa-fw fa-caret-right"></i>
+                    Family and Relationships
+                </span>
+              </li>
+            </ul>
           </aside>
       </Fragment>
     );
