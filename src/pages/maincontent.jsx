@@ -15,22 +15,22 @@ class MainContent extends Component {
               <div className="gds-flex-grid__row" style={{'paddingRight': '0px', 'marginBottom': '0px'}}>
                 <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                    <img src={'https://picsum.photos/id/1071/200/150'} alt="placeholder" />
                   </div>
                 </div> 
                 <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                    <img src={'https://picsum.photos/id/1071/200/150'} alt="placeholder" />
                   </div>
                 </div> 
                 <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                    <img src={'https://picsum.photos/id/1071/200/150'} alt="placeholder" />
                   </div>
                 </div> 
                 <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                    <img src={'https://picsum.photos/id/1071/200/150'} alt="placeholder" />
                   </div>
                 </div> 
               </div>
@@ -61,7 +61,7 @@ class MainContent extends Component {
               <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
               <div className="gds-card gds-flex-grid__item--full-height">
                     <div className="gds-card__block -p-a-3">
-                    <p>proin</p>
+                    <p>egestas</p>
                     </div>
                 </div>
               </div>
@@ -112,24 +112,24 @@ class MainContent extends Component {
           <div className="gds-flex-grid__container">
               {/* change padding later and do real calculations for smooth grid layout*/}
               <div className="gds-flex-grid__row" style={{'paddingRight': '0px', 'marginBottom': '0px'}}>
-                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-2">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
+                   <img src={'https://picsum.photos/id/1067/200/150'} alt="placeholder" />
                   </div>
                 </div> 
-                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-2">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
+                    <img src={'https://picsum.photos/id/1067/200/150'} alt="placeholder" />
                   </div>
                 </div> 
-                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-2">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
+                    <img src={'https://picsum.photos/id/1067/200/150'} alt="placeholder" />
                   </div>
                 </div> 
-                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-2">
                   <div className="gds-flex-grid__item">
-                    <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
+                    <img src={'https://picsum.photos/id/1067/200/150'} alt="placeholder" />
                   </div>
                 </div> 
               </div>
@@ -160,7 +160,7 @@ class MainContent extends Component {
               <div className="gds-flex-grid__item gds-flex-grid__item--desktop-6 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
               <div className="gds-card gds-flex-grid__item--full-height">
                     <div className="gds-card__block -p-a-3">
-                    <p>proin</p>
+                    <p>egestas</p>
                     </div>
                 </div>
               </div>

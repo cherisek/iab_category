@@ -21,9 +21,9 @@ class Index extends Component {
     return (
       <Fragment>
         <header className="gds-spa-header" style={{'padding': '0.5rem'}}>
-          <div className="gds-spa-header__primary-nav" style={{'maxWidth': '1200px', 'marginLeft': 'auto', 'marginRight': 'auto', 'width': '40%', 'paddingLeft': '2rem', 'paddingRight': '2rem'}}>
-            <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}} onClick={this.handleHomePage}/>
-            <nav className="gds_layout__column--md-6" style={{'display': 'flex', 'flex': '1', 'justifyContent': 'spaceEvenly'}}>
+          <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}} onClick={this.handleHomePage}/>
+          <div className="gds-spa-header__primary-nav" style={{'width': '50%', 'marginLeft': 'auto', 'marginRight': 'auto', 'paddingLeft': '2rem', 'paddingRight': '2rem'}}>
+            <nav className="gds_layout__column--md-6" style={{'display': 'flex', 'flex': '1', 'justify-content': 'space-around'}}>
               <a href="/" className="gds-persist-nav">Iab Category</a>
               <a href="/" className="gds-persist-nav">Threats</a>
               <a href="/" className="gds-persist-nav">Events</a>
@@ -33,7 +33,7 @@ class Index extends Component {
         <div className="gds-persist-nav gds-persist-nav--page-header">
         <SideNav />
         <section className="gds-persist-nav__main-content"  style={{'paddingLeft': '4rem', 'paddingRight': '4rem'}}>
-        <div className="gds-layout__container" style={{'paddingTop': '4rem'}}>
+        <div className="gds-layout__container" style={{'paddingTop': '4rem', 'paddingLeft': '0.2rem', 'paddingRight': '0.2rem'}}>
           <div className="gds-form-group"> 
             <div className="gds-form-group__input-group -m-b-4">
               <div className="gds-search-select__control -m-r-2" data-gds-search-select="single" style={{'display': 'flex', 'width': '100%'}}>
