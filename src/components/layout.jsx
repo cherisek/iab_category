@@ -17,7 +17,7 @@ class Layout extends React.Component {
         <Fragment>
           <header className="gds-page-header -m-b-5">
           <div className="gds-layout-container">
-            <img className="logo" src={logo} alt="gumgum logo"/> 
+            <img className="logo -m-t-6" src={logo} alt="gumgum logo"/> 
             <div className="gds-form-group"> 
               <div className="gds-form-group__input-group">
                 <div className="gds-search-select__control -m-r-2" data-gds-search-select="single" style={{'display': 'flex', 'width': '100%'}}>
@@ -29,7 +29,7 @@ class Layout extends React.Component {
             </div>
           </div>      
           </header>
-          <section className="gds-layout__row gds-flex" style={{'minHeight': '100%', 'margin': '0 auto 260px'}}>
+          <section className="gds-layout__row gds-flex -m-h-6">
             <div className="gds-layout__container--xs-12 footer">
               {this.props.children}
             </div>

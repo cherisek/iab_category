@@ -36,7 +36,7 @@ class Index extends Component {
             </nav>
           </div>
         </header>
-        <div className="gds-persist-nav gds-persist-nav--page-header">
+        <div className="gds-persist-nav gds-persist-nav--page-header -p-t-5">
         <SideNav />
         <section className="gds-persist-nav__main-content"  style={{'paddingLeft': '4rem', 'paddingRight': '4rem', 'overflowY': 'hidden'}}>
         <div className="gds-layout__container" style={{'paddingTop': '4rem', 'paddingLeft': '0.2rem', 'paddingRight': '0.2rem'}}>

@@ -18,10 +18,6 @@ body {
   width: 100%;
 } 
 
-.gds-persist-nav--page-header {
-  padding-top: 50px !important; 
-}
-
 .gds-layout-container{
   margin-left: auto; 
   margin-right: auto; 
@@ -32,15 +28,12 @@ body {
 
 .logo {
   height: 80px; 
-  margin-top: 100px; 
   width: 100%; 
 }  
 
 .logo-index {
   height: 30px;
 }
-
-
 
 .gds-search__input-holder {
   margin-top: 0; 
@@ -50,22 +43,17 @@ body {
   box-shadow: none;  
 }
 
-// .gds-flex{
-//   max-width: 1200px; 
-//   padding-left: 5rem; 
-//   padding-right: 5rem; 
-//   margin-left: auto; 
-//   margin-right: auto; 
-// }
+.gds-flex{
+  max-width: 1200px; 
+  padding-left: 5rem; 
+  padding-right: 5rem; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
 
 
-// .gds-layout__row {
-//   columns: 2 300px; 
-// }
-
-.gds-text--header-xs {
-  margin-bottom: 20px; 
-  text-align: center;
+.gds-layout__row {
+  columns: 2 300px; 
 }
 
 .gds-spa-header {
@@ -73,41 +61,9 @@ body {
   border: $grayLight3Color;
 }
 
-
-.gds-persist-nav__link--expandable::before {
-  content: '';
-  position: absolute;
-  width: 0; 
-  height: 0; 
-  border-top: .33rem solid transparent; 
-  border-bottom: .33rem solid transparent; 
-  border-left: .5rem solid $blueColor; 
-  margin-left: -1rem; 
-  top: .75rem;
+.gds-persist-nav__link:before {
+  display: none !important; 
 }
-
-.gds-sub-item-level-2 {
-  padding-left: 1rem; 
-}
-
-.gds-tree__link {
-  font-size: 1rem; 
-}
-
-.arrow-down {
-  float: right;
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent; 
-  border-top: 0.5rem solid $blueColor; 
-}
-
-.arrow-right {
-  float: right;
-  border-top: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid transparent; 
-  border-left: 0.5rem solid $blueColor; 
-}
-
 
 footer {
   flex-shrink: 0; 
@@ -115,10 +71,4 @@ footer {
   display: flex; 
   padding: 20px; 
   text-align: center;
- }
-
- @media only screen and (min-width: 1024px) {
-   .gds-layout-container {
-     width: 40% !important; 
-   }
  }

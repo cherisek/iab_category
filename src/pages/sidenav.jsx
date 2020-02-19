@@ -1,8 +1,6 @@
 import React, { Fragment, Component } from "react";
-// import Data from "../components/data";
-// import { data }from "../components/data";
 
- 
+
 class SideNav extends Component {
   constructor(props) {
     super(props); 
@@ -17,105 +15,121 @@ class SideNav extends Component {
     return (
        <Fragment>
           <aside className="gds-persist-nav__sidebar">
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-down"></i>
-                    Automotive
-                </span>
-                <ul className="gds-tree__sub-nav">
-                  <li className="gds-sub-item">
-                  <i className="fal fa-fw fa-caret-down"></i>
-                    Auto Body Styles
+            <ul className="gds-persist-nav__top-nav">
+              <li className="gds-persist-nav__item">
+                <a href="/" className="gds-persist-nav__link">
+                   Automotive
+                </a>
+                <ul className="gds-persist-nav__sub-nav">
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Auto Body Styles
+                    </a>     
                   </li>
-                  <li className="gds-sub-item-level-2" style={{'color': '#0e0e0e', 'boxShadow' : 'inset -5px 0 0 0 #00a7cf, 0 0 3px 0 rgba(0,0,0, .2' }}>
-                    Commercial Trucks 
+                  <ul className="gds-persist-nav__sub-nav">
+                    <li className="gds-persist-nav__sub-item">
+                      <a href="/" className="gds-persist-nav__link">
+                        Commercial Trucks
+                      </a>     
+                    </li>
+                  </ul> 
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Auto Type
+                    </a>     
                   </li>
-                  <li className="gds-sub-item">
-                    Auto Type 
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Car Culture
+                    </a>     
                   </li>
-                  <li className="gds-sub-item">
-                   Car Culture
-                  </li>
-                  <li className="gds-sub-item">
-                    Dash Cam Videos 
-                  </li>
-                  <li className="gds-sub-item">
-                   Motorcycles 
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Books and Literature
-                </span>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Business and Finance 
-                </span>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-down"></i>
-                    Careers
-                </span>
-                <ul className="gds-tree__sub-nav">
-                  <li className="gds-sub-item">
-                    Apprenticeships
-                  </li>
-                  <li className="gds-sub-item">
-                    Career Advice
-                  </li>
-                  <li className="gds-sub-item">
-                    Career Planning
-                  </li>
-                  <li className="gds-sub-item">
-                  <i className="fal fa-fw fa-caret-down"></i>
-                   Job Search
-                  </li>
-                  <li className="gds-sub-item-level-2">
-                    Job Fairs 
-                  </li>
-                  <li className="gds-sub-item-level-2">
-                    Job Fairs 
-                  </li>
-                  <li className="gds-sub-item">
-                   Remote Working 
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Dash Cam Videos 
+                    </a>     
+                  </li> 
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Motorcycles
+                    </a>     
                   </li>
                 </ul>
               </li>
             </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Education
-                </span>
+            <ul className="gds-persist-nav__top-nav">
+              <li className="gds-persist-nav__item">
+                <a href="/" className="gds-persist-nav__link">
+                   Books and Literature
+                </a>
               </li>
             </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Events and Attractions
-                </span>
+            <ul className="gds-persist-nav__top-nav">
+              <li className="gds-persist-nav__item">
+                <a href="/" className="gds-persist-nav__link">
+                   Business and Finance 
+                </a>
               </li>
             </ul>
-            <ul>
-              <li>
-                <span className="gds-tree__link gds-tree__link--active gds-tree__link">
-                  <i className="fal fa-fw fa-caret-right"></i>
-                    Family and Relationships
-                </span>
+            <ul className="gds-persist-nav__top-nav">
+              <li className="gds-persist-nav__item">
+                <a href="/" className="gds-persist-nav__link">
+                   Careers
+                </a>
+                <ul className="gds-persist-nav__sub-nav">
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Apprenticeships 
+                    </a>     
+                  </li>
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Career Advice
+                    </a>     
+                  </li>
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Career Planning 
+                    </a>     
+                  </li>
+                  <li className="gds-persist-nav__sub-item">
+                    <a href="/" className="gds-persist-nav__link">
+                       Job Search
+                    </a>  
+                    <ul className="gds-persist-nav__sub-nav">
+                      <li className="gds-persist-nav__sub-item">
+                        <a href="/" className="gds-persist-nav__link">
+                          Job Fairs
+                        </a>     
+                      </li>
+                      <li className="gds-persist-nav__sub-item">
+                        <a href="/" className="gds-persist-nav__link">
+                          Remote Working 
+                        </a>     
+                      </li>
+                  </ul>    
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul className="gds-persist-nav__top-nav">
+              <li className="gds-persist-nav__item">
+                <a href="/" className="gds-persist-nav__link">
+                   Education
+                </a>
+              </li>
+            </ul>
+            <ul className="gds-persist-nav__top-nav">
+              <li className="gds-persist-nav__item">
+                <a href="/" className="gds-persist-nav__link">
+                   Events and Attraction
+                </a>
+              </li>
+            </ul>
+            <ul className="gds-persist-nav__top-nav">
+              <li className="gds-persist-nav__item">
+                <a href="/" className="gds-persist-nav__link">
+                   Family and Relationships
+                </a>
               </li>
             </ul>
           </aside>
