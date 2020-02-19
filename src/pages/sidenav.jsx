@@ -28,7 +28,7 @@ class SideNav extends Component {
                   <i className="fal fa-fw fa-caret-down"></i>
                     Auto Body Styles
                   </li>
-                  <li className="gds-sub-item-level-2" style={{'backgroundColor': '#dbdbdb' }}>
+                  <li className="gds-sub-item-level-2" style={{'color': '#0e0e0e', 'boxShadow' : 'inset -5px 0 0 0 #00a7cf, 0 0 3px 0 rgba(0,0,0, .2' }}>
                     Commercial Trucks 
                   </li>
                   <li className="gds-sub-item">

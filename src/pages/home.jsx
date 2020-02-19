@@ -6,7 +6,7 @@ class Home extends React.Component {
     return (
         <Layout>
             <div className="gds-flex-grid__container" style={{'marginBottom': '50px'}}>
-              <h1 className="gds-text--header-xs">About Iab</h1>
+              <h1 className="gds-text--header-xs gds-text--bold">About Iab</h1>
               <p className="gds-text--body-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -17,7 +17,7 @@ class Home extends React.Component {
             </div>
             <div className="gds-layout__row">
               <div className="gds-flex-grid__row">
-                <h1 className="gds-text--header-xs">About GumGum Events</h1>
+                <h1 className="gds-text--header-xs gds-text--bold">About GumGum Events</h1>
                 <p className="gds-text--body-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -27,7 +27,7 @@ class Home extends React.Component {
                 </p>
               </div>
               <div className="gds-flex-grid__row">
-                <h1 className="gds-text--header-xs">About GumGum Threats</h1>
+                <h1 className="gds-text--header-xs gds-text--bold">About GumGum Threats</h1>
                 <p className="gds-text--body-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { withRouter } from "react-router-dom"; 
-import logo from "../images/logo-white.svg";
+import logo from "../images/new-logo.svg";
 import Footer from "../pages/footer";
 
 class Layout extends React.Component {

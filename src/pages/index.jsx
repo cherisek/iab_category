@@ -1,7 +1,5 @@
 import React, { Fragment, Component } from "react";
-import logo from "../images/logo-white.svg";
-// import Data from "../components/data";
-// import { data }from "../components/data";
+import logo from "../images/new-logo.svg";
 import MainContent from "./maincontent";
 import SideNav from "./sidenav";
 import Footer from "./footer";
@@ -20,19 +18,27 @@ class Index extends Component {
   render() {
     return (
       <Fragment>
-        <header className="gds-spa-header" style={{'padding': '0.5rem'}}>
-          <img className="logo-index" src={logo} alt="gumgum logo" style={{'height': '30px'}} onClick={this.handleHomePage}/>
-          <div className="gds-spa-header__primary-nav" style={{'width': '50%', 'marginLeft': 'auto', 'marginRight': 'auto', 'paddingLeft': '2rem', 'paddingRight': '2rem'}}>
-            <nav className="gds_layout__column--md-6" style={{'display': 'flex', 'flex': '1', 'justifyContent': 'space-around'}}>
-              <a href="/" className="gds-persist-nav">Iab Category</a>
-              <a href="/" className="gds-persist-nav">Threats</a>
-              <a href="/" className="gds-persist-nav">Events</a>
+        <header className="gds-spa-header -p-h-3">
+          <img className="logo-index -m-t-2" src={logo} alt="gumgum logo" onClick={this.handleHomePage}/>
+          <div className="gds-spa-header__primary-nav" style={{'marginLeft': 'auto', 'marginRight': 'auto', 'paddingLeft': '2rem', 'paddingRight': '2rem'}}>
+            <nav className="">
+              <ul className="gds-nav-tabs gds-nav-tabs--underline gds-nav-tabs--justified" data-gds-nav="7">
+                <li className="gds-nav-tabs__list-item gds-nav-tabs__list-item--underline gds-nav-tabs__list-item--active" data-gds-nav-item="">
+                  <a href="/" className="gds-nav-tabs__link gds-nav-tabs__link--underline" data-gds-nav-button="1" data-gds-nav-type="tab">Iab<span className="active-tab-nav"></span></a>
+                </li>
+                <li className="gds-nav-tabs__list-item gds-nav-tabs__list-item--underline" data-gds-nav-item="">
+                  <a href="/" className="gds-nav-tabs__link gds-nav-tabs__link--underline" data-gds-nav-button="2" data-gds-nav-type="">Threats</a>
+                </li>
+                <li className="gds-nav-tabs__list-item gds-nav-tabs__list-item--underline" data-gds-nav-item="">
+                  <a href="/" className="gds-nav-tabs__link gds-nav-tabs__link--underline" data-gds-nav-button="3" data-gds-nav-type="tab">Events</a>
+                </li>
+              </ul>
             </nav>
           </div>
         </header>
         <div className="gds-persist-nav gds-persist-nav--page-header">
         <SideNav />
-        <section className="gds-persist-nav__main-content"  style={{'paddingLeft': '4rem', 'paddingRight': '4rem'}}>
+        <section className="gds-persist-nav__main-content"  style={{'paddingLeft': '4rem', 'paddingRight': '4rem', 'overflowY': 'hidden'}}>
         <div className="gds-layout__container" style={{'paddingTop': '4rem', 'paddingLeft': '0.2rem', 'paddingRight': '0.2rem'}}>
           <div className="gds-form-group"> 
             <div className="gds-form-group__input-group -m-b-4">
