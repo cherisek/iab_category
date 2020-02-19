@@ -5,7 +5,7 @@ class Home extends React.Component {
   render() {
     return (
         <Layout>
-            <div className="gds-flex-grid__container -m-b-3">
+            <div className="gds-flex-grid__container -m-b-6">
               <h1 className="gds-text--header-xs gds-text--bold -text-center -m-b-3">About Iab</h1>
               <p className="gds-text--body-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -15,9 +15,9 @@ class Home extends React.Component {
                 occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
-            <div className="gds-layout__row -m-r-2">
-              <div className="gds-flex-grid__row">
-                <h1 className="gds-text--header-xs gds-text--bold -m-b-3">About GumGum Events</h1>
+            <div className="gds-layout__row -m-b-6">
+              <div className="gds-flex-grid -m-r-6 -m-b-4">
+                <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Events</h1>
                 <p className="gds-text--body-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -26,8 +26,8 @@ class Home extends React.Component {
                   occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
-              <div className="gds-flex-grid__row">
-                <h1 className="gds-text--header-xs gds-text--bold -m-b-3">About GumGum Threats</h1>
+              <div className="gds-flex-grid">
+                <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Threats</h1>
                 <p className="gds-text--body-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 

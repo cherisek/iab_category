@@ -15,8 +15,8 @@ class Layout extends React.Component {
   render() {
     return (
         <Fragment>
-          <header className="gds-page-header -m-b-5">
-          <div className="gds-layout-container">
+          <header className="gds-page-header -m-b-5 -color-bg-lt-3">
+          <div className="gds-layout-container -p-v-1">
             <img className="logo -m-t-6" src={logo} alt="gumgum logo"/> 
             <div className="gds-form-group"> 
               <div className="gds-form-group__input-group">
@@ -29,13 +29,12 @@ class Layout extends React.Component {
             </div>
           </div>      
           </header>
-          <section className="gds-layout__row gds-flex -m-h-6">
-            <div className="gds-layout__container--xs-12 footer">
+          <section className="gds-layout__container -m-b-6 -p-h-3">
+            <div className="gds-layout__container--xs-12">
               {this.props.children}
             </div>
-            <div className="push" style={{'height': '50px'}}></div>
           </section>
-          <Footer />
+          {/* <Footer /> */}
         </Fragment>
     )
   }

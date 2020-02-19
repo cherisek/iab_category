@@ -18,7 +18,7 @@ class Index extends Component {
   render() {
     return (
       <Fragment>
-        <header className="gds-spa-header -p-h-3">
+        <header className="gds-spa-header -p-h-3 -color-bg-lt-3 -color-bd-lt-3">
           <img className="logo-index -m-t-2" src={logo} alt="gumgum logo" onClick={this.handleHomePage}/>
           <div className="gds-spa-header__primary-nav" style={{'marginLeft': 'auto', 'marginRight': 'auto', 'paddingLeft': '2rem', 'paddingRight': '2rem'}}>
             <nav className="">
@@ -38,7 +38,7 @@ class Index extends Component {
         </header>
         <div className="gds-persist-nav gds-persist-nav--page-header -p-t-5">
         <SideNav />
-        <section className="gds-persist-nav__main-content"  style={{'paddingLeft': '4rem', 'paddingRight': '4rem', 'overflowY': 'hidden'}}>
+        <section className="gds-persist-nav__main-content">
         <div className="gds-layout__container" style={{'paddingTop': '4rem', 'paddingLeft': '0.2rem', 'paddingRight': '0.2rem'}}>
           <div className="gds-form-group"> 
             <div className="gds-form-group__input-group -m-b-4">
