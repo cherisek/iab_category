@@ -1,17 +1,17 @@
 @import "~gg-design-system/scss/themes/theme-blue";
 @import "~gg-design-system/scss/main";
-
+ 
 html {
   height: 100%; 
 }
 
 body {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .gds-page-header {
-  box-shadow: none;
-  border: none;
   height: 350px; 
   position: relative;
   width: 100%;
@@ -21,7 +21,7 @@ body {
   margin-left: auto; 
   margin-right: auto; 
   width: 40%;  
-  height: 100%; 
+  min-height: 100%; 
 }
 
 .logo {
@@ -45,11 +45,12 @@ body {
   box-shadow: none;  
 }
 
-.gds-layout__row {
-  columns: 2 300px; 
-}
-
 .gds-persist-nav__link:before {
   display: none !important; 
 }
+
+footer {
+  margin-top: auto; 
+}
+
 

@@ -178,7 +178,7 @@ class MainContent extends Component {
             </ul>
           </div> 
 
-          <div className="gds-accordion -m-t-3" data-gds-accordion=""> 
+          <div className="gds-accordion -m-t-3 -m-b-6" data-gds-accordion=""> 
             <ul className="gds-accordion-list">
               <li className="gds-accordion__item gds-accordion__item" data-gds-accordion-item="">
                 <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Family and Relationships</h4>
@@ -187,7 +187,24 @@ class MainContent extends Component {
             </ul>
           </div>   
 
-      
+          <nav className="-text-center">
+            <ul className="gds-pagination gds-pagination--sm gds-pagination--mobile-arrows gds-pagination--fixed" data-paganimate="">
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed"> 
+                  <a href="/" className="gds-pagination__page-link gds-pagination__page-link--fixed" aria-label="Previous" data-page-change="prev"> 
+                    <span className="-vis-hidden" aria-hidden="true">«</span> <span className="-sr-only">Previous</span> 
+                  </a> 
+                </li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed gds-pagination__page-item--active" data-paginate-active="true"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">1</a></li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">2</a></li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a    href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">3</a></li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">4</a></li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a   href="/"data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">5</a></li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">6</a></li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a   href="/"data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">7</a></li>
+                <li className="gds-pagination__page-item gds-pagination__page-item--fixed"><a   href="/" className="gds-pagination__page-link gds-pagination__page-link--fixed" aria-label="Next" data-page-change="next"><span className="-vis-hidden" aria-hidden="true">»</span> <span className="-sr-only">Next</span></a></li>
+                <span className="gds-pagination__page-indicator"></span>
+            </ul>
+          </nav>
       </Fragment>  
     );
   }

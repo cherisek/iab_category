@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/home";
-import Index from "./pages/index"
+import Home from "./components/home";
+import Index from "./components/index"
 import './App.scss';
 
 function App() {
