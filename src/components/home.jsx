@@ -5,9 +5,9 @@ class Home extends React.Component {
   render() {
     return (
         <Layout>
-           <div className="gds-layout__container -m-b-6">
+           <div className="gds-layout__container--home -m-b-6">
             <div className="gds-layout__row">
-                <div className="gds-layout__column--md-4 -p-h-4">
+                <div className="gds-layout__column--md-4 -p-h-4 -m-b-4">
                   <h1 className="gds-text--header-xs gds-text--bold -text-center -m-b-3">About Iab</h1>
                     <p className="gds-text--body-md">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -17,7 +17,7 @@ class Home extends React.Component {
                       occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
-                <div className="gds-layout__column--md-4 -p-h-4">
+                <div className="gds-layout__column--md-4 -p-h-4 -m-b-4">
                   <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Events</h1>
                   <p className="gds-text--body-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -27,7 +27,7 @@ class Home extends React.Component {
                     occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </p>
                 </div>
-                <div className="gds-layout__column--md-4 -p-h-4">
+                <div className="gds-layout__column--md-4 -p-h-4 -m-b-4">
                   <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Threats</h1>
                   <p className="gds-text--body-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 

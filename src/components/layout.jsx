@@ -15,7 +15,6 @@ class Layout extends React.Component {
   render() {
     return (
         <Fragment>
-          <div className="">
             <header className="gds-page-header -m-b-6 -color-bg-lt-3">
             <div className="gds-layout-container -p-v-1">
               <img className="logo -m-t-6" src={logo} alt="gumgum logo"/> 
@@ -33,8 +32,7 @@ class Layout extends React.Component {
             <section className="gds-layout__container -m-b-6">
                 {this.props.children}
             </section>
-            <Footer /> 
-          </div>
+            {/* <Footer />  */}
         </Fragment>
     )
   }

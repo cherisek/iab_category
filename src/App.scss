@@ -17,7 +17,7 @@ body {
   width: 100%;
 } 
 
-.gds-layout-container{
+.gds-layout-container--home{
   margin-left: auto; 
   margin-right: auto; 
   width: 40%;  
@@ -30,7 +30,7 @@ body {
 }  
 
 .logo-index {
-  height: 30px;
+  height: 40px;
 }
 
 .gds-persist-nav__main-content {
@@ -47,6 +47,10 @@ body {
 
 .gds-persist-nav__link:before {
   display: none !important; 
+} 
+
+.gds-persist-nav__sidebar {
+  transition: all 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 footer {
