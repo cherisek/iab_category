@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from "react";
 import { withRouter } from "react-router-dom"; 
-import logo from "../images/new-logo.svg";
-import TreeNav from "./treenav";
+import MobileNav from './mobilenav';
+import DesktopNav from './desktopnav';
 
 class SideNav extends Component {
   constructor(props) {
@@ -10,7 +10,6 @@ class SideNav extends Component {
       width: window.innerWidth, 
         sideNavOpen: true,
     };  
-    this.handleHomePage = this.handleHomePage.bind(this);
     this.handleWindowSizeChange = this.handleWindowSizeChange.bind(this);
   }
 
@@ -26,13 +25,8 @@ class SideNav extends Component {
     this.setState({ width: window.innerWidth });
   }
 
-  handleHomePage() {
-    this.props.history.push('/'); 
-  } 
-
   toggleSideNav = () => {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
-    console.log('clicked clicked')
   }
 
   render() {
@@ -41,44 +35,17 @@ class SideNav extends Component {
 
     return (
       <Fragment> 
-        <header className="gds-spa-header -color-bg-lt-3 -color-bd-lt-3">
-          <div className="gds-spa-header__primary-nav">
-            <div className="gds-page-header__primary-nav">
-              <button className="gds-page-header__menu -m-r-3" onClick={this.toggleSideNav}>
-                <span className="gds-page-header__menu-line"></span>
-                <span className="gds-page-header__menu-line"></span>
-                <span className="gds-page-header__menu-line"></span>
-                <span className="gds-page-header__menu-line"></span>
-              </button>
-            </div>
-            <div className="gds-spa-header__section gds-spa-header__section--product" style={{'borderLeft': 'transparent'}}>
-              <img className="logo-index" src={logo} alt="gumgum logo" onClick={this.handleHomePage}/>
-            </div>
-          </div>
-        </header>
-        <div className="gds-persist-nav">
-          <div className="gds-persist-nav gds-persist-nav--page-header">
-            <aside className={`gds-persist-nav__sidebar ${this.state.sideNavOpen ? "gds-persist-nav__sidebar--toggle":""}`}>
-              <ul className="gds-persist-nav__top-nav">
-                <li className="gds-persist-nav__item--active">
-                  <a href="/"className="gds-persist-nav__link gds-text--regular -text-tr-up">
-                    iab
-                  </a>
-                </li>
-                <li className="gds-persist-nav__item">
-                  <a href="/"className="gds-persist-nav__link gds-text--regular -text-tr-up">
-                    threats
-                  </a>
-                </li>
-                <li className="gds-persist-nav__item">
-                  <a href="/"className="gds-persist-nav__link gds-text--regular -text-tr-up">
-                  events
-                  </a>
-                </li>
-              </ul>
-            </aside> 
-          </div>
-        </div>
+        {
+        isMobile ? 
+           ( 
+            <MobileNav /> 
+          ) 
+          : 
+          (
+            <DesktopNav />
+  
+          )
+      }
       </Fragment>
     );
   }

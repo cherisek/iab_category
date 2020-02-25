@@ -1,24 +1,23 @@
 import React, { Fragment, Component } from "react";
+import IabData from "../constants/iabdata";
 
 class TreeNav extends Component {
 
   render() {
     return (
       <Fragment> 
-        <div className="gds-flex__item"> 
-          <h6 className="gds-text--header-md -m-b-3 -m-t-2 -text-tr-up">iab</h6>
+        <div className="gds-layout__column"> 
+          <h6 className="gds-text--header-md -m-b-3 -m-t-4 -text-tr-up">iab</h6>
           <aside className="gds-persist-nav__sidebar -m-t-2" style={{'height': '1000px'}}>
-            <div className="gds-form-group -m-h-3 -m-b-3"> 
-              <div className="gds-form-group gds-search__form-group">
-                <div className="gds-search-select__control" data-gds-search-select="single">
-                  <input className="gds-form-group__text-input" type="text" placeholder="Search"/> 
-                  <i className="gds-form-group__text-input-icon btl bt-search"></i>
-                </div>
+            <div className="gds-form-group -m-h-3 -m-b-3">    
+              <div className="gds-search-select__control" data-gds-search-select="single">
+                <input className="gds-form-group__text-input" type="text" placeholder="Search"/> 
+                <i className="gds-form-group__text-input-icon btl bt-search"></i>
               </div>
             </div>
             <ul className="gds-persist-nav__top-nav">
               <li className="gds-persist-nav__item">
-              <a href="/" className="gds-persist-nav__link">
+              <a href="/" className="gds-persist-nav__link gds-text--bold">
               Automotive
               </a>
               <ul className="gds-persist-nav__sub-nav">
@@ -73,7 +72,7 @@ class TreeNav extends Component {
               </ul>
               <ul className="gds-persist-nav__top-nav">
               <li className="gds-persist-nav__item">
-              <a href="/" className="gds-persist-nav__link">
+              <a href="/" className="gds-persist-nav__link gds-text--bold">
               Careers
               </a>
               <ul className="gds-persist-nav__sub-nav">

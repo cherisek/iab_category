@@ -17,9 +17,9 @@ class Header extends React.Component {
           <header className="gds-page-header -m-b-6 -color-bg-lt-3">
             <div className="gds-layout-container -p-v-1">
               <img className="logo -m-t-6" src={logo} alt="gumgum logo"/> 
-              <div className="gds-search gds-search--shown" style={{'position': 'relative', 'backgroundColor': 'transparent'}}> 
-                <div className="gds-search__input-holder -m-r-3">
-                  <div className="gds-form-group gds-search__form-group">
+              <div className="gds-search gds-search--shown -pos-rel -color-bg-none" style={{'backgroundColor': 'transparent'}}> 
+                <div className="gds-search__input-holder -m-r-3 -m-t-0">
+                  <div className="gds-form-group gds-search__form-group" style={{'boxShadow': 'none'}}>
                     <input className="gds-form-group__text-input" type="text" placeholder="Search..." data-gds-search-input="0" />
                     <i className="gds-form-group__text-input-icon btl bt-search"></i>
                   </div>

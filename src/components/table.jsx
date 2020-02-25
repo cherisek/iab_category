@@ -5,7 +5,8 @@ class Table extends Component {
   render() {
     return (
     <Fragment>
-      <div className="gds-layout__container gds-layout__container--full-width -p-v-4">
+      <div className="gds-layout__column">
+      <div className="gds-layout__container -p-v-4">
         <div className="gds-accordion" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
             <li className="gds-accordion__item gds-accordion__item--active" data-gds-accordion-item="">
@@ -310,6 +311,7 @@ class Table extends Component {
                 <span className="gds-pagination__page-indicator"></span>
             </ul>
           </nav>
+          </div>
           </div>
         </Fragment>
     );
