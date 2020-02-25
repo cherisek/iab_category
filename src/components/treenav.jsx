@@ -5,7 +5,7 @@ class TreeNav extends Component {
   render() {
     return (
       <Fragment> 
-        <div className="gds-layout-container"> 
+        <div className="gds-flex__item"> 
           <h6 className="gds-text--header-md -m-b-3 -m-t-2 -text-tr-up">iab</h6>
           <aside className="gds-persist-nav__sidebar -m-t-2" style={{'height': '1000px'}}>
             <div className="gds-form-group -m-h-3 -m-b-3"> 
