@@ -31,7 +31,6 @@ class MobileNav extends Component {
 
   toggleSideNav = () => {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
-    console.log('clicked clicked')
   }
 
   render() {

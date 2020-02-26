@@ -2,6 +2,17 @@ import React, { Fragment, Component } from "react";
 import IabData from "../constants/iabdata";
 
 class TreeNav extends Component {
+  constructor(props) {
+    super(props); 
+      this.state = {
+        active: true, 
+      }; 
+  }
+
+  toggleCategory = () => {
+    this.setState({ active: !this.state.active }); 
+  }
+
 
   render() {
     return (
@@ -17,26 +28,26 @@ class TreeNav extends Component {
             </div>
             <ul className="gds-persist-nav__top-nav">
               <li className="gds-persist-nav__item">
-              <a href="/" className="gds-persist-nav__link gds-text--bold">
+              <a href="#" className="gds-persist-nav__link gds-text--bold">
               Automotive
               </a>
               <ul className="gds-persist-nav__sub-nav">
-              <li className="gds-persist-nav__sub-item">
-              <a href="/" className="gds-persist-nav__link">
-              Auto Body Styles
-              </a>     
-              </li>
-              <ul className="gds-persist-nav__sub-nav">
-              <li className="gds-persist-nav__sub-item">
-              <a href="/" className="gds-persist-nav__link">
-                Commercial Trucks
-              </a>     
-              </li>
+                <li className="gds-persist-nav__sub-item">
+                  <a href="/" className="gds-persist-nav__link">
+                  Auto Body Styles
+                  </a>     
+                </li>
+                <ul className="gds-persist-nav__sub-nav">
+                  <li className="gds-persist-nav__sub-item">
+                  <a href="/" className="gds-persist-nav__link">
+                    Commercial Trucks
+                  </a>     
+                  </li>
               </ul> 
               <li className="gds-persist-nav__sub-item">
-              <a href="/" className="gds-persist-nav__link">
-              Auto Type
-              </a>     
+                <a href="/" className="gds-persist-nav__link">
+                Auto Type
+                </a>     
               </li>
               <li className="gds-persist-nav__sub-item">
               <a href="/" className="gds-persist-nav__link">

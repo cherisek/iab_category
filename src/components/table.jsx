@@ -10,11 +10,11 @@ class Table extends Component {
         <div className="gds-accordion" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
             <li className="gds-accordion__item gds-accordion__item--active" data-gds-accordion-item="">
-              <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Automotive</h4>
-              <i className="gds-accordion__item-icon"></i>
-              <ul className="gds-accordion__child-items">
-                <li className="gds-accordion__child-item -color-bg-white -p-a-4">
-                  <p>
+              <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Automotive</h4>
+              <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
+              <ul className="gds-accordion__child-items gds-accordion__child-items--sm">
+                <li className="gds-accordion__child-item gds-accordion__child-item--sm -color-bg-white -p-a-4">
+                  <p className="gds-text--body-sm">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna 
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -69,56 +69,56 @@ class Table extends Component {
                       </div>                    
                     </div>
                     <hr className="-color-bd-lt-3 -m-v-3" />
-                      <h6 className="gds-text-header--sm -m-b-2">Terms</h6> 
-                      <div className="gds-tag">
+                      <h6 className="gds-text--body-md -m-b-2">Terms</h6> 
+                      <div className="gds-tag gds-text--body-sm">
                           accordion-item                   
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword                     
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                            longer keyword phrase                      
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword  keyword                  
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword phrase                      
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword keyword keyword                     
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword phrase                   
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword                     
                       </div>
                       <hr className="-color-bd-lt-3 -m-v-3" />
                       <div className="gds-flex-grid__container">
                         <div className="gds-flex-grid__row">
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Auto Body Styles 
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Auto Type
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Car Culture
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Dash Cam Videos
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Motorcycles 
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Road-Side Assistance 
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Scooters 
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Auto Buying and Selling 
                           </div>
                         </div>
@@ -132,18 +132,18 @@ class Table extends Component {
 
           <div className="gds-accordion -m-t-3" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
-            <li className="gds-accordion__item gds-accordion__item" data-gds-accordion-item="">
-              <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Books and Literature</h4>
-              <i className="gds-accordion__item-icon"></i>
+            <li className="gds-accordion__item" data-gds-accordion-item="">
+              <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Books and Literature</h4>
+              <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
             </li>
           </ul>
           </div>  
 
           <div className="gds-accordion -m-v-3" data-gds-accordion=""> 
             <ul className="gds-accordion-list">
-              <li className="gds-accordion__item gds-accordion__item" data-gds-accordion-item="">
-                <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Business and Finance</h4>
-                <i className="gds-accordion__item-icon"></i>
+              <li className="gds-accordion__item" data-gds-accordion-item="">
+                <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Business and Finance</h4>
+                <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
               </li>
             </ul>
           </div>  
@@ -152,11 +152,11 @@ class Table extends Component {
           <div className="gds-accordion" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
             <li className="gds-accordion__item gds-accordion__item--active" data-gds-accordion-item="">
-              <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Careers</h4>
-              <i className="gds-accordion__item-icon"></i>
+              <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Careers</h4>
+              <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
               <ul className="gds-accordion__child-items">
                 <li className="gds-accordion__child-item -color-bg-white -p-a-4">
-                  <p>
+                  <p className="gds-text--body-sm">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna 
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -211,50 +211,50 @@ class Table extends Component {
                       </div>                    
                     </div>
                     <hr className="-color-bd-lt-3 -m-v-3" />
-                      <h6 className="gds-text-header--sm -m-b-2">Terms</h6> 
-                      <div className="gds-tag">
+                      <h6 className="gds-text--body-md -m-b-2">Terms</h6> 
+                      <div className="gds-tag gds-text--body-sm">
                           accordion-item                   
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword                     
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                            longer keyword phrase                      
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword  keyword                  
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword phrase                      
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword keyword keyword                     
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword phrase                   
                       </div>
-                      <div className="gds-tag">
+                      <div className="gds-tag gds-text--body-sm">
                           keyword                     
                       </div>
                       <hr className="-color-bd-lt-3 -m-v-3" />
                       <div className="gds-flex-grid__container">
                         <div className="gds-flex-grid__row">
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Apprenticeships
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Career Advice
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Career Planning 
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Job Search 
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Remote Working 
                           </div>
-                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                          <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Vocational Training 
                           </div>
                         </div>                      
@@ -269,8 +269,8 @@ class Table extends Component {
           <div className="gds-accordion -m-t-3" data-gds-accordion=""> 
             <ul className="gds-accordion-list">
               <li className="gds-accordion__item gds-accordion__item" data-gds-accordion-item="">
-                <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Education</h4>
-                <i className="gds-accordion__item-icon"></i>
+                <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Education</h4>
+                <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
               </li>
             </ul>
           </div>  
@@ -278,8 +278,8 @@ class Table extends Component {
           <div className="gds-accordion -m-t-3" data-gds-accordion=""> 
             <ul className="gds-accordion-list">
               <li className="gds-accordion__item gds-accordion__item" data-gds-accordion-item="">
-                <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Events and Attraction</h4>
-                <i className="gds-accordion__item-icon"></i>
+                <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Events and Attraction</h4>
+                <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
               </li>
             </ul>
           </div> 
@@ -287,8 +287,8 @@ class Table extends Component {
           <div className="gds-accordion -m-t-3 -m-b-6" data-gds-accordion=""> 
             <ul className="gds-accordion-list">
               <li className="gds-accordion__item gds-accordion__item" data-gds-accordion-item="">
-                <h4 className="gds-accordion__item-title" data-gds-accordion-title="">Family and Relationships</h4>
-                <i className="gds-accordion__item-icon"></i>
+                <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Family and Relationships</h4>
+                <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
               </li>
             </ul>
           </div>
