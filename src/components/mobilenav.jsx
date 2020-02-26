@@ -37,22 +37,22 @@ class MobileNav extends Component {
 
     return (
       <Fragment>     
-          <header className="gds-spa-header -color-bg-lt-3 -color-bd-lt-3">
-            <div className="gds-spa-header__primary-nav">
-              <div className="gds-page-header__primary-nav">
-                <button className="gds-page-header__menu -m-r-3" onClick={this.toggleSideNav}>
-                  <span className="gds-page-header__menu-line"></span>
-                  <span className="gds-page-header__menu-line"></span>
-                  <span className="gds-page-header__menu-line"></span>
-                  <span className="gds-page-header__menu-line"></span>
-                </button>
-              </div>
-              <div className="gds-spa-header__section gds-spa-header__section--product" style={{'borderLeft': 'transparent'}}>
+          <header className="gds-spa-header -p-a-2 -color-bg-lt-3 -color-bd-lt-3">
+            <div className="gds-page-header__primary-nav -m-t-2">
+              <button className="gds-page-header__menu" onClick={this.toggleSideNav}>
+                <span className="gds-page-header__menu-line"></span>
+                <span className="gds-page-header__menu-line"></span>
+                <span className="gds-page-header__menu-line"></span>
+                <span className="gds-page-header__menu-line"></span>
+              </button>
+            </div>
+            <div className="gds-spa-header__secondary-nav -color-bd-lt-3">
+              <div className="gds-spa-header__section gds-spa-header__section--product -color-bd-lt-3">
                 <img className="logo-index" src={logo} alt="gumgum logo" onClick={this.handleHomePage}/>
               </div>
             </div>
           </header>
-          <aside className={`gds-persist-nav__sidebar ${this.state.sideNavOpen ? "gds-persist-nav__sidebar--toggle":""}`} style={{'top': '57px'}}>
+          <aside className={`gds-persist-nav__sidebar ${this.state.sideNavOpen ? "gds-persist-nav__sidebar--toggle":""}`} style={{'top': '70px'}}>
             <ul className="gds-persist-nav__top-nav">
               <li className="gds-persist-nav__item--active">
                 <a href="/"className="gds-persist-nav__link gds-text--regular -text-tr-up">
