@@ -5,6 +5,7 @@ import Index from "./components/index";
 import './App.scss';
 
 
+
 class App extends Component {
   constructor(props) {
     super(props); 
@@ -20,7 +21,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} /> 
-            <Route exact path="/index" component={Index} /> 
+            <Route path="/index" component={Index} /> 
           </Switch>
         </Router>
     )

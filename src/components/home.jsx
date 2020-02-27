@@ -6,9 +6,10 @@ class Header extends React.Component {
   constructor(props) {
     super(props); 
     this.handleViewAll = this.handleViewAll.bind(this); 
-  } 
+  }
+
   handleViewAll() {
-    this.props.history.push('/index');
+    this.props.history.push('/index/iab');
   } 
 
   render() {
@@ -24,7 +25,7 @@ class Header extends React.Component {
                     <i className="gds-form-group__text-input-icon btl bt-search"></i>
                   </div>
                 </div>
-                <button className="gds-button gds-button--xs gds-button--primary"onClick={this.handleViewAll} >View All</button>
+                <button className="gds-button gds-button--xs gds-button--primary" onClick={this.handleViewAll} >View All</button>
               </div>
             </div>      
           </header>

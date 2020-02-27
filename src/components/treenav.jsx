@@ -28,7 +28,7 @@ class TreeNav extends Component {
             </div>
             <ul className="gds-persist-nav__top-nav">
               <li className="gds-persist-nav__item">
-              <a href="#" className="gds-persist-nav__link gds-text--bold">
+              <a href="/" className="gds-persist-nav__link gds-text--bold">
               Automotive
               </a>
               <ul className="gds-persist-nav__sub-nav">
