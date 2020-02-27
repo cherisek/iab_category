@@ -42,9 +42,9 @@ class MobileNav extends Component {
               </button>
             </div>
             <div className="gds-spa-header__secondary-nav -color-bd-lt-3">
-              <NavLink to="/" target="/">
+              <a href="/">
                 <img className="logo-index" src={logo} alt="gumgum logo" />
-              </NavLink>
+              </a>
             </div>
           </header>
           <nav className={`gds-persist-nav__sidebar ${this.state.sideNavOpen ? "gds-persist-nav__sidebar--toggle":""}`} style={{'top': '70px'}}>

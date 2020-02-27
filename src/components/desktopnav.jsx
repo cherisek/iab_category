@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from "react";
-import { withRouter, NavLink } from "react-router-dom"; 
+import { withRouter, NavLink, Link } from "react-router-dom"; 
 import logo from "../images/new-logo.svg";
 import TreeNav from "./treenav";
 
@@ -18,9 +18,9 @@ class DesktopNav extends Component {
     return (
       <Fragment>
         <nav className="gds-persist-nav__sidebar -m-r-6">
-          <NavLink to="/" target="/">
+          <a href="/">
             <img className="logo-index -p-h-4 -m-b-3" src={logo} alt="gumgum logo"/>
-          </NavLink>
+          </a>
           <NavLink className="gds-persist-nav__link -m-b-4  gds-text--regular -text-tr-up " activeClassName="gds-persist-nav__link--active" to="/index/iab">
             iab
           </NavLink>
