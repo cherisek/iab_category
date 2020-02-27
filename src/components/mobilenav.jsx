@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from "react";
-import { withRouter } from "react-router-dom"; 
+import { withRouter, NavLink } from "react-router-dom"; 
 import logo from "../images/new-logo.svg";
 
 class MobileNav extends Component {
@@ -9,7 +9,6 @@ class MobileNav extends Component {
       width: window.innerWidth, 
         sideNavOpen: true,
     };  
-    this.handleHomePage = this.handleHomePage.bind(this);
     this.handleWindowSizeChange = this.handleWindowSizeChange.bind(this);
   }
 
@@ -24,10 +23,6 @@ class MobileNav extends Component {
   handleWindowSizeChange() {
     this.setState({ width: window.innerWidth });
   }
-
-  handleHomePage() {
-    this.props.history.push('/'); 
-  } 
 
   toggleSideNav = () => {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
@@ -47,30 +42,22 @@ class MobileNav extends Component {
               </button>
             </div>
             <div className="gds-spa-header__secondary-nav -color-bd-lt-3">
-              <div className="gds-spa-header__section gds-spa-header__section--product -color-bd-lt-3">
-                <img className="logo-index" src={logo} alt="gumgum logo" onClick={this.handleHomePage}/>
-              </div>
+              <NavLink to="/" target="/">
+                <img className="logo-index" src={logo} alt="gumgum logo" />
+              </NavLink>
             </div>
           </header>
-          <aside className={`gds-persist-nav__sidebar ${this.state.sideNavOpen ? "gds-persist-nav__sidebar--toggle":""}`} style={{'top': '70px'}}>
-            <ul className="gds-persist-nav__top-nav">
-              <li className="gds-persist-nav__item--active">
-                <a href="/"className="gds-persist-nav__link gds-text--regular -text-tr-up">
-                  iab
-                </a>
-              </li>
-              <li className="gds-persist-nav__item">
-                <a href="/"className="gds-persist-nav__link gds-text--regular -text-tr-up">
-                  threats
-                </a>
-              </li>
-              <li className="gds-persist-nav__item">
-                <a href="/"className="gds-persist-nav__link gds-text--regular -text-tr-up">
-                events
-                </a>
-              </li>
-            </ul>
-          </aside> 
+          <nav className={`gds-persist-nav__sidebar ${this.state.sideNavOpen ? "gds-persist-nav__sidebar--toggle":""}`} style={{'top': '70px'}}>
+            <NavLink className="gds-persist-nav__link gds-text--regular -text-tr-up -m-b-4" activeClassName="gds-persist-nav__link--active" to="/index/iab">
+              iab
+            </NavLink>
+            <NavLink className="gds-persist-nav__link gds-text--regular -text-tr-up -m-b-4" activeClassName="gds-persist-nav__link--active" to="/index/threats">
+              threats
+            </NavLink>
+            <NavLink className="gds-persist-nav__link gds-text--regular -text-tr-up" activeClassName="gds-persist-nav__link--active" to="/index/events">
+              events
+            </NavLink>
+          </nav> 
           <div className="gds-persist-nav__mobile-close" data-sidebar-toggle="gds-persist-nav__sidebar--toggle"></div>
       </Fragment>
     );
