@@ -18,13 +18,6 @@ const tree = [{
         'minivan', 
         'off-road vehicles', 
         'pickup trucks'
-        // {
-        //     name: 'a subchild node with grandchildren',
-        //     grandchildNodes: [
-        //         'grand child 1',
-        //         'grand child 1'
-        //     ]
-        // }
       ],   
     },
     {
@@ -158,18 +151,20 @@ const tree = [{
         'small and medium-sized business',
         'startups',
         'business administration',
-        'business banking and finance',
+        {
+          title: 'business banking and finance',
+          grandchildNodes: [
+              'angel investment',
+              'bankruptcy',
+              'business loans',
+              'debt factoring and invoice discounting',
+              'mergers and acquisitions',
+              'private equity',
+              'sale and lease back',
+              'venture capital'
+          ]
+       }
       ], 
-      thirdLevel: [
-        'angel investment', 
-        'bankruptcy', 
-        'business loans', 
-        'debt factoring and invoice discounting', 
-        'mergers and acquisitions', 
-        'private equity',
-        'sale and lease back',
-        'venture capital'
-      ]
     }
   ] 
  }

@@ -54,21 +54,28 @@ class TreeNav extends Component {
                               {childNodes.subChildNodes.map((item, index) => {
                                 return (
                                   <li className="gds-tree__sub-item">
-                                    <a href="/index/iab" className="gds-tree__link -text-tr-cap">
-                                      {item}
-                                    </a>
-                                  
-                                    {/* <ul className="gds-tree__sub-nav">
-                                      {childNodes.grandChildNodes.map((item, index) => {
-                                      return (
-                                        <li className="gds-tree__sub-item">
-                                          <span className="gds-tree__link -text-tr-cap">
-                                            {item}
+                                    {
+                                      typeof item === 'string' ?
+                                        <a href="/index/iab" className="gds-tree__link -text-tr-cap">
+                                          {item}
+                                        </a> :
+                                        <>
+                                          <span className="gds-tree__link gds-tree__link--primary -text-tr-cap" key={index}>
+                                            {item.title}
                                           </span>
-                                        </li>
-                                       )
-                                      })} 
-                                  </ul> */}
+                                          <ul className="gds-tree__sub-nav">
+                                            {item.grandchildNodes.map((item, index) => {
+                                            return (
+                                              <li className="gds-tree__sub-item">
+                                                <span className="gds-tree__link -text-tr-cap">
+                                                  {item}
+                                                </span>
+                                              </li>
+                                            )
+                                            })} 
+                                        </ul>
+                                      </>
+                                    }
                                   </li>
                                 )
                               })}
