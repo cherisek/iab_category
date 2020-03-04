@@ -10,14 +10,16 @@ class TreeNav extends Component {
       }; 
   }
 
-  toggleCategory = () => {
-    this.setState({ toggle: !this.state.toggle }); 
+  toggleCategory = ({ target }) => {
+    const { nextSibling } = target; 
+    nextSibling.style.display = nextSibling.style.display === 'block' || !nextSibling.style.display ? 'none' : 'block';
   } 
-  
+
+
   render() { 
     return (
       <div className="gds-layout__column--lg-4 gds-layout__column--md-12">
-        <div className="gds-card -pos-fix"> 
+        <div className="gds-card -pos-fix -overflow-x-scroll" style={{'height': '100%', 'minWidth': '25%' }}> 
           <div className="gds-card__block">
             {tree.map((item, index) => {
               return (
@@ -32,19 +34,19 @@ class TreeNav extends Component {
                   <i className="gds-form-group__text-input-icon btl bt-search"></i>
                 </div>
               </div>
-              <ul className="-p-h-4">
-                <li>
+
+              <ul className="-p-h-4">           
                   {tree.map((item, index) => {
                     return (
-                      <span className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" onClick={() => {this.toggleCategory()}}>
+                      <li>
+                      <span className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" onClick={this.toggleCategory}>
                         {item.category}
                       </span>
-                    )
-                  })}
+                
                   <ul className="gds-tree__sub-nav">
-                      {tree[0].childNodes.map((childNodes, index) => {
+                      {item.childNodes.map((childNodes, index) => {
                         return (
-                          <li className="gds-tree__sub-item">
+                          <li className="gds-tree__sub-item" onClick={this.toggleCategory}>
                             <span className="gds-tree__link gds-tree__link--primary -text-tr-cap" key={index}>
                               {childNodes.title}
                             </span>
@@ -52,9 +54,21 @@ class TreeNav extends Component {
                               {childNodes.subChildNodes.map((item, index) => {
                                 return (
                                   <li className="gds-tree__sub-item">
-                                  <a href="/index/iab" className="gds-tree__link -text-tr-cap">
-                                    {item}
-                                  </a>
+                                    <a href="/index/iab" className="gds-tree__link -text-tr-cap">
+                                      {item}
+                                    </a>
+                                  
+                                    {/* <ul className="gds-tree__sub-nav">
+                                      {childNodes.grandChildNodes.map((item, index) => {
+                                      return (
+                                        <li className="gds-tree__sub-item">
+                                          <span className="gds-tree__link -text-tr-cap">
+                                            {item}
+                                          </span>
+                                        </li>
+                                       )
+                                      })} 
+                                  </ul> */}
                                   </li>
                                 )
                               })}
@@ -62,8 +76,10 @@ class TreeNav extends Component {
                           </li>
                         )
                       })}           
-                  </ul>    
-                </li>
+                  </ul> 
+                  </li>   
+                )
+              })}
               </ul>
           </div>
         </div>  

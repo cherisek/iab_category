@@ -18,6 +18,13 @@ const tree = [{
         'minivan', 
         'off-road vehicles', 
         'pickup trucks'
+        // {
+        //     name: 'a subchild node with grandchildren',
+        //     grandchildNodes: [
+        //         'grand child 1',
+        //         'grand child 1'
+        //     ]
+        // }
       ],   
     },
     {
@@ -92,8 +99,80 @@ const tree = [{
     {
       title: 'auto rentals',
       subChildNodes: [],    
+    }, 
+  ], 
+},
+{
+  category: 'books and literature',
+  childNodes: [
+    {
+      title: 'art and photography books',
+      subChildNodes: []
+    },
+    {
+      title: 'biographies', 
+      subChildNodes: []
+    },
+    {
+      title: 'children\'s literature', 
+      subChildNodes: []
+    },
+    {
+      title: 'comics and graphic novels', 
+      subChildNodes: []
+    },
+    {
+      title: 'cookbooks', 
+      subChildNodes: []
+    },
+    {
+      title: 'fiction', 
+      subChildNodes: []
+    },
+    {
+      title: 'poetry', 
+      subChildNodes: []
+    },
+    {
+      title: 'travel books', 
+      subChildNodes: []
+    },
+    {
+      title: 'young adult literature', 
+      subChildNodes: []
     }
   ]
-}]
+ },
+ {
+  category: 'business and finance',
+  childNodes: [
+    {
+      title: 'business',
+      subChildNodes: [
+        'business accounting and finance',
+        'human resources',
+        'large business', 
+        'logistics',
+        'marketing and advertising',
+        'sales',
+        'small and medium-sized business',
+        'startups',
+        'business administration',
+        'business banking and finance',
+      ], 
+      thirdLevel: [
+        'angel investment', 
+        'bankruptcy', 
+        'business loans', 
+        'debt factoring and invoice discounting', 
+        'mergers and acquisitions', 
+        'private equity',
+        'sale and lease back',
+        'venture capital'
+      ]
+    }
+  ] 
+ }
+]
 
 export default tree; 

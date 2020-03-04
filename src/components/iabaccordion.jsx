@@ -1,6 +1,4 @@
 import React, { Fragment, Component } from "react";
-// import PropTypes from 'prop-types'; 
-// import Iab from "../constants/iab"; 
 
 class IabTree extends Component {
   constructor(props) {
@@ -324,12 +322,5 @@ class IabTree extends Component {
     );
   }
 } 
-
-// IabTree.propTypes = {
-//   children: PropTypes.object.isRequired, 
-//   isOpen: PropTypes.bool.isRequired, 
-//   title: PropTypes.string.isRequired, 
-//   onClick: PropTypes.func.isRequired
-// }
 
 export default IabTree; 
