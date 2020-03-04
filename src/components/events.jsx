@@ -5,7 +5,7 @@ class Events extends Component {
   render() {
     return (
     <Fragment>
-      <div className="gds-layout__column">
+      <div className="gds-layout__column--xs-10">
       <div className="gds-layout__container -p-v-4">
         <div className="gds-accordion" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
@@ -121,8 +121,7 @@ class Events extends Component {
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
                             Auto Buying and Selling 
                           </div>
-                        </div>
-                     
+                        </div>                
                 </div>
                 </li>
               </ul>

@@ -8,7 +8,7 @@ class SideNav extends Component {
     super(props); 
     this.state = {
       width: window.innerWidth, 
-        sideNavOpen: true,
+      sideNavOpen: true
     };  
     this.handleWindowSizeChange = this.handleWindowSizeChange.bind(this);
   }
@@ -23,10 +23,6 @@ class SideNav extends Component {
 
   handleWindowSizeChange() {
     this.setState({ width: window.innerWidth });
-  }
-
-  toggleSideNav = () => {
-    this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
   render() {

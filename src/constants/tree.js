@@ -1,39 +1,99 @@
-const tree = [
-  {
-    pageTitle: "iab", 
-    subCategory: "automotive", 
-    subCategoryLevel2: "auto body styles", 
-    childNodes: [ 
-        {
-        title: "commercial trucks",
-        title: "sedan", 
-        title: "station wagon",
-        title: "suv",
-        title: "van", 
-        title: "convertible",
-        title: "coupe", 
-        title: "crossover", 
-        title: "hatchback",
-        title: "microcar", 
-        title: "minivan",
-        title: "off-road-vehicles",
-        title: "pickup trucks"
-      }
-    ], 
-    subCategoryLevel2: "auto type", 
-    childNodes: [ 
-      {
-      title: "budget cars",
-      title: "certified pre-owned cars", 
-      title: "classic cars",
-      title: "concept cars",
-      title: "driverless cars", 
-      title: "green vehicles",
-      title: "luxury cars", 
-      title: "performance cars "
+const tree = [{
+  pageTitle: 'iab',
+  category: 'automotive',
+  childNodes: [
+    {
+      title: 'auto body styles', 
+      subChildNodes: [
+        'commercial trucks', 
+        'sedan', 
+        'station wagon', 
+        'suv', 
+        'van',
+        'convertible', 
+        'coupe', 
+        'crossover', 
+        'hatchback', 
+        'microcar', 
+        'minivan', 
+        'off-road vehicles', 
+        'pickup trucks'
+      ],   
+    },
+    {
+      title: 'auto type', 
+      subChildNodes: [
+        'budget cars', 
+        'certified pre-owned cars', 
+        'classic cars', 
+        'concept cars', 
+        'driverless cars',
+        'green vehicles', 
+        'luxury cars', 
+        'performance cars'
+      ],   
+    }, 
+    {
+      title: 'car culture',  
+      subChildNodes: [],   
+    }, 
+    {
+      title: 'dash cam videos',
+      subChildNodes: [],    
+    }, 
+    {
+      title: 'motorcycles',
+      subChildNodes: [],    
+    }, 
+    {
+      title: 'road-side assistance',
+      subChildNodes: [],    
+    }, 
+    {
+      title: 'scooters',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto buying and selling',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto insurance',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto parts',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto recalls',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto repair',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto safety',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto shows',
+      subChildNodes: [],    
+    },
+    {
+      title: 'auto technology',
+      subChildNodes: [
+        'auto infotainment technologies',
+        'auto naviagtion systems',
+        'auto safety technologies'
+      ],    
+    },
+    {
+      title: 'auto rentals',
+      subChildNodes: [],    
     }
-  ],  
-  }
-] 
+  ]
+}]
 
 export default tree; 

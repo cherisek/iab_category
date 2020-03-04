@@ -1,7 +1,6 @@
 import React, { Fragment, Component } from "react";
-import { withRouter, NavLink, Link } from "react-router-dom"; 
+import { withRouter, NavLink } from "react-router-dom"; 
 import logo from "../images/new-logo.svg";
-import TreeNav from "./treenav";
 
 class DesktopNav extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class DesktopNav extends Component {
 
     return (
       <Fragment>
-        <nav className="gds-persist-nav__sidebar -m-r-6">
+        <nav className="gds-persist-nav__sidebar">
           <a href="/">
             <img className="logo-index -p-h-4 -m-b-3" src={logo} alt="gumgum logo"/>
           </a>
@@ -31,8 +30,8 @@ class DesktopNav extends Component {
             events
           </NavLink>
           </nav>
-          <TreeNav /> 
-        </Fragment>  
+          {/* <TreeNav /> */}
+      </Fragment>  
     );
   }
 } 

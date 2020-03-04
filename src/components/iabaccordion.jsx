@@ -1,125 +1,133 @@
 import React, { Fragment, Component } from "react";
+// import PropTypes from 'prop-types'; 
+// import Iab from "../constants/iab"; 
 
-class Iab extends Component {
+class IabTree extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      toggle: true,
+    }
+  } 
+
+  toggleAccordion = (e) => {
+    this.setState({ toggle: !this.state.toggle })
+  }
 
   render() {
+
     return (
     <Fragment>
-      <div className="gds-layout__column">
-      <div className="gds-layout__container -p-v-4">
+      <div className="gds-layout__column--lg-8 gds-layout__column--md-12 -p-h-6 -m-b-3">
         <div className="gds-accordion" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
-            <li className="gds-accordion__item gds-accordion__item--active" data-gds-accordion-item="">
-              <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Automotive</h4>
-              <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
+            <li className={this.state.toggle ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
+              <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" onClick={(e) => {this.toggleAccordion(e)}} data-gds-accordion-title="">
+                Automotive
+                {/* { this.renderData() } */}
+              </h4>
+              <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>
               <ul className="gds-accordion__child-items gds-accordion__child-items--sm">
                 <li className="gds-accordion__child-item gds-accordion__child-item--sm -color-bg-white -p-a-4">
-                  <p className="gds-text--body-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                    occaecat cupidatat non proident, sunt in culpa qui officia 
-                    deserunt mollit anim id est laborum.
-                  </p>
+                  <p className="gds-text--body-sm"></p>      
                   <hr className="-color-bd-lt-3 -m-v-3 -p-b-4" />
                     <div className="gds-flex gds-flex--justify-between">
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+
                         </div>
                       </div> 
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                          {/* <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" /> */}
                         </div>
                       </div> 
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                          {/* <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" /> */}
                         </div>
                       </div> 
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                          {/* <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" /> */}
                         </div>
                       </div> 
 
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                          {/* <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" /> */}
                         </div>
                       </div> 
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                          {/* <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" /> */}
                         </div>
                       </div> 
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                          {/* <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" /> */}
                         </div>
                       </div> 
                       <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
                         <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" />
+                          {/* <img src={'https://picsum.photos/id/1071/250/150'} alt="placeholder" /> */}
                         </div>
                       </div>                    
                     </div>
                     <hr className="-color-bd-lt-3 -m-v-3" />
-                      <h6 className="gds-text--body-md -m-b-2">Terms</h6> 
+                      <h6 className="gds-text--body-md -m-b-2">
+                        {/* Terms */}
+                      </h6> 
                       <div className="gds-tag gds-text--body-sm">
-                          accordion-item                   
+                          {/* accordion-item                    */}
                       </div>
                       <div className="gds-tag gds-text--body-sm">
-                          keyword                     
+                          {/* keyword                      */}
                       </div>
                       <div className="gds-tag gds-text--body-sm">
-                           longer keyword phrase                      
+                           {/* longer keyword phrase                       */}
                       </div>
                       <div className="gds-tag gds-text--body-sm">
-                          keyword  keyword                  
+                          {/* keyword  keyword                   */}
                       </div>
                       <div className="gds-tag gds-text--body-sm">
-                          keyword phrase                      
+                          {/* keyword phrase                       */}
                       </div>
                       <div className="gds-tag gds-text--body-sm">
-                          keyword keyword keyword                     
+                          {/* keyword keyword keyword                      */}
                       </div>
                       <div className="gds-tag gds-text--body-sm">
-                          keyword phrase                   
+                          {/* keyword phrase                    */}
                       </div>
                       <div className="gds-tag gds-text--body-sm">
-                          keyword                     
+                          {/* keyword                      */}
                       </div>
                       <hr className="-color-bd-lt-3 -m-v-3" />
                       <div className="gds-flex-grid__container">
                         <div className="gds-flex-grid__row">
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Auto Body Styles 
+                            {/* Auto Body Styles  */}
                           </div>
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Auto Type
+                            {/* Auto Type */}
                           </div>
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Car Culture
+                            {/* Car Culture */}
                           </div>
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Dash Cam Videos
+                            {/* Dash Cam Videos */}
                           </div>
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Motorcycles 
+                            {/* Motorcycles  */}
                           </div>
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Road-Side Assistance 
+                            {/* Road-Side Assistance  */}
                           </div>
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Scooters 
+                            {/* Scooters  */}
                           </div>
                           <div className="gds-flex-grid__item gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 gds-text--body-sm -m-b-3">
-                            Auto Buying and Selling 
+                            {/* Auto Buying and Selling  */}
                           </div>
                         </div>
                      
@@ -153,7 +161,7 @@ class Iab extends Component {
           <ul className="gds-accordion-list">
             <li className="gds-accordion__item gds-accordion__item--active" data-gds-accordion-item="">
               <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" data-gds-accordion-title="">Careers</h4>
-              <i className="gds-accordion__item-icon gds-accordion__item-icon--sm"></i>
+              <i className="gds-accordion__item-icon gds-accordion__item-icon--sm" ></i>
               <ul className="gds-accordion__child-items">
                 <li className="gds-accordion__child-item -color-bg-white -p-a-4">
                   <p className="gds-text--body-sm">
@@ -312,10 +320,16 @@ class Iab extends Component {
             </ul>
           </nav>
           </div>
-          </div>
         </Fragment>
     );
   }
 } 
 
-export default Iab; 
+// IabTree.propTypes = {
+//   children: PropTypes.object.isRequired, 
+//   isOpen: PropTypes.bool.isRequired, 
+//   title: PropTypes.string.isRequired, 
+//   onClick: PropTypes.func.isRequired
+// }
+
+export default IabTree; 
