@@ -180,10 +180,152 @@ const tree = [{
     },
     {
       title: 'economy',
-      subChildNodes: []
-    } 
+      subChildNodes: [
+        'commodities',
+        'currencies',
+        'financial crisis',
+        'financial reform',
+        'financial regulation',
+        'gasoline prices',
+        'housing market',
+        'interest rates',
+        'job market'
+      ]
+    }, 
+    {
+      title: 'industries', 
+      subChildNodes: [
+        'advertising industry',
+        'education industry',
+        'entertainment industry',
+        'environmental services industry',
+        'financial industry',
+        'food industry',
+        'healthcare industry',
+        'hospitality industry',
+        'information services industry',
+        'legal services industry',
+        'agriculture',
+        'management consulting industry',
+        'manufacturing industry',
+        'mechanical and industrial engineering industry',
+        'media industry',
+        'metals industry',
+        'non-profit organizations',
+        'pharmaceutical industry',
+        'power and energy industry',
+        'publishing industry',
+        'real estate industry',
+        'apparel industry', 
+        'retail industry',
+        'technology industry', 
+        'telecommunications industry',
+        'automotive industry',
+        'aviation industry',
+        'biotech and biomedical industry',
+        'civil engineering industry',
+        'construction industry',
+        'defense industry'
+      ]
+    }
   ] 
- }
+ }, 
+ {
+  category: 'careers', 
+  childNodes: [
+    {
+      title: 'apprenticeships', 
+      subChildNodes: []
+    }, 
+    {
+      title: 'career advice',
+      subChildNodes: []
+    },
+    {
+      title: 'career planning', 
+      subChildNodes: []
+    }, 
+    {
+      title: 'job search',
+      subChildNodes: [
+        'job fairs', 
+        'resume writing and advice'
+      ]
+    }, 
+    {
+      title: 'remote working',
+      subChildNodes: []
+    }, 
+    {
+      title: 'vocational training', 
+      subChildNodes: []
+    }
+  ]
+ }, 
+ {
+   category: 'education', 
+   childNodes: [
+     {
+      title: 'adult education', 
+      subChildNodes: []
+     }, 
+     {
+       title: 'private school',
+       subChildNodes: []
+     }, 
+     {
+       title: 'secondary education',
+       subChildNodes: []
+     }, 
+     {
+       title: 'special education',
+       subChildNodes: []
+     }, 
+     {
+       title: 'college education', 
+       subChildNodes: [
+         {
+          title: 'postgraduate education', 
+          grandchildNodes: [
+            'professional school'
+          ]
+         },
+         'college planning',
+         'undergraduate education'
+       ]
+     }, 
+     {
+       title: 'early childhood education', 
+       subChildNodes: []
+     }, 
+     {
+       title: 'educational assessment',
+       subChildNodes: [
+         'standardized testing'
+       ]
+     }, 
+     {
+       title: 'homeschooling', 
+       subChildNodes: []
+     }, 
+     {
+       title: 'homework and study', 
+       subChildNodes: []
+     }, 
+     {
+       title: 'language and learning',
+       subChildNodes: []
+     },
+     {
+       title: 'online education', 
+       subChildNodes: []
+     },
+     {
+       title: 'primary education',
+       subChildNodes: []
+     }
+    ]
+  }
 ]
 
 export default tree; 

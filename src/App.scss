@@ -37,6 +37,26 @@ body {
   display: none !important; 
 } 
 
+// .gds-tree__link--expanded:before {
+//   content: ''; 
+//   position: absolute;
+//   margin-top: 8px; 
+//   margin-left: 100px;
+//   border-top: 0.33rem solid transparent;
+//   border-bottom: 0.33rem solid transparent;
+//   border-left: 0.33rem solid #000;
+// }
+
+// .gds-tree__link--expanded:after {
+//   content: ''; 
+//   position: absolute;
+//   margin-top: 8px; 
+//   margin-left: 8px;
+//   border-right: 0.33rem solid transparent;
+//   border-left: 0.33rem solid transparent;
+//   border-top: 0.33rem solid #000;
+// }
+
 footer {
   margin-top: auto; 
 }

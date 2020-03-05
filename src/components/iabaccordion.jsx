@@ -16,7 +16,7 @@ class IabTree extends Component {
 
     return (
     <Fragment>
-      <div className="gds-layout__column--lg-8 gds-layout__column--md-12 -p-h-6 -m-b-3">
+      <div className="gds-layout__column--lg-12 gds-layout__column--md-12 -p-t-5">
         <div className="gds-accordion" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
             <li className={this.state.toggle ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
@@ -298,25 +298,6 @@ class IabTree extends Component {
               </li>
             </ul>
           </div>
-
-          <nav className="-text-center">
-            <ul className="gds-pagination gds-pagination--sm gds-pagination--mobile-arrows gds-pagination--fixed" data-paganimate="">
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed"> 
-                  <a href="/" className="gds-pagination__page-link gds-pagination__page-link--fixed" aria-label="Previous" data-page-change="prev"> 
-                    <span className="-vis-hidden" aria-hidden="true">«</span> <span className="-sr-only">Previous</span> 
-                  </a> 
-                </li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed gds-pagination__page-item--active" data-paginate-active="true"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">1</a></li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">2</a></li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a    href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">3</a></li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">4</a></li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a   href="/"data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">5</a></li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a  href="/" data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">6</a></li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed" data-paginate-active="false"><a   href="/"data-paginate-link="" className="gds-pagination__page-link gds-pagination__page-link--fixed">7</a></li>
-                <li className="gds-pagination__page-item gds-pagination__page-item--fixed"><a   href="/" className="gds-pagination__page-link gds-pagination__page-link--fixed" aria-label="Next" data-page-change="next"><span className="-vis-hidden" aria-hidden="true">»</span> <span className="-sr-only">Next</span></a></li>
-                <span className="gds-pagination__page-indicator"></span>
-            </ul>
-          </nav>
           </div>
         </Fragment>
     );

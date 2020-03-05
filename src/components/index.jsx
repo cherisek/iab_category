@@ -22,7 +22,7 @@ class Index  extends Component {
         <div className="gds-persist-nav -gds-persist-nav--page-header">
           <SideNav />
           <section className="gds-persist-nav__main-content -overflow-y-hidden">
-            <div className="gds-layout__container gds-layout__container--full-width -p-h-4">
+            <div className="gds-layout__container gds-layout__container--full-width">
               <div className="gds-layout__row">
                 <Switch>
                   <Route path="/index/iab">
@@ -35,10 +35,10 @@ class Index  extends Component {
                     <Events />
                   </Route>
                 </Switch>
-                <TreeNav /> 
               </div>
             </div>
           </section>
+          <TreeNav /> 
         </div>
         <Footer />
       </Router>
