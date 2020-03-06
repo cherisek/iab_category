@@ -416,6 +416,141 @@ const tree = [{
       }, 
       {
         title: 'remodeling and construction'
+      }, 
+      {
+        title: 'smart home'
+      }, 
+      {
+        title: 'home appliances'
+      }, 
+      {
+        title: 'home entertaining'
+      }, 
+      {
+        title: 'home improvement'
+      }, 
+      {
+        title: 'home security'
+      }, 
+      {
+        title: 'indoor environmental quality'
+      }, 
+      {
+        title: 'interior decorating'
+      }, 
+      {
+        title: 'landscaping'
+      }, 
+      {
+        title: 'outdoor decorating'
+      }
+    ]
+  }, 
+  {
+    category: 'medical health', 
+    childNodes: [
+      {
+        title: 'diseases and conditions'
+      }, 
+      {
+        title: 'medical tests'
+      },
+      {
+        title: 'pharmaceutical drugs'
+      }, 
+      {
+        title: 'surgery'
+      },
+      {
+        title: 'vaccines'
+      },
+      {
+        title: 'cosmetic medical services'
+      }
+    ]
+  }, 
+  {
+    category: 'movies', 
+    childNodes: [
+      {
+        title: 'action and adventure movies'
+      }, 
+      {
+        title: 'romance movies'
+      }, 
+      {
+        title: 'science fiction movies'
+      },
+      {
+        title: 'indie and arthouse movies'
+      }, 
+      {
+        title: 'animation movies'
+      },
+      {
+        title: 'comedy movies'
+      },
+      {
+        title: 'crime and mystery movies'
+      },
+      {
+        title: 'documentary movies'
+      },
+      {
+        title: 'drama movies'
+      },
+      {
+        title: 'family and children movies'
+      },
+      {
+        title: 'fantasy movies'
+      },
+      {
+        title: 'horror movies'
+      },
+      {
+        title: 'world movies'
+      }
+    ]
+  }, 
+  {
+    category: 'music and audio', 
+    childNodes: [
+      {
+        title: 'adult contemporary music'
+      },
+      {
+        title: 'adult album alternative' 
+      }, 
+      {
+        title: 'alternative music'
+      }, 
+      {
+        title: 'children\'s music'
+      }, 
+      {
+        title: 'classic hits'
+      },
+      {
+        title: 'classical music'
+      },
+      {
+        title: 'college radio'
+      },
+      {
+        title: 'comedy (music and audio)'
+      }, 
+      {
+        title: 'contemporary hits, pop, top 40'
+      }, 
+      {
+        title: 'country music'
+      },
+      {
+        title: 'dance and electronic'
+      }, 
+      {
+        title: 'world and international music'
       }
     ]
   }
