@@ -3,95 +3,52 @@ const tree = [{
   category: 'automotive',
   childNodes: [
     {
-      title: 'auto body styles', 
-      subChildNodes: [
-        'commercial trucks', 
-        'sedan', 
-        'station wagon', 
-        'suv', 
-        'van',
-        'convertible', 
-        'coupe', 
-        'crossover', 
-        'hatchback', 
-        'microcar', 
-        'minivan', 
-        'off-road vehicles', 
-        'pickup trucks'
-      ],   
+      title: 'auto body styles' 
     },
     {
-      title: 'auto type', 
-      subChildNodes: [
-        'budget cars', 
-        'certified pre-owned cars', 
-        'classic cars', 
-        'concept cars', 
-        'driverless cars',
-        'green vehicles', 
-        'luxury cars', 
-        'performance cars'
-      ],   
+      title: 'auto type' 
     }, 
     {
-      title: 'car culture',  
-      subChildNodes: [],   
+      title: 'car culture'  
     }, 
     {
-      title: 'dash cam videos',
-      subChildNodes: [],    
+      title: 'dash cam videos'  
     }, 
     {
-      title: 'motorcycles',
-      subChildNodes: [],    
+      title: 'motorcycles'  
     }, 
     {
-      title: 'road-side assistance',
-      subChildNodes: [],    
+      title: 'road-side assistance'  
     }, 
     {
-      title: 'scooters',
-      subChildNodes: [],    
+      title: 'scooters'
     },
     {
-      title: 'auto buying and selling',
-      subChildNodes: [],    
+      title: 'auto buying and selling'  
     },
     {
-      title: 'auto insurance',
-      subChildNodes: [],    
+      title: 'auto insurance'  
     },
     {
-      title: 'auto parts',
-      subChildNodes: [],    
+      title: 'auto parts' 
     },
     {
-      title: 'auto recalls',
-      subChildNodes: [],    
+      title: 'auto recalls'  
     },
     {
-      title: 'auto repair',
-      subChildNodes: [],    
+      title: 'auto repair'  
     },
     {
-      title: 'auto safety',
-      subChildNodes: [],    
+      title: 'auto safety'  
     },
     {
-      title: 'auto shows',
-      subChildNodes: [],    
+      title: 'auto shows' 
     },
     {
-      title: 'auto technology',
-      subChildNodes: [
-        'auto infotainment technologies',
-        'auto naviagtion systems',
-        'auto safety technologies'
-      ],    
+      title: 'auto technology'
     },
     {
-      title: 'auto rentals',
-      subChildNodes: [],    
+      title: 'auto rentals' 
     }, 
   ], 
 },
@@ -99,40 +56,31 @@ const tree = [{
   category: 'books and literature',
   childNodes: [
     {
-      title: 'art and photography books',
-      subChildNodes: []
+      title: 'art and photography books'
     },
     {
-      title: 'biographies', 
-      subChildNodes: []
+      title: 'biographies'
     },
     {
-      title: 'children\'s literature', 
-      subChildNodes: []
+      title: 'children\'s literature'
     },
     {
-      title: 'comics and graphic novels', 
-      subChildNodes: []
+      title: 'comics and graphic novels'
     },
     {
-      title: 'cookbooks', 
-      subChildNodes: []
+      title: 'cookbooks'
     },
     {
-      title: 'fiction', 
-      subChildNodes: []
+      title: 'fiction'
     },
     {
-      title: 'poetry', 
-      subChildNodes: []
+      title: 'poetry'
     },
     {
-      title: 'travel books', 
-      subChildNodes: []
+      title: 'travel books'
     },
     {
-      title: 'young adult literature', 
-      subChildNodes: []
+      title: 'young adult literature'
     }
   ]
  },
@@ -140,125 +88,33 @@ const tree = [{
   category: 'business and finance',
   childNodes: [
     {
-      title: 'business',
-      subChildNodes: [
-        'business accounting and finance',
-        'human resources',
-        'large business', 
-        'logistics',
-        'marketing and advertising',
-        'sales',
-        'small and medium-sized business',
-        'startups',
-        'business administration',
-        {
-          title: 'business banking and finance',
-          grandchildNodes: [
-              'angel investment',
-              'bankruptcy',
-              'business loans',
-              'debt factoring and invoice discounting',
-              'mergers and acquisitions',
-              'private equity',
-              'sale and lease back',
-              'venture capital'
-          ]
-       }, 
-       'business I.T.', 
-       'business operations',
-       {
-         title: 'consumer issues', 
-         grandchildNodes: [
-           'recalls'
-         ]
-       }, 
-       'executive leadership and management', 
-       'government business',
-       'green solutions',
-       'business utilities'
-      ], 
+      title: 'business'
     },
     {
-      title: 'economy',
-      subChildNodes: [
-        'commodities',
-        'currencies',
-        'financial crisis',
-        'financial reform',
-        'financial regulation',
-        'gasoline prices',
-        'housing market',
-        'interest rates',
-        'job market'
-      ]
-    }, 
-    {
-      title: 'industries', 
-      subChildNodes: [
-        'advertising industry',
-        'education industry',
-        'entertainment industry',
-        'environmental services industry',
-        'financial industry',
-        'food industry',
-        'healthcare industry',
-        'hospitality industry',
-        'information services industry',
-        'legal services industry',
-        'agriculture',
-        'management consulting industry',
-        'manufacturing industry',
-        'mechanical and industrial engineering industry',
-        'media industry',
-        'metals industry',
-        'non-profit organizations',
-        'pharmaceutical industry',
-        'power and energy industry',
-        'publishing industry',
-        'real estate industry',
-        'apparel industry', 
-        'retail industry',
-        'technology industry', 
-        'telecommunications industry',
-        'automotive industry',
-        'aviation industry',
-        'biotech and biomedical industry',
-        'civil engineering industry',
-        'construction industry',
-        'defense industry'
-      ]
+       title: 'economy'
     }
-  ] 
- }, 
+  ]
+ },
  {
   category: 'careers', 
   childNodes: [
     {
-      title: 'apprenticeships', 
-      subChildNodes: []
+      title: 'apprenticeships'
     }, 
     {
-      title: 'career advice',
-      subChildNodes: []
+      title: 'career advice'
     },
     {
-      title: 'career planning', 
-      subChildNodes: []
+      title: 'career planning'
     }, 
     {
-      title: 'job search',
-      subChildNodes: [
-        'job fairs', 
-        'resume writing and advice'
-      ]
-    }, 
+      title: 'job search'
+    },
     {
-      title: 'remote working',
-      subChildNodes: []
-    }, 
+      title: 'remote working'
+    },
     {
-      title: 'vocational training', 
-      subChildNodes: []
+      title: 'vocational training'
     }
   ]
  }, 
@@ -266,64 +122,301 @@ const tree = [{
    category: 'education', 
    childNodes: [
      {
-      title: 'adult education', 
-      subChildNodes: []
+      title: 'adult education'
      }, 
      {
-       title: 'private school',
-       subChildNodes: []
+       title: 'private school'
      }, 
      {
-       title: 'secondary education',
-       subChildNodes: []
+       title: 'secondary education'
      }, 
      {
-       title: 'special education',
-       subChildNodes: []
+       title: 'special education'
      }, 
      {
-       title: 'college education', 
-       subChildNodes: [
-         {
-          title: 'postgraduate education', 
-          grandchildNodes: [
-            'professional school'
-          ]
-         },
-         'college planning',
-         'undergraduate education'
-       ]
+       title: 'college education'
      }, 
      {
-       title: 'early childhood education', 
-       subChildNodes: []
+       title: 'early childhood education'
      }, 
      {
-       title: 'educational assessment',
-       subChildNodes: [
-         'standardized testing'
-       ]
+       title: 'educational assessment'
      }, 
      {
-       title: 'homeschooling', 
-       subChildNodes: []
+       title: 'homeschooling'
      }, 
      {
-       title: 'homework and study', 
-       subChildNodes: []
+       title: 'homework and study'
      }, 
      {
-       title: 'language and learning',
-       subChildNodes: []
+       title: 'language and learning'
      },
      {
-       title: 'online education', 
-       subChildNodes: []
+       title: 'online education'
      },
      {
-       title: 'primary education',
-       subChildNodes: []
+       title: 'primary education'
      }
+    ]
+  }, 
+  {
+    category: 'events and attractions', 
+    childNodes: [
+      {
+        title: 'amusement and theme parks' 
+      }, 
+      {
+        title: 'fashion events'
+      }, 
+      {
+        title: 'historic site and landmarks tours'
+      },
+      {
+        title: 'malls and shopping centers'
+      },
+      {
+        title: 'museums and galleries'
+      },
+      {
+        title: 'musicals'
+      },
+      {
+        title: 'national and civic holidays'
+      },
+      {
+        title: 'nightclubs'
+      },
+      {
+        title: 'outdoor activities'
+      },
+      {
+      title: 'parks and nature'
+      },
+      {
+      title: 'award shows'
+      },
+      {
+        title: 'personal celebration and life events'
+      }, 
+      {
+        title: 'political events'
+      },
+      {
+        title: 'religious events'
+      },
+      {
+        title: 'sporting events'
+      },
+      {
+      title: 'theater venues and events'
+      },
+      {
+      title: 'zoos and aquariums'
+      },
+      {
+        title: 'bars and restaurants'
+      },
+      {
+        title: 'business expos and conferences'
+      },
+      {
+      title: 'casinos and gambling'
+      },
+      {
+        title: 'cinemas and events'
+      },
+      {
+        title: 'comedy events'
+      },
+      {
+      title: 'concerts and music events'
+      },
+      {
+        title: 'fan conventions'
+      }
+   ]
+  }, 
+  {
+    category: 'family and relationships', 
+    childNodes: [
+      {
+        title: 'bereavement' 
+      }, 
+      {
+        title: 'dating'
+      }, 
+      {
+        title: 'divorce'
+      },
+      {
+        title: 'eldercare'
+      }, 
+      {
+        title: 'parenting'
+      }, 
+      {
+        title: 'single life'
+      }
+    ]
+  }, 
+  {
+    category: 'fine art', 
+    childNodes: [
+      {
+        title: 'costume'
+      }, 
+      {
+        title: 'dance'
+      }, 
+      {
+        title: 'design'
+      }, 
+      {
+        title: 'digital arts'
+      },
+      {
+        title: 'fine art photography'
+      }, 
+      {
+        title: 'modern art'
+      },
+      {
+        title: 'opera'
+      }, 
+      {
+        title: 'theater'
+      }
+    ]
+  }, 
+  {
+    category: 'food and drink', 
+    childNodes: [
+      {
+        title: 'alcoholic beverages'
+      },
+      {
+        title: 'vegan diets'
+      },
+      {
+        title: 'vegetarian diets'
+      }, 
+      {
+        title: 'world cuisines'
+      },
+      {
+        title: 'barbecues and grilling'
+      },
+      {
+        title: 'cooking'
+      },
+      {
+        title: 'desserts and baking'
+      },
+      {
+        title: 'dining out'
+      },
+      {
+        title: 'food allergies'
+      },
+      {
+        title: 'food movements'
+      },
+      {
+        title: 'healthy cooking and eating'
+      },
+      {
+        title: 'non-alcoholic beverages'
+      }
+    ]
+  }, 
+  {
+    category: 'healthy living', 
+    childNodes: [
+      {
+        title: 'children\'s health'
+      }, 
+      {
+        title: 'fitness and exercise'
+      },
+      {
+        title: 'men\'s health'
+      },
+      {
+        title: 'senior health'
+      },
+      {
+        title: 'weight loss'
+      },
+      {
+        title: 'wellness'
+      },
+      {
+        title: 'women\'s health'
+      }
+    ]
+  }, 
+  {
+    category: 'hobbies and interest', 
+    childNodes: [
+      {
+        title: 'antiquing and antiques'
+      },
+      {
+        title: 'magic and illusion'
+      },
+      {
+        title: 'model toys'
+      }, 
+      {
+        title: 'musical instruments'
+      },
+      {
+        title: 'paranormal phenomena'
+      },
+      {
+        title: 'radio control'
+      },
+      {
+        title: 'sci-fi and fantasy'
+      }, 
+      {
+        title: 'workshops and classes'
+      }, 
+      {
+        title: 'arts and crafts'
+      }, 
+      {
+        title: 'beekeeping'
+      }, 
+      {
+        title: 'birdwatching'
+      }, 
+      {
+        title: 'cigars'
+      }, 
+      {
+        title: 'collecting'
+      },
+      {
+        title: 'content production'
+      },
+      {
+        title: 'games and puzzles'
+      },
+      {
+        title: 'genealogy and ancestry'
+      }
+    ]
+  }, 
+  {
+    category: 'home and garden', 
+    childNodes: [
+      {
+        title: 'gardening'
+      }, 
+      {
+        title: 'remodeling and construction'
+      }
     ]
   }
 ]

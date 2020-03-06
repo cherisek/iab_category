@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { withRouter } from "react-router-dom"; 
-import logo from "../images/new-logo.svg";
+import logo from "../images/new-logo-v2.svg";
 
 class Header extends React.Component {
   constructor(props) {
@@ -14,56 +14,54 @@ class Header extends React.Component {
 
   render() {
     return (
-        <Fragment>
-          <header className="gds-page-header -m-b-6 -color-bg-lt-3">
-            <div className="gds-layout-container -p-v-1">
-              <img className="logo -m-t-6" src={logo} alt="gumgum logo"/> 
-              <div className="gds-search gds-search--shown -pos-rel -color-bg-none" style={{'backgroundColor': 'transparent'}}> 
-                <div className="gds-search__input-holder -m-r-3 -m-t-0">
-                  <div className="gds-form-group gds-search__form-group" style={{'boxShadow': 'none'}}>
-                    <input className="gds-form-group__text-input" type="text" placeholder="search for categories" data-gds-search-input="0" />
-                    <i className="gds-form-group__text-input-icon btl bt-search"></i>
-                  </div>
+      <Fragment>
+        <div className="-color-bg-lt-3 -color-bd-lt-3">
+          <header className="-m-b-6 -p-v-4-xs -p-v-6-md">
+            <img className="logo -m-b-4" src={logo} alt="gumgum logo"/> 
+              <div className="gds-form-group -m-a-4">
+                <div className="gds-form-group__text-input--button-cap">
+                  <input className="gds-form-group__text-input" type="text" placeholder="search for categories" data-gds-search-input="0" />
+                  <i className="gds-form-group__text-input-icon btl bt-search"></i>
                 </div>
-                <button className="gds-button gds-button--xs gds-button--primary" onClick={this.handleViewAll} >View All</button>
               </div>
-            </div>      
+              <button className="gds-button gds-button--sm gds-button--primary -flex -m-b-4" onClick={this.handleViewAll} style={{'margin': 'auto'}}>View All</button>
           </header>
-          <div className="gds-layout__container--home -m-b-6">
-            <div className="gds-layout__row">
-                <div className="gds-layout__column--md-4 -p-h-4 -m-b-4">
-                  <h1 className="gds-text--header-xs gds-text--bold -text-center -m-b-3">About Iab</h1>
-                    <p className="gds-text--body-md">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <div className="gds-layout__column--md-4 -p-h-4 -m-b-4">
-                  <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Events</h1>
-                  <p className="gds-text--body-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-                <div className="gds-layout__column--md-4 -p-h-4 -m-b-4">
-                  <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Threats</h1>
-                  <p className="gds-text--body-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-             </div>
-           </div>
-        </Fragment>
+        </div> 
+        <div className="gds-layout__container">
+          <div className="gds-layout__row">
+            <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -p-h-4 -m-b-4">
+              <h1 className="gds-text--header-xs gds-text--bold -text-center -m-b-3">About Iab</h1>
+              <p className="gds-text--body-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -p-h-4 -m-b-4">
+              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Events</h1>
+                <p className="gds-text--body-md">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                  occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -m-b-4 -p-h-4">
+              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Threats</h1>
+              <p className="gds-text--body-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Fragment>
     )
   }
 }

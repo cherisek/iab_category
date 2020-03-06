@@ -16,7 +16,7 @@ class DesktopNav extends Component {
 
     return (
       <Fragment>
-        <nav className="gds-persist-nav__sidebar">
+        <nav className="gds-persist-nav__sidebar -color-bg-white">
           <a href="/">
             <img className="logo-index -p-h-4 -m-b-3" src={logo} alt="gumgum logo"/>
           </a>
@@ -30,7 +30,6 @@ class DesktopNav extends Component {
             events
           </NavLink>
           </nav>
-          {/* <TreeNav /> */}
       </Fragment>  
     );
   }

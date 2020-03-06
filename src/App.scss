@@ -1,61 +1,28 @@
 @import "~gg-design-system/scss/themes/theme-blue";
 @import "~gg-design-system/scss/main";
  
-html {
+html, 
+body {
   height: 100%; 
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.gds-page-header {
-  height: 350px; 
-  position: relative;
-  width: 100%;
-} 
-
-.gds-layout-container--home{
-  margin-left: auto; 
+header {
+  max-width: 1200px;
+  margin-left: auto;
   margin-right: auto; 
-  width: 40%;  
-  min-height: 100%; 
+  height: 50vh; 
+  padding-top: 10rem; 
+  padding-bottom: 10rem;
 }
 
 .logo {
   height: 80px; 
-  width: 100%; 
+  width: 100%;
 }  
 
 .logo-index {
   height: 40px;
 }
-
-.gds-persist-nav__link:before {
-  display: none !important; 
-} 
-
-// .gds-tree__link--expanded:before {
-//   content: ''; 
-//   position: absolute;
-//   margin-top: 8px; 
-//   margin-left: 100px;
-//   border-top: 0.33rem solid transparent;
-//   border-bottom: 0.33rem solid transparent;
-//   border-left: 0.33rem solid #000;
-// }
-
-// .gds-tree__link--expanded:after {
-//   content: ''; 
-//   position: absolute;
-//   margin-top: 8px; 
-//   margin-left: 8px;
-//   border-right: 0.33rem solid transparent;
-//   border-left: 0.33rem solid transparent;
-//   border-top: 0.33rem solid #000;
-// }
 
 footer {
   margin-top: auto; 
