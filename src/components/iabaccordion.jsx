@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 
-class IabTree extends Component {
+class IabAccordion extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -16,7 +16,7 @@ class IabTree extends Component {
 
     return (
     <Fragment>
-      <div className="gds-layout__column--lg-12 gds-layout__column--md-12 -p-t-5">
+      <div className="gds-layout__column--lg-10 gds-layout__column--md-12 -p-v-5 -m-h-3-md -m-h-4-lg">
         <div className="gds-accordion" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
             <li className={this.state.toggle ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
@@ -109,6 +109,7 @@ class IabTree extends Component {
                       <hr className="-color-bd-lt-3 -m-v-3" />
                 </li>
               </ul>
+              <ul className="gds-accordion__item">
               <li className="gds-accordion__item gds-accordion__item--active -color-bg-white" data-gds-accordion-item="">
                 <h4 className="gds-accordion__item-title gds-text--body-sm" data-gds-accordion-title="">Auto Body Styles</h4>
                 <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>
@@ -124,12 +125,13 @@ class IabTree extends Component {
                         <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>
                         <ul className="gds-accordion__child-items">
                         <li className="gds-accordion__child-item">
-                            <h4 className="gds-accordion__child-item-title">Ricardo Vega<div class="gds-badge gds-badge--dark">32</div></h4>
+                            <h4 className="gds-accordion__child-item-title">Ricardo Vega<div className="gds-badge gds-badge--dark">32</div></h4>
                         </li>
                       </ul>
                     </li>
                 </ul>
               </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -309,4 +311,4 @@ class IabTree extends Component {
   }
 } 
 
-export default IabTree; 
+export default IabAccordion; 

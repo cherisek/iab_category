@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
-import tree from "../constants/tree";
+import iabTree from "../constants/IabTree";
 
-class TreeNav extends Component {
+class IabTreeNav extends Component {
   constructor(props) {
     super(props); 
       this.state = {
@@ -45,17 +45,17 @@ class TreeNav extends Component {
           )
           : 
           (
-      <div className="gds-layout__column--lg-2 gds-layout__column--md-12">
-        <div className="gds-card -pos-fix -overflow-x-scroll" style={{'height': '100%', 'width': '15%', 'right': '0'}}> 
+      <div className="gds-layout__column--lg-2 -m-h-3">
+        <div className="gds-card -pos-fix -overflow-x-scroll" style={{'height': '100%', 'right': '0', 'width': '20rem'}}> 
           <div className="gds-card__block">
-            {tree.map((item, index) => {
+            {iabTree.map((item, index) => {
               return (
-                <h6 className="gds-text--header-md -m-b-3 -m-t-4 -p-h-3 -text-tr-up">
+                <h6 className="gds-text--header-md -m-v-3 -p-h-3 -text-tr-up">
                   {item.pageTitle}            
                 </h6>
               )
             })}
-              <div className="gds-form-group -m-h-3 -m-b-3">    
+              <div className="gds-form-group -m-a-3">    
                 <div className="gds-search-select__control" data-gds-search-select="single">
                   <input className="gds-form-group__text-input" type="text" placeholder="Search"/> 
                   <i className="gds-form-group__text-input-icon btl bt-search"></i>
@@ -64,7 +64,7 @@ class TreeNav extends Component {
 
               <ul className="-p-h-4">
                
-                  {tree.map((item, index) => {
+                  {iabTree.map((item, index) => {
                     return (
                       <li>
                       <span className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" data-category={item.category} onClick={this.toggleCategory}>
@@ -97,4 +97,4 @@ class TreeNav extends Component {
   }
 } 
 
-export default TreeNav; 
+export default IabTreeNav; 
