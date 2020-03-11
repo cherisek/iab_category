@@ -22,7 +22,7 @@ class Index  extends Component {
       <Router>
         <div className="gds-persist-nav -gds-persist-nav--page-header">
           <SideNav />
-          <section className="gds-persist-nav__main-content -overflow-y-hidden -m-r-6">
+          <section className="gds-persist-nav__main-content">
             <div className="gds-layout__container gds-layout__container--full-width">
               <div className="gds-layout__row">
                 <Switch>

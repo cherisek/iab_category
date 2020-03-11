@@ -1,9 +1,65 @@
 @import "~gg-design-system/scss/themes/theme-blue";
 @import "~gg-design-system/scss/main";
- 
+
+:root {
+    /* primary color */
+    --primary: #43ABE6;
+    --primary-dark-1: #1E96D9;
+    --primary-dark-2: #1878AD;
+    --primary-dark-3: #125A82;
+    --primary-dark-4: #0C3C57;
+    --primary-light-1: #69BCEA;
+    --primary-light-2: #8ECDEF;
+    --primary-light-3: #B4DDF5;
+    --primary-light-4: #D9EEFA;
+
+    --success: #6FCF97;
+
+    /* grayscale */
+    --gray: #6E797E;
+    --dark-1: #535C5F;
+    --dark-2: #3B4144;
+    --dark-3: #242729;
+    --dark-4: #0C0D0E;
+    --dark-5: #000;
+    --light-1: #848F94;
+    --light-2: #A0A8AC;
+    --light-3: #BBC1C4;
+    --light-4: #D6DADB;
+    --light-5: #F0F4F4;
+    --light-6: #F9FBFC;
+    --white: #fff;
+
+    --br: 6px;
+
+    --s-0: 0rem;
+    --s-1: 0.125rem;
+    --s-2: 0.25rem;
+    --s-3: 0.5rem;
+    --s-4: 0.75rem;
+    --s-5: 1rem;
+    --s-6: 1.5rem;
+    --s-7: 2rem;
+    --s-8: 3rem;
+    --s-9: 5rem;
+
+    --font-md: 1rem;
+    --font-sm: 0.8rem;
+    --font-xs: 0.64rem;
+
+    --motion: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+}
+
 html, 
 body {
   height: 100%; 
+}
+
+body {
+    background-color: var(--light-5);
+    font-family: poppins,sans-serif;
+    font-weight: 400;
+    color: var(--dark-2);
 }
 
 header {
@@ -29,3 +85,182 @@ footer {
 }
 
 
+#root {
+    height: 100%;
+    overflow: hidden
+}
+
+.category-image {
+    width: 100%;
+    border-radius: 3px;
+}
+
+
+
+.gds-text--link {
+    color: var(--primary);
+}
+
+.gds-text--bold {
+    font-family: poppins, sans-serif;
+    font-weight: 600 !important;
+}
+
+
+.gds2-nav-bar {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 16rem;
+    background: white;
+    /*box-shadow: 2px 2px 3px rgba(0,0,0,0.05);*/
+    transition: var(--motion);
+
+}
+
+.gds-text--header-xs {
+    font-size: 1.25rem;
+}
+
+.gds2-nav-bar--collapse {
+    width: var(--s-9);
+}
+
+.gds2-nav-bar--collapse .gds2-nav-bar__label {
+    opacity: 0;
+    transition-delay: 0ms;
+}
+
+.gds2-nav-bar--collapse .gds2-nav-bar__link {
+    padding: var(--s-5) var(--s-6);
+}
+
+.gds2-nav-bar--collapse .gds2-nav-bar__branding {
+    padding: var(--s-5) var(--s-5);
+}
+
+.gds2-nav-bar--collapse .gds2-nav-bar__logo {
+    background-image: url('./images/mark.png');
+
+}
+
+.gds2-nav-bar--collapse .gds2-nav-bar__toggle {
+    margin-left: var(--s-6); 
+}
+
+.gds2-nav-bar__controls {
+    padding: var(--s-7) 0;
+    z-index: 1;
+    text-align: center;
+}
+.gds2-nav-bar__toggle {
+    height: var(--s-7);
+    width: var(--s-7);
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid var(--light-4);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: var(--light-3);
+    margin-left: var(--s-8); 
+    transition: var(--motion);
+    cursor: pointer;
+}
+
+.gds2-nav-bar__toggle:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.gds2-nav-bar__label {
+    transition: var(--motion);
+    white-space: nowrap;
+    margin-left: var(--s-5);
+    vertical-align: middle;
+    transition-delay: 250ms;
+}
+
+.gds2-nav-bar__item {
+    font-size: 14px;
+    color: var(--light-2);
+    font-family: poppins,sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: var(--motion);
+}
+
+.gds2-nav-bar__item:before {
+    content: '';
+    background-color: var(--primary);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: var(--motion);
+}
+
+.gds2-nav-bar__item:hover:before {
+    width: 0.4rem;
+    background-color: var(--primary-light-2);
+}
+
+.gds2-nav-bar__item:hover {
+    color: var(--gray);
+    background-color: var(--light-6);
+}
+
+.gds2-nav-bar__link {
+    padding: var(--s-5) var(--s-8);
+    display: block;
+    transition: var(--motion);
+}
+
+.gds2-nav-bar__item--active {
+    color: var(--dark-2);
+    background-color: var(--light-6);
+}
+
+.gds2-nav-bar__item--active:before {
+    width: 0.4rem;
+}
+
+.gds2-nav-bar__icon {
+    font-size: 1.53rem;
+    transition: var(--motion);
+    vertical-align: middle;
+}
+
+.gds2-nav-bar__icon--sm {
+    font-size: 1.25rem;
+}
+
+
+.gds2-nav-bar__branding {
+    padding: var(--s-6) var(--s-7);
+    transition: var(--motion);
+    height: 112px;
+}
+
+.gds2-nav-bar__logo {
+    background-image: url('./images/new-logo.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 4rem;
+    transition: var(--motion);
+}
+
+.gds2-nav-bar__footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.gds-tree__sub-item > .gds-tree__link {
+    font-weight: 400;
+    font-size: var(--font-xs);
+}

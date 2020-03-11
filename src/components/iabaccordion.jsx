@@ -16,8 +16,11 @@ class IabAccordion extends Component {
 
     return (
     <Fragment>
-      <div className="gds-layout__column--lg-10 gds-layout__column--md-12 -p-v-5 -m-h-3-md -m-h-4-lg">
-        <div className="gds-accordion" data-gds-accordion=""> 
+        <div className="gds-layout__column--md-12 -m-t-4">
+            <h1 className="gds-text--header-md">IAB Categories</h1>    
+        </div> 
+      <div className="gds-layout__column--lg-12 gds-layout__column--md-12 -m-v-3">
+        <div className="gds-accordion gds-accordion--sm" data-gds-accordion=""> 
           <ul className="gds-accordion-list">
             <li className={this.state.toggle ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
               <h4 className="gds-accordion__item-title gds-accordion__item-title--sm" onClick={(e) => {this.toggleAccordion(e)}} data-gds-accordion-title="">
@@ -36,101 +39,88 @@ class IabAccordion extends Component {
                       occaecat cupidatat non proident, sunt in culpa qui officia 
                       deserunt mollit anim id est laborum.
                     </p>
-                    <hr className="-color-bd-lt-3 -m-v-3 -p-b-4" />
-                    <div className="gds-flex gds-flex--justify-between">
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                    <hr className="-color-bd-lt-3 -m-v-4" />
+                    <div className="gds-flex gds-flex--justify-stretch">
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                         <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                         <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div>                    
                     </div>
                     <hr className="-color-bd-lt-3 -m-v-3 -p-b-2" />
                     <h6 className="gds-text--body-md -m-b-2">Terms</h6> 
-                      <div className="gds-tag gds-text--body-sm">
-                          accordion-item                   
+                    <div className="-m-b-4">
+                          <div className="gds-tag gds-text--body-sm">
+                              accordion-item                   
+                          </div>
+                          <div className="gds-tag gds-text--body-sm">
+                              keyword                     
+                          </div>
+                          <div className="gds-tag gds-text--body-sm">
+                               longer keyword phrase                      
+                          </div>
+                          <div className="gds-tag gds-text--body-sm">
+                              keyword  keyword                  
+                          </div>
+                          <div className="gds-tag gds-text--body-sm">
+                              keyword phrase                      
+                          </div>
+                          <div className="gds-tag gds-text--body-sm">
+                              keyword keyword keyword                     
+                          </div>
+                          <div className="gds-tag gds-text--body-sm">
+                              keyword phrase                   
+                          </div>
+                          <div className="gds-tag gds-text--body-sm">
+                              keyword                     
+                          </div>
                       </div>
-                      <div className="gds-tag gds-text--body-sm">
-                          keyword                     
-                      </div>
-                      <div className="gds-tag gds-text--body-sm">
-                           longer keyword phrase                      
-                      </div>
-                      <div className="gds-tag gds-text--body-sm">
-                          keyword  keyword                  
-                      </div>
-                      <div className="gds-tag gds-text--body-sm">
-                          keyword phrase                      
-                      </div>
-                      <div className="gds-tag gds-text--body-sm">
-                          keyword keyword keyword                     
-                      </div>
-                      <div className="gds-tag gds-text--body-sm">
-                          keyword phrase                   
-                      </div>
-                      <div className="gds-tag gds-text--body-sm">
-                          keyword                     
-                      </div>
-                      <hr className="-color-bd-lt-3 -m-v-3" />
+                        <h6 className="gds-text--body-md -m-b-2">Subcategories</h6> 
+                      <div className='gds-accordion gds-accordion--white gds-accordion--sm'>
+                        <ul className="gds-accordion-list">
+                            <li className="gds-accordion__item gds-accordion__item--active" data-gds-accordion-item="">
+                                <h4 className="gds-accordion__item-title  gds-accordion__item-title--sm" data-gds-accordion-title="">Auto Body Styles</h4>
+                                <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>
+                                <ul className="gds-accordion__child-items">
+                                    <li className="gds-accordion__child-item gds-accordion__child-item--sm" data-gds-accordion-item="">
+                                      <h4 className="gds-accordion__child-item-title gds-accordion__item-title--sm -p-h-3 -p-v-2">Commercial Trucks</h4>
+                                    </li>
+                                    <li className="gds-accordion__child-item" data-gds-accordion-item="">
+                                      <h4 className="gds-accordion__child-item-title gds-accordion__item-title--sm -p-h-3 -p-v-2">Commercial Trucks</h4>
+                                    </li>
+                                    <li className="gds-accordion__child-item" data-gds-accordion-item="">
+                                        <h4 className="gds-accordion__child-item-title gds-accordion__item-title--sm -p-h-3 -p-v-2">Sedan</h4>
+                                        <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>
+                                        <ul className="gds-accordion__child-items">
+                                        <li className="gds-accordion__child-item">
+                                            <h4 className="gds-accordion__child-item-title">Ricardo Vega<div className="gds-badge gds-badge--dark">32</div></h4>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-              </ul>
-              <ul className="gds-accordion__item">
-              <li className="gds-accordion__item gds-accordion__item--active -color-bg-white" data-gds-accordion-item="">
-                <h4 className="gds-accordion__item-title gds-text--body-sm" data-gds-accordion-title="">Auto Body Styles</h4>
-                <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>
-                <ul className="gds-accordion__child-items -color-bg-white">
-                    <li className="gds-accordion__child-item" data-gds-accordion-item="">
-                      <h4 className="gds-accordion__child-item-title gds-text--body-sm">Commercial Trucks</h4>
-                    </li>
-                    <li className="gds-accordion__child-item" data-gds-accordion-item="">
-                      <h4 className="gds-accordion__child-item-title gds-text--body-sm">Commercial Trucks</h4>
-                    </li>
-                    <li className="gds-accordion__child-item" data-gds-accordion-item="">
-                        <h4 className="gds-accordion__child-item-title gds-text--body-sm">Sedan</h4>
-                        <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>
-                        <ul className="gds-accordion__child-items">
-                        <li className="gds-accordion__child-item">
-                            <h4 className="gds-accordion__child-item-title">Ricardo Vega<div className="gds-badge gds-badge--dark">32</div></h4>
-                        </li>
-                      </ul>
-                    </li>
-                </ul>
-              </li>
               </ul>
             </li>
           </ul>
@@ -180,47 +170,30 @@ class IabAccordion extends Component {
                     deserunt mollit anim id est laborum.
                   </p>
                   <hr className="-color-bd-lt-3 -m-v-3 -p-b-4" />
-                    <div className="gds-flex gds-flex--justify-between">
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                    <div className="gds-flex gds-flex--justify-stretch">
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                         <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                         <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 
-                      <div className="gds-flex__item gds-flex__item--grow-0 -m-b-3">
-                        <div className="gds-flex-item">
-                          <img src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
-                        </div>
+                      <div className="gds-flex__item -m-a-2">
+                          <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div>                    
                     </div>
                     <hr className="-color-bd-lt-3 -m-v-3" />

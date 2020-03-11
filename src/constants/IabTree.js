@@ -1,5 +1,5 @@
 const iabTree = [{
-  pageTitle: 'iab',
+  pageTitle: 'Category Browser',
   category: 'automotive',
   childNodes: [
     {
