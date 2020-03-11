@@ -1,6 +1,5 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
 import { withRouter } from "react-router-dom"; 
-import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
 
 class SideNav extends Component {

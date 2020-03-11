@@ -40,7 +40,7 @@ class IabAccordion extends Component {
                       deserunt mollit anim id est laborum.
                     </p>
                     <hr className="-color-bd-lt-3 -m-v-4" />
-                    <div className="gds-flex gds-flex--justify-stretch">
+                    <div className="gds-flex gds-flex--justify-start">
                       <div className="gds-flex__item -m-a-2">
                           <img className="category-image" src={'https://picsum.photos/id/1067/250/150'} alt="placeholder" />
                       </div> 

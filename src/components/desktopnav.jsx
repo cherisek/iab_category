@@ -55,7 +55,7 @@ class DesktopNav extends Component {
             </ul>
             <ul className="gds2-nav-bar__footer">
                 <li className="gds2-nav-bar__item">
-                    <a className="gds2-nav-bar__link">
+                    <a className="gds2-nav-bar__link" href="/">
                             <span className="gds-tooltip--right" data-tooltip="home"><i className="gds2-nav-bar__icon ds2-nav-bar__icon--sm fas fa-fw fa-home"></i></span>
                             <span className="gds2-nav-bar__label">Home</span>
                     </a>
