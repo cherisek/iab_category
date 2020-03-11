@@ -259,8 +259,19 @@ footer {
     width: 100%;
     bottom: 0px;
 }
+.gds-tree__link {
+    font-weight: 400;
+    font-size: var(--font-sm);
+}
 
 .gds-tree__sub-item > .gds-tree__link {
     font-weight: 400;
     font-size: var(--font-xs);
 }
+
+@media screen and (max-width: 768px) {
+    #tree {
+        display: none;
+    }
+}
+

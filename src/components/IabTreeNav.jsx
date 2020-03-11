@@ -6,11 +6,9 @@ class IabTreeNav extends Component {
     super(props); 
       this.state = {
         toggle: false, 
-        toggleArrow: false, 
-        width: window.innerWidth, 
+        toggleArrow: false,
         tree: [] 
       }; 
-    this.handleWindowSizeChange = this.handleWindowSizeChange.bind(this);
   }
 
   toggleCategory = ({ currentTarget }) => {
@@ -20,32 +18,11 @@ class IabTreeNav extends Component {
     nextSibling.style.display = nextSibling.style.display === 'block' || !nextSibling.style.display ? 'none' : 'block';
   } 
 
-  componentWillMount() {
-    window.addEventListener('resize', this.handleWindowSizeChange); 
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowSizeChange); 
-  }
-
-  handleWindowSizeChange() {
-    this.setState({ width: window.innerWidth });
-  }
-
   render() { 
-    const { width } = this.state; 
-    const isMobile = width <= 1000;  
 
     return (
       <Fragment> 
-        {
-          isMobile ?
-          (
-            "null"
-          )
-          : 
-          (
-      <div className=" -overflow-x-scroll" style={{'height': '100%', 'width': '20rem'}}>
+      <div id="tree" className=" -overflow-x-scroll" style={{'height': '100%', 'width': '19rem'}}>
         <div className="gds-card"> 
           <div className="gds-card__block">
             {iabTree.map((item, index) => {
@@ -90,8 +67,6 @@ class IabTreeNav extends Component {
           </div>
         </div>  
       </div>
-      )
-     }
     </Fragment>
     );
   }

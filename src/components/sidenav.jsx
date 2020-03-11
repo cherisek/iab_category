@@ -9,19 +9,6 @@ class SideNav extends Component {
     this.state = {
       sideNavOpen: true
     };  
-    this.handleWindowSizeChange = this.handleWindowSizeChange.bind(this);
-  }
-
-  componentWillMount() {
-    window.addEventListener('resize', this.handleWindowSizeChange); 
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowSizeChange); 
-  }
-
-  handleWindowSizeChange() {
-    this.setState({ width: window.innerWidth });
   }
 
   render() {

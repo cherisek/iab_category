@@ -16,7 +16,7 @@ class IabAccordion extends Component {
 
     return (
     <Fragment>
-        <div className="gds-layout__column--md-12 -m-t-4">
+        <div className="gds-layout__column--md-12 -m-t-3">
             <h1 className="gds-text--header-md">IAB Categories</h1>    
         </div> 
       <div className="gds-layout__column--lg-12 gds-layout__column--md-12 -m-v-3">
