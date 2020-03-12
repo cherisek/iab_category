@@ -1,104 +1,263 @@
 const eventsTree = [{
   pageTitle: 'events',
   category: 'awards',
-  childNodes: [
+  subcategories: [
     {
-      title: 'film and tv'
+      title: 'film and tv',
+      subcategories: [
+        'academy awards (oscars)',
+        'BET awards',
+        'critic\'s choice awards',
+        'daytime emmy awards',
+        'golden globes',
+        'MTV movie awards',
+        'NAACP awards',
+        'nicklodeon kids choice awards',
+        'people\'s choice awards',
+        'primetime emmy awards',
+        'SAG awards',
+        'teen choice awards'
+      ]
     },
     {
-      title: 'gaming'
+      title: 'gaming',
+      subcategories: [
+        'BAFTA video game awards'
+      ]
     },
     {
-      title: 'music'
+      title: 'music',
+      subcategories: [
+        'american music awards',
+        'billboard latin music awards',
+        'billboard music awards',
+        'CMT music awards',
+        'grammy awards',
+        'MTV video music awards',
+        'tony awards'
+      ]
     },
     {
-      title: 'sports'
+      title: 'sports',
+      subcategories: [
+        'ESPN ESPYS'
+      ]
     }
    ]
   },
   {
     category: 'business',
-    childNodes: [
+    subcategories: [
       {
-        title: 'trade shows'
+        title: 'trade shows',
+        subcategories: [
+          'CES'
+        ]
       }
     ]
   },
   {
     category: 'festivals and shows',
-    childNodes: [
+    subcategories: [
       {
-        title: 'fashion'
+        title: 'fashion',
+        subcategories: [
+          'LA fashion week',
+          'NY fashion week',
+          'victoria\'s secret fashion show'
+        ]
       },
       {
-        title: 'film and tv'
+        title: 'film and tv',
+        subcategories: [
+          'comic-con',
+          'sundance film festival',
+          'SXSW'
+        ]
       },
       {
-        title: 'music'
+        title: 'music',
+        subcategories: [
+          'austin city limits music festival',
+          'bonnaroo festival',
+          'coachella',
+          'electric daisy carnival',
+          'electric zoo festival',
+          'firefly',
+          'governor\'s ball',
+          'hardfest',
+          'lollapalooza',
+          'outside lands',
+          'sasquatch',
+          'stagecoach country music festival',
+          'tomorrowland',
+          'ultra music festival'
+        ]
       }
     ]
   },
   {
     category: 'seasonal',
-    childNodes: [
+    subcategories: [
       {
-        title: 'miscellaneous'
+        title: 'miscellaneous',
+        subcategories: [
+          'black friday',
+          'cinco de mayo',
+          'cyber monday',
+          'earth day',
+          'father\'s day',
+          'halloween',
+          'kwanzaa',
+          'mardi gras',
+          'mother\'s day',
+          'new year\'s eve',
+          'st. patrick\'s day',
+          'valentine\'s day'
+        ]
       },
       {
-        title: 'national holidays'
+        title: 'national holidays',
+        subcategories: [
+          'independence day',
+          'labor day',
+          'memorial day',
+          'thanksgiving'
+        ]
       },
       {
-        title: 'personal'
+        title: 'personal',
+        subcategories: [
+          'back to school',
+          'graduation',
+          'prom night',
+          'spring break',
+          'tax filing'
+        ]
       },
       {
-        title: 'religious holidays'
+        title: 'religious holidays',
+        subcategories: [
+          'christmas',
+          'easter',
+          'hanukkah'
+        ]
       }
     ]
   },
   {
     category: 'sports',
-    childNodes: [
+    subcategories: [
       {
-        title: 'american football'
+        title: 'american football', 
+        subcategories: [
+          'BCS national championship',
+          'rose bowl',
+          'sugar bowl',
+          'super bowl'
+        ]
       },
       {
-        title: 'baseball'
+        title: 'baseball',
+        subcategories: [
+          'college world series',
+          'little league world series',
+          'MLB all-star game',
+          'MLB world series'
+        ]
       }, 
       {
-        title: 'basketball'
+        title: 'basketball',
+        subcategories: [
+          'NBA all-star game',
+          'NBA finals',
+          'NBA playoffs',
+          'NCAA final four (men)',
+          'NCAA final four (women)',
+          'NCAA march madness'
+        ]
       }, 
       {
-        title: 'car racing'
+        title: 'car racing',
+        subcategories: [
+          'NASCAR daytona 500'
+        ]
       }, 
       {
-        title: 'cycling'
+        title: 'cycling',
+        subcategories: [
+          'tour de france'
+        ]
       }, 
       {
-        title: 'golf'
+        title: 'golf',
+        subcategories: [
+          'british open',
+          'LPGA championship',
+          'PGA ryder cup',
+          'the masters',
+          'the players championship',
+          'president cup',
+          'US open',
+          'US PGA Championship'
+        ]
       },
       {
-        title: 'horse racing'
+        title: 'horse racing',
+        subcategories: [
+          'kentucky derby'
+        ]
       },
       {
-        title: 'ice hockey'
+        title: 'ice hockey',
+        subcategories: [
+          'NCAA frozen four',
+          'stanley cup'
+        ]
       },
       {
-        title: 'marathon'
+        title: 'marathon',
+        subcategories: [
+          'boston marathon',
+        ]
       },
       {
-        title: 'olympics'
+        title: 'olympics',
+        subcategories: [
+          'summer olympics',
+          'winter olympics'
+        ]
       },
       {
-        title: 'sailing'
+        title: 'sailing',
+        subcategories: [
+          'america\'s cup'
+        ]
       },
       {
-        title: 'soccer'
+        title: 'soccer',
+        subcategories: [
+          'FA cup',
+          'world cup'
+        ]
       },
       {
-        title: 'tennis'
+        title: 'tennis',
+        subcategories: [
+          'australian open',
+          'french open',
+          'wimbledon',
+          'US open'
+        ]
       },
       {
-        title: 'x games'
+        title: 'x games',
+        subcategories: [
+          'summer x games',
+          'winter x games',
+          'x games asia',
+          'x games europe'
+        ]
       }
     ]
   }

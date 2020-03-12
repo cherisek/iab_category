@@ -73,11 +73,11 @@ class ThreatsTreeNav extends Component {
                       </span>
                 
                   <ul className="gds-tree__sub-nav">
-                      {item.childNodes.map((childNodes, index) => {
+                      {item.subcategories.map((subcategories, index) => {
                         return (
                           <li className="gds-tree__sub-item">
                             <span className="gds-tree__link gds-tree__link--primary -text-tr-cap" key={index}>
-                              {childNodes.title}
+                              {subcategories.title}
                             </span>
                           </li>
                         )

@@ -5,9 +5,9 @@ import ThreatsAccordion from "./ThreatsAccordion";
 import EventsAccordion from "./EventsAccordion";
 import SideNav from "./SideNav";
 import Footer from "./Footer";
-import IabTreeNav from "./IabTreeNav";
-import ThreatsTreeNav from "./ThreatsTreeNav";
-import EventsTreeNav from "./EventsTreeNav";
+import TreeNav from "./TreeNav";
+// import ThreatsTreeNav from "./ThreatsTreeNav";
+// import EventsTreeNav from "./EventsTreeNav";
 
 
 class Index  extends Component {
@@ -39,17 +39,7 @@ class Index  extends Component {
               </div>
             </div>
           </section>
-          <Switch>
-            <Route path="/index/iab">
-              <IabTreeNav />
-            </Route>
-            <Route path="/index/threats">
-              <ThreatsTreeNav />
-            </Route>
-            <Route path="/index/events">
-              <EventsTreeNav />
-            </Route>
-          </Switch>
+          <TreeNav />
         </div>
         <Footer />
       </Router>
