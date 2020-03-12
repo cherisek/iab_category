@@ -34,20 +34,20 @@ class DesktopNav extends Component {
                 <div onClick={this.toggleExpand} className="gds2-nav-bar__toggle"><i className='fas fa-fw fa-bars'></i></div>
             </div>
             <ul className="gds2-nav-bar__items">
-                <li className="gds2-nav-bar__item gds2-nav-bar__item--active">
-                     <NavLink className="gds2-nav-bar__link" to="/index/iab">
+                <li className="gds2-nav-bar__item">
+                     <NavLink className="gds2-nav-bar__link" activeClassName="gds2-nav-bar__item gds2-nav-bar__item--active" to="/index/iab">
                         <span className="gds-tooltip--right" data-tooltip="IAB Categories"><i className="gds2-nav-bar__icon fas fa-fw fa-sitemap"></i></span>
                         <span className="gds2-nav-bar__label">IAB Categories</span>
                     </NavLink>
                 </li>
                 <li className="gds2-nav-bar__item">
-                    <NavLink className="gds2-nav-bar__link" to="/index/threats">
+                    <NavLink className="gds2-nav-bar__link" activeClassName="gds2-nav-bar__item gds2-nav-bar__item--active" to="/index/threats">
                         <span className="gds-tooltip--right" data-tooltip="Threats"><i className="gds2-nav-bar__icon fas fa-fw fa-do-not-enter"></i></span>
                         <span className="gds2-nav-bar__label">Threats</span>
                     </NavLink>
                 </li>
                 <li className="gds2-nav-bar__item">
-                    <NavLink className="gds2-nav-bar__link" to="/index/events">
+                    <NavLink className="gds2-nav-bar__link" activeClassName="gds2-nav-bar__item gds2-nav-bar__item--active" to="/index/events">
                         <span className="gds-tooltip--right" data-tooltip="Events"><i className="gds2-nav-bar__icon fas fa-fw fa-calendar-alt"></i></span>
                         <span className="gds2-nav-bar__label">Events</span>
                     </NavLink>

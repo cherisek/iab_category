@@ -17,7 +17,7 @@ class Header extends React.Component {
     return (
       <Fragment>
         <div className="-color-bg-lt-3 -color-bd-lt-3" style={{'background-image': `url(${jumboImage})`, 'background-position': 'center center', 'background-size': 'cover'}}>
-          <header className="-m-b-6 -p-v-4-xs -p-v-6-md">
+          <header className="-m-b-6 -p-v-2-xs -p-v-4-md -p-v-3-lg -p-v-2-xl">
             <img className="logo -m-b-4" src={logo} alt="gumgum logo"/> 
               <div className="gds-form-group -m-a-4">
                 <div className="gds-form-group__text-input--button-cap">
