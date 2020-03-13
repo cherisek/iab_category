@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from "react";
-import iabData from "../constants/IabData";
 
 class IabAccordion extends Component {
   constructor(props) {
@@ -13,6 +12,24 @@ class IabAccordion extends Component {
     this.setState({ toggle: { ...this.state.toggle, [title]: !this.state.toggle[title] } })
   }
 
+  componentWillReceiveProps(newProps) {
+    const toggle = {}
+    console.log(newProps.active)
+    if (newProps.active.length === 1) {
+      newProps.active.forEach((each) => {
+        toggle[each] = true;
+      });
+    }
+    newProps.active.slice(1).forEach((each) => {
+      toggle[each] = true;
+    });
+    this.setState({ toggle }, () => {
+      setTimeout(() => {
+        this.refs[newProps.active[0]].scrollIntoView({block: 'end', behavior: 'smooth'});
+      }, 1000)
+    })
+  }
+
   render() {
     const { toggle } = this.state;
     return (
@@ -21,15 +38,15 @@ class IabAccordion extends Component {
           <h1 className="gds-text--header-md">IAB Categories</h1>
         </div>
         <div className="gds-layout__column--lg-12 gds-layout__column--md-12 -m-v-3">
-          <div className="gds-accordion gds-accordion--sm  gds-accordion--white" data-gds-accordion="">
+          <div className="gds-accordion gds-accordion--white" data-gds-accordion="">
             <ul className="gds-accordion-list">
-              {iabData.map((item, index) => {
+              {this.props.data.map((item, index) => {
                 return (
-                  <li className={this.state.toggle[item.title] ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
-                    <h4 className="gds-accordion__item-title gds-accordion__item-title--sm -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, item.title) }} data-gds-accordion-title="">
+                  <li  className={this.state.toggle[item.title] ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
+                    <h4 className="gds-accordion__item-title -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, item.title) }} data-gds-accordion-title="">
                       {item.title}
                     </h4>
-                    <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, item.title) }}></i>
+                    <i className="gds-accordion__item-icon -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, item.title) }}></i>
                     <ul className="gds-accordion__child-items">
                       <li className="gds-accordion__child-item -color-bg-white -p-a-4">
                         <>
@@ -49,32 +66,32 @@ class IabAccordion extends Component {
                               item.terms.map(eachTerm => <div className="gds-tag gds-text--body-sm">{eachTerm}</div>)
                             }
                           </div>
-                          <h6 className="gds-text--body-md -m-b-2">Subcategories</h6>
+                          { item.categories && <h6 className="gds-text--body-md -m-b-2">Subcategories</h6> }
                           <div className="gds-accordion gds-accordion--white gds-accordion--sm">
                             {item.categories && item.categories.map((category, index) => {
                               return (
-                                <ul className="gds-accordion-list">
+                               
                                   <li className={`gds-accordion__item ${toggle[category.title] ? 'gds-accordion__item--active' : ''}`} data-gds-accordion-item="">
-                                    <h4 className="gds-accordion__item-title  gds-accordion__item-title--sm -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, category.title) }} data-gds-accordion-title="">{category.title}</h4>
-                                    {category.subcategories && <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer"></i>}
+                                    <h4 ref={category.title} className="gds-accordion__item-title  gds-accordion__item-title--sm -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, category.title) }} data-gds-accordion-title="">{category.title}</h4>
+                                    {category.subcategories && <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, category.title) }}></i>}
                                     <ul className="gds-accordion__child-items">
                                       {
                                         category.subcategories && category.subcategories.map(eachSub => {
                                           return (
                                             <li className={`gds-accordion__item ${toggle[eachSub.title] ? 'gds-accordion__item--active' : ''}`} data-gds-accordion-item="">
-                                              <h4 className="gds-accordion__child-item-title gds-accordion__item-title--sm -text-tr-cap -p-h-3 -p-v-2" onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}>
+                                              <h4 ref={typeof eachSub === 'string' ? eachSub : eachSub.title} className="gds-accordion__child-item-title gds-accordion__item-title--sm -text-tr-cap -p-h-3 -p-v-2" onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}>
                                                 {typeof eachSub === 'string' ? eachSub : eachSub.title}
                                               </h4>
                                               {
                                                 typeof eachSub !== 'string' &&
                                                 <>
-                                                  <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, eachSub.title)}}></i>
-                                                  <ul className="gds-accordion__child-items">
+                                                  <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}></i>
+                                                  <ul className="gds-accordion__child-items gds-accordion--sm">
                                                     {
                                                       eachSub.grandsubcategories && eachSub.grandsubcategories.map(eachGrand => {
                                                         return (
-                                                          <li className="gds-accordion__child-item">
-                                                            <h4 className="gds-accordion__child-item-title">{eachGrand}</h4>
+                                                          <li className="gds-accordion__child-item" ref={eachGrand}>
+                                                            <h4 className="gds-accordion__child-item-title gds-accordion__child-item-title--sm -text-tr-cap">{eachGrand}</h4>
                                                           </li>
                                                         )
                                                       })
@@ -90,7 +107,7 @@ class IabAccordion extends Component {
 
                                     </ul>
                                   </li>
-                                </ul>
+                               
                               )
                             })}
                           </div>

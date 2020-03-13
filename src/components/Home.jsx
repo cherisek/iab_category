@@ -16,18 +16,18 @@ class Header extends React.Component {
   render() {
     return (
       <Fragment>
-        <div className="-color-bg-lt-3 -color-bd-lt-3" style={{'background-image': `url(${jumboImage})`, 'background-position': 'center center', 'background-size': 'cover'}}>
-          <header className="-m-b-6 -p-v-2-xs -p-v-4-md -p-v-3-lg -p-v-2-xl">
-            <img className="logo -m-b-4" src={logo} alt="gumgum logo"/> 
-              <div className="gds-form-group -m-a-4">
-                <div className="gds-form-group__text-input--button-cap">
-                  <input className="gds-form-group__text-input  -color-tx-white" type="text" placeholder="Search Categories" data-gds-search-input="0"/>
-                  <i className="gds-form-group__text-input-icon btl bt-search -color-tx-white"></i>
-                </div>
+        <div className="-color-bg-lt-3 -color-bd-lt-3" style={{'backgroundImage': `url(${jumboImage})`, 'backgroundPosition': 'center center', 'backgroundSize': 'cover'}}>
+          <header className="-m-b-6 -flex">
+            <img className="logo" src={logo} alt="gumgum logo"/>
+            <div className="gds-form-group -m-a-4">
+              <div className="gds-form-group__text-input--button-cap">
+                <input className="gds-form-group__text-input  -color-tx-white" type="text" placeholder="Search Categories" data-gds-search-input="0"/>
+                <i className="gds-form-group__text-input-icon btl bt-search"></i>
               </div>
-              <button className="gds-button gds-button--xs gds-button--white -flex -p-h-4" onClick={this.handleViewAll} style={{'margin': 'auto'}}>View All</button>
+            </div>
+            <button className="gds-button gds-button--xs gds-button--white" style={{'margin': '0 auto'}} onClick={this.handleViewAll}>View All</button>
           </header>
-        </div> 
+          </div>
         <div className="gds-layout__container">
           <div className="gds-layout__row">
             <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -p-h-4 -m-b-4">

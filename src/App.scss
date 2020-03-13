@@ -67,11 +67,13 @@ header {
   margin-left: auto;
   margin-right: auto; 
   height: 50vh; 
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .logo {
   height: 80px;
-  width: 100%; 
 }  
 
 .logo-index {

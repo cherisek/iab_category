@@ -21,6 +21,7 @@ class TreeNav extends Component {
 
   render() {
     const { toggleArrow } = this.state;
+    const { goTo } = this.props;
     return (
       <Fragment>
         <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '19rem' }}>
@@ -40,7 +41,7 @@ class TreeNav extends Component {
                 {this.props.data.map((item, index) => {
                   return (
                     <li>
-                      <span className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" data-title={item.title} onClick={this.toggleCategory}>
+                      <span onClick={(e) => item.categories ? this.toggleCategory(e) : goTo(item.title)} className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" data-title={item.title}>
                       {
                         item.categories && <i className={!toggleArrow[item.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
                       }
@@ -51,7 +52,7 @@ class TreeNav extends Component {
                           return (
                             category.subcategories
                               ? <>
-                                <span className="gds-tree__link -text-tr-cap -cursor--pointer" data-title={category.title} onClick={this.toggleCategory}>
+                                <span className="gds-tree__link -text-tr-cap -cursor--pointer" data-title={category.title} onClick={this.toggleCategory} style={{'fontSize': '0.64rem'}}>
                                   <i className={!toggleArrow[category.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
                                   {category.title} 
                                 </span>
@@ -60,7 +61,7 @@ class TreeNav extends Component {
                                     return (
                                       typeof subCat !== 'string'
                                         ? <>
-                                          <span className="gds-tree__link -text-tr-cap -cursor--pointer" data-title={subCat.title} onClick={this.toggleCategory}>
+                                          <span className="gds-tree__link -text-tr-cap -cursor--pointer" data-title={subCat.title} onClick={this.toggleCategory} style={{'fontSize': '0.64rem'}}>
                                             <i className={!toggleArrow[subCat.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
                                             {subCat.title}
                                           </span>
@@ -68,7 +69,7 @@ class TreeNav extends Component {
                                             {subCat.grandsubcategories && subCat.grandsubcategories.map((grandSubCat, index) => {
                                               return (
                                                 <li className="gds-tree__sub-item">
-                                                  <span className="gds-tree__link -text-tr-cap">
+                                                  <span className="gds-tree__link -text-tr-cap" onClick={(e) => goTo(grandSubCat, subCat.title, category.title, item.title)} style={{'fontSize': '0.64rem'}}>
                                                     {grandSubCat}
                                                   </span>
                                                 </li>
@@ -77,7 +78,7 @@ class TreeNav extends Component {
                                           </ul>
                                         </>
                                         : <li className="gds-tree__sub-item">
-                                        <span className="gds-tree__link -text-tr-cap">
+                                        <span className="gds-tree__link -text-tr-cap" onClick={(e) => goTo(subCat, category.title, item.title)} style={{'fontSize': '0.64rem'}}>
                                           {subCat}
                                         </span>
                                       </li>
@@ -86,7 +87,7 @@ class TreeNav extends Component {
                                 </ul>
                               </>
                               : <li className="gds-tree__sub-item">
-                                <span className="gds-tree__link gds-tree__link--primary -text-tr-cap" key={index}>
+                                <span className="gds-tree__link gds-tree__link--primary -text-tr-cap" key={index} onClick={(e) => goTo(category.title, item.title)} style={{'fontSize': '0.64rem'}}>
                                   {category.title}
                                 </span>
                               </li>

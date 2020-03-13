@@ -1,28 +1,20 @@
 import React, { Fragment, Component } from "react";
 import iabData from "../constants/IabData";
-import IabAccordion from "./IabAccordion"
+import Accordion from "./Accordion"
 import TreeNav from "./TreeNav";
 
 class IapPage extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      active: []
+    }
   }
 
-  handleShow = (i) => {
-    var items = [];
-  
-    for (var i = 0; i < 100; i++) {
-      items.push(i);
-    }  
-  
-    var List = React.createClass({
-      getInitialState: function() {
-        return {index: 0};
-      }
-    })  
-  
-    this.setState({index: i});
-    this.refs[i].scrollIntoView({block: 'end', behavior: 'smooth'});
+  goTo = (element, ...parents) => {
+    this.setState({
+      active: [element, ...parents]
+    });
   }
 
   render() {
@@ -31,11 +23,11 @@ class IapPage extends Component {
         <section className="gds-persist-nav__main-content">
           <div className="gds-layout__container gds-layout__container--full-width">
             <div className="gds-layout__row">
-              <IabAccordion />
+              <Accordion data={iabData} active={this.state.active} />
             </div>
           </div>
         </section>
-        <TreeNav data={iabData} />
+        <TreeNav data={iabData} goTo={this.goTo} />
       </Fragment>
     );
   }
