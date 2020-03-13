@@ -59,7 +59,7 @@ const eventsData = [
 				]
 			},
 			{
-				title: 'sports',
+				title: 'sports awards',
 				subcategories: [
 					'ESPN ESPYS'
 				]

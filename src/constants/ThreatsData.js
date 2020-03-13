@@ -72,30 +72,6 @@ const threatsData = [
 		],
 	},
 	{
-		title: 'drugs and alcohol', 
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
-		images: [
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-		],
-		terms: [ 
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-		],
-	},
-	{
 		title: 'hate logos', 
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
 		images: [

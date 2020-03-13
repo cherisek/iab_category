@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 
-class IabAccordion extends Component {
+class Accordion extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -23,6 +23,7 @@ class IabAccordion extends Component {
     newProps.active.slice(1).forEach((each) => {
       toggle[each] = true;
     });
+    
     this.setState({ toggle }, () => {
       setTimeout(() => {
         this.refs[newProps.active[0]].scrollIntoView({block: 'end', behavior: 'smooth'});
@@ -47,7 +48,7 @@ class IabAccordion extends Component {
                       {item.title}
                     </h4>
                     <i className="gds-accordion__item-icon -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, item.title) }}></i>
-                    <ul className="gds-accordion__child-items">
+                    <ul className="gds-accordion__child-items"> 
                       <li className="gds-accordion__child-item -color-bg-white -p-a-4">
                         <>
                           <p className="gds-text--body-sm">
@@ -126,4 +127,4 @@ class IabAccordion extends Component {
   }
 }
 
-export default IabAccordion; 
+export default Accordion; 

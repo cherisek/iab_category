@@ -78,7 +78,14 @@ header {
 
 .logo-index {
   height: 40px;
-}
+} 
+
+.gds-accordion__item.gds-accordion__item--active > 
+ ul > li > .gds-accordion.gds-accordion--white.gds-accordion--sm > 
+ .gds-accordion__item.gds-accordion__item--active > ul {
+     max-height: 3000px; 
+ }
+
 
 footer {
   margin-top: auto; 
