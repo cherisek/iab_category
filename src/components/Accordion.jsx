@@ -43,8 +43,8 @@ class Accordion extends Component {
             <ul className="gds-accordion-list">
               {this.props.data.map((item, index) => {
                 return (
-                  <li  className={this.state.toggle[item.title] ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
-                    <h4 className="gds-accordion__item-title -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, item.title) }} data-gds-accordion-title="">
+                  <li className={this.state.toggle[item.title] ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
+                    <h4 ref={item.title} className="gds-accordion__item-title -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, item.title) }} data-gds-accordion-title="">
                       {item.title}
                     </h4>
                     <i className="gds-accordion__item-icon -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, item.title) }}></i>
