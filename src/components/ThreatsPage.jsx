@@ -11,6 +11,15 @@ class ThreatsPage extends Component {
     }
   }
 
+  componentWillMount() {
+    const { search } = this.props.location
+    let category = search.split('=')[1]
+    if (category) {
+      category = category.replace(/\%20/g, ' ')
+      this.goTo(category)
+    }
+  }
+
   goTo = (element, ...parents) => {
     this.setState({
       active: [element, ...parents]
@@ -23,7 +32,7 @@ class ThreatsPage extends Component {
         <section className="gds-persist-nav__main-content">
           <div className="gds-layout__container gds-layout__container--full-width">
             <div className="gds-layout__row">
-              <Accordion data={threatsData} active={this.state.active} />
+              <Accordion data={threatsData} active={this.state.active} title="Threats Categories" />
             </div>
           </div>
         </section>

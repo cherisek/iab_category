@@ -9,18 +9,69 @@ class TreeNav extends Component {
       toggleArrow: {
         [this.props.data[0].title]: true
       },
+      filteredData: this.props.data
     };
   }
 
   toggleCategory = ({ currentTarget }) => {
-    //const { nextSibling } = currentTarget;
     const newArrowStatus = { ...this.state.toggleArrow, [currentTarget.dataset.title]: !this.state.toggleArrow[currentTarget.dataset.title] }
     this.setState({ toggleArrow: newArrowStatus })
-    //nextSibling.style.display = nextSibling.style.display === 'block' || !nextSibling.style.display ? 'none' : 'block';
-  }
+  } 
+
+  handleSearchChange = ({ target: { value: searchTerm } }) => {
+    const { filteredData } = this.state; 
+    const { filteredTree, openNode } = this.filteredDataByTerm(searchTerm, filteredData);
+    this.setState({
+      filteredData: !!searchTerm 
+        ? filteredTree
+        : this.props.data,
+        toggleArrow: openNode
+    });
+  }; 
+
+  filteredDataByTerm = (term, data) => {
+    term = term.toLowerCase();
+    let openNode = {};
+    const filteredTree = data.filter(item => {
+      if (item.title.toLowerCase().includes(term)) {
+        return true;
+      }
+      if (item.categories) {
+        const filterCategory = item.categories.filter(cat => {
+          if (cat.title.toLowerCase().includes(term)) {
+            openNode = { ...openNode, [item.title]: true };
+            return true
+          }
+          if (cat.subcategories) {
+            const filterSubCat = cat.subcategories.filter(subCat => {
+              if (typeof subCat === 'string') {
+                if (subCat.toLowerCase().includes(term)) {
+                  openNode = { ...openNode, [item.title]: true, [cat.title]: true }
+                  return true
+                }
+              } else {
+                if (subCat.title.toLowerCase().includes(term)
+                || subCat.grandsubcategories.filter(grand => grand.toLowerCase().includes(term)).length) {
+                  openNode = { ...openNode, [item.title]: true, [cat.title]: true, [subCat.title]: true }
+                  return true;
+                }
+              }
+            })
+            return filterSubCat.length;
+          }
+        })
+        return filterCategory.length;
+      }
+     });
+
+     return {
+       filteredTree,
+       openNode
+     }
+  };
 
   render() {
-    const { toggleArrow } = this.state;
+    const { toggleArrow, filteredData } = this.state;
     const { goTo } = this.props;
     return (
       <Fragment>
@@ -32,16 +83,28 @@ class TreeNav extends Component {
               </h6>
               <div className="gds-form-group -m-a-3">
                 <div className="gds-search-select__control" data-gds-search-select="single">
-                  <input className="gds-form-group__text-input gds-form-group__text-input--sm" type="text" placeholder="Search" />
+                  <input 
+                    className="gds-form-group__text-input gds-form-group__text-input--sm" 
+                    type="text" 
+                    placeholder="Search"  
+                    onChange={this.handleSearchChange}
+                  />
                   <i className="gds-form-group__text-input-icon gds-form-group__text-input-icon--sm btl bt-search"></i>
                 </div>
               </div>
 
               <ul className="-p-h-4">
-                {this.props.data.map((item, index) => {
+                {filteredData.map((item, index) => {
                   return (
                     <li>
-                      <span onClick={(e) => item.categories ? this.toggleCategory(e) : goTo(item.title)} className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" data-title={item.title}>
+                      <span onClick={(e) => 
+                        item.categories 
+                        ? this.toggleCategory(e) 
+                        : goTo(item.title)
+                        } 
+                        className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" 
+                        data-title={item.title}
+                      >
                       {
                         item.categories && <i className={!toggleArrow[item.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
                       }

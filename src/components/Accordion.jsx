@@ -12,17 +12,30 @@ class Accordion extends Component {
     this.setState({ toggle: { ...this.state.toggle, [title]: !this.state.toggle[title] } })
   }
 
+  componentWillMount() {
+    const category = this.props.active[0]
+    if (category) {
+      this.setState({ toggle: {
+        [category]: true
+      }}, () => {
+        setTimeout(() => {
+          this.refs[category].scrollIntoView({block: 'end', behavior: 'smooth'});
+        }, 1000)
+      })
+    }
+  }
+
   componentWillReceiveProps(newProps) {
     const toggle = {}
-    console.log(newProps.active)
     if (newProps.active.length === 1) {
       newProps.active.forEach((each) => {
         toggle[each] = true;
       });
+    } else {
+      newProps.active.slice(1).forEach((each) => {
+        toggle[each] = true;
+      });
     }
-    newProps.active.slice(1).forEach((each) => {
-      toggle[each] = true;
-    });
     
     this.setState({ toggle }, () => {
       setTimeout(() => {
@@ -33,10 +46,11 @@ class Accordion extends Component {
 
   render() {
     const { toggle } = this.state;
+    const { title } = this.props;
     return (
       <Fragment>
         <div className="gds-layout__column--md-12 -m-t-3">
-          <h1 className="gds-text--header-md">IAB Categories</h1>
+          <h1 className="gds-text--header-md">{title}</h1>
         </div>
         <div className="gds-layout__column--lg-12 gds-layout__column--md-12 -m-v-3">
           <div className="gds-accordion gds-accordion--white" data-gds-accordion="">
