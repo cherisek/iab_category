@@ -221,7 +221,6 @@ const iabData = [
      {
       title: 'industries',
       subcategories: [
-        'zzzzz',
         'advertising industry',
         'agriculture',
         'apparel industry',
