@@ -75,7 +75,7 @@ class TreeNav extends Component {
     const { goTo } = this.props;
     return (
       <Fragment>
-        <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '19rem' }}>
+        <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '20rem' }}>
           <div className="gds-card">
             <div className="gds-card__block">
               <h6 className="gds-text--header-xs -m-v-3 -p-h-3 -text-tr-cap">
@@ -86,7 +86,7 @@ class TreeNav extends Component {
                   <input 
                     className="gds-form-group__text-input gds-form-group__text-input--sm" 
                     type="text" 
-                    placeholder="Search"  
+                    placeholder="Search Categories"  
                     onChange={this.handleSearchChange}
                   />
                   <i className="gds-form-group__text-input-icon gds-form-group__text-input-icon--sm btl bt-search"></i>

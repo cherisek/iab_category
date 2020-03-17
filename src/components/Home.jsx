@@ -2,9 +2,9 @@ import React, { Fragment } from "react";
 import { withRouter } from "react-router-dom";
 import logo from "../images/new-logo-v2.svg";
 import jumboImage from "../images/jumbotron_image.jpg";
-import IabData from "../constants/IabData"
-import EventsData from "../constants/EventsData"
-import ThreatsData from "../constants/ThreatsData"
+import IabData from "../constants/IabData";
+import EventsData from "../constants/EventsData";
+import ThreatsData from "../constants/ThreatsData";
 
 class Header extends React.Component {
   constructor(props) {
@@ -99,7 +99,9 @@ class Header extends React.Component {
                 </div>
               </div>
             </form>
-            <button className="gds-button gds-button--xs gds-button--white" style={{ 'margin': '0 auto' }} onClick={this.handleViewAll}>View All</button>
+            <span className="gds-tooltip--dark gds-tooltip--right" data-tooltip="View All Categories" style={{ 'margin': '0 auto' }}>
+              <button className="gds-button gds-button--xs gds-button--white"  onClick={this.handleViewAll}>View All</button>
+            </span>
           </header>
         </div>
         <div className="gds-layout__container">

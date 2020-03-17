@@ -80,16 +80,9 @@ header {
   height: 40px;
 } 
 
-.gds-accordion__item.gds-accordion__item--active > 
- ul > li > .gds-accordion.gds-accordion--white.gds-accordion--sm > 
- .gds-accordion__item.gds-accordion__item--active > ul {
-     max-height: 3000px; 
+.gds-accordion__item--active > .gds-accordion__child-items {
+     max-height: 3000px !important; 
  }
-
-
-footer {
-  margin-top: auto; 
-}
 
 
 #root {
@@ -100,6 +93,10 @@ footer {
 .category-image {
     width: 100%;
     border-radius: 3px;
+} 
+
+.gds-tree__sub-nav:before {
+    bottom: calc(1rem - 11px) !important;
 }
 
 
