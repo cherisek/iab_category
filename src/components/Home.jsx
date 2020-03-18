@@ -9,13 +9,23 @@ import ThreatsData from "../constants/ThreatsData";
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    const allOptions = IabData.map(each => ({text: each.title, type: "iab"}))
+                        .concat(EventsData.map(each => ({ text: each.title, type: "event" })),
+                          ThreatsData.map(each => ({ text: each.title, type: "threats" })));
+    
+    allOptions.sort((a, b) => {
+      if (a.text < b.text) {
+        return -1;
+      }
+      if (a.text > b.text) {
+        return 1;
+      }
+    })
     this.state = {
       searchValue: "",
       iabDate: [],
-      allOptions: IabData.map(each => ({text: each.title, type: "iab"}))
-                    .concat(EventsData.map(each => ({ text: each.title, type: "event" })),
-                            ThreatsData.map(each => ({ text: each.title, type: "threats" }))),
-      filteredOptions: [],
+      allOptions,
+      filteredOptions: allOptions,
     }
     this.handleViewAll = this.handleViewAll.bind(this);
   }
@@ -24,14 +34,13 @@ class Header extends React.Component {
     this.props.history.push('/index/iab');
   }
 
-  handleOnChange = ({ target }) => {
+  handleOnChange = ({ target: { dataset } }) => {
     this.setState({
-      searchValue: target.dataset.type ? target.innerText : '',
-      type: target.dataset.type,
-      isOptionOpen: false,
+      searchValue: dataset.type ? dataset.value : '',
+      type: dataset.type,
     }, () => {
-      if (target.dataset.type) {
-        this.props.history.push(`/index/${target.dataset.type}?q=${target.innerText}`)
+      if (dataset.type) {
+        this.props.history.push(`/index/${dataset.type}?q=${dataset.value.toLowerCase()}`)
       }
     })
   };
@@ -42,10 +51,12 @@ class Header extends React.Component {
     })
   }
 
-  closeOption = () => {
-    this.setState({
-      isOptionOpen: false
-    })
+  closeOption = ({ target }) => {
+    if (target.tagName !== 'INPUT') {
+      this.setState({
+        isOptionOpen: false
+      })
+    }
   }
 
   filterOptions = ({ target }) => {
@@ -61,7 +72,7 @@ class Header extends React.Component {
       });
     } else {
       this.setState({
-        filteredOptions: [],
+        filteredOptions: this.state.allOptions,
         searchValue: ""
       });
     }
@@ -71,14 +82,14 @@ class Header extends React.Component {
     e.preventDefault()
     const { searchValue, type } = this.state;
     if (type) {
-      this.props.history.push(`/index/${type}?q=${searchValue}`)
+      this.props.history.push(`/index/${type}?q=${searchValue.toLowerCase()}`)
     }
   }
 
   render() {
     const { isOptionOpen, filteredOptions, searchValue } = this.state;
     return (
-      <Fragment>
+      <div onClick={this.closeOption}>
         <div className="-color-bg-lt-3 -color-bd-lt-3" style={{ 'backgroundImage': `url(${jumboImage})`, 'backgroundPosition': 'center center', 'backgroundSize': 'cover' }}>
           <header className="-m-b-6 -flex">
             <img className="logo -m-b-5" src={logo} alt="gumgum logo" />
@@ -86,13 +97,13 @@ class Header extends React.Component {
               <div class="gds-form-group" data-gds-form-group="">           
                 <div className={`gds-search-select ${isOptionOpen ? 'gds-search-select--open' : ''}`} data-gds-search-select="single" data-gds-search-select-size="md">
                   <div class="gds-search-select__control" data-gds-search-select-control="">
-                  <input autoFocus onFocus={this.openOption} onChange={this.filterOptions} id="searcchselect-input-0" type="text" placeholder="Search Categories..." value={searchValue} className="gds-search-select__input--sm gds-search-select__input--has-tag-sm" data-gds-search-select-input autocomplete="off" />
-                  <i onClick={this.submitForm} className="btl bt-search search-icon -color-tx-lt-4" style={{ 'position': 'absolute', 'top': '.6rem', 'right': '10px' }}></i>
+                    <input onFocus={this.openOption} onChange={this.filterOptions} id="searcchselect-input-0" type="text" placeholder="Search Categories..." value={searchValue} className="gds-search-select__input--sm gds-search-select__input--has-tag-sm" data-gds-search-select-input autocomplete="off" />
+                    <i onClick={this.submitForm} className="btl bt-search search-icon -color-tx-lt-4" style={{ 'position': 'absolute', 'top': '.6rem', 'right': '10px' }}></i>
                   </div>
                   <div class="gds-search-select__menu" data-gds-search-select-menu="">
                     <ul class="gds-search-select__menu-items" data-gds-search-select-list="">
                     {
-                      filteredOptions.map(each => <li onClick={this.handleOnChange} class="gds-search-select__menu-item" data-gds-search-select-item={each} data-type={each.type}>{ each.text }</li>)
+                      filteredOptions.map(each => <li onClick={this.handleOnChange} class="gds-search-select__menu-item -text-tr-cap" data-gds-search-select-item={each} data-type={each.type} data-value={each.text}>{ each.text }</li>)
                     }
                     </ul>
                   </div>
@@ -138,7 +149,7 @@ class Header extends React.Component {
             </div>
           </div>
         </div>
-      </Fragment>
+      </div>
     )
   }
 }
