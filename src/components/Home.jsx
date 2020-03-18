@@ -10,7 +10,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     const allOptions = IabData.map(each => ({text: each.title, type: "iab"}))
-                        .concat(EventsData.map(each => ({ text: each.title, type: "event" })),
+                        .concat(EventsData.map(each => ({ text: each.title, type: "events" })),
                           ThreatsData.map(each => ({ text: each.title, type: "threats" })));
     
     allOptions.sort((a, b) => {
