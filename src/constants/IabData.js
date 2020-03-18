@@ -968,65 +968,6 @@ const iabData = [
     ]
   },    
   {
-    title: 'home and garden', 
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
-    images: [
-      'https://picsum.photos/id/1071/250/150',
-      'https://picsum.photos/id/1071/250/150',
-      'https://picsum.photos/id/1071/250/150',
-      'https://picsum.photos/id/1071/250/150',
-      'https://picsum.photos/id/1071/250/150',
-      'https://picsum.photos/id/1071/250/150',
-      'https://picsum.photos/id/1071/250/150',
-      'https://picsum.photos/id/1071/250/150',
-    ],
-    terms: [ 
-      'placeholder text',
-      'placeholder text',
-      'placeholder text',
-      'placeholder text',
-      'placeholder text',
-      'placeholder text',
-      'placeholder text',
-      'placeholder text',
-    ],
-    categories: [
-      {
-        title: 'gardening'
-      }, 
-      {
-        title: 'home appliances'
-      }, 
-      {
-        title: 'home entertaining'
-      }, 
-      {
-        title: 'home improvement'
-      }, 
-      {
-        title: 'home security'
-      },
-      {
-        title: 'indoor environmental quality'
-      }, 
-      {
-        title: 'interior decorating'
-      }, 
-      {
-        title: 'landscaping'
-      }, 
-      {
-        title: 'outdoor decorating'
-      },
-      {
-        title: 'remodeling and construction'
-      }, 
-      {
-        title: 'smart home'
-      }        
-    ]
-  },
-  {
     title: 'movies', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
     images: [
