@@ -4,7 +4,6 @@ import IabPage from "./IabPage";
 import ThreatsPage from "./ThreatsPage";
 import EventsPage from "./EventsPage";
 import SideNav from "./SideNav";
-import Footer from "./Footer";
 
 class Index  extends Component {
   constructor(props) {
@@ -24,7 +23,6 @@ class Index  extends Component {
             <Route path="/index/events" component={EventsPage} />
           </Switch>
         </div>
-        <Footer />
       </Router>
     );
   }
