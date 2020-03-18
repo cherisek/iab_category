@@ -82,11 +82,11 @@ class Header extends React.Component {
         <div className="-color-bg-lt-3 -color-bd-lt-3" style={{ 'backgroundImage': `url(${jumboImage})`, 'backgroundPosition': 'center center', 'backgroundSize': 'cover' }}>
           <header className="-m-b-6 -flex">
             <img className="logo -m-b-5" src={logo} alt="gumgum logo" />
-            <form class="gds-form -m-b-5" onSubmit={this.submitForm}>
+            <form class="gds-form -m-b-5 -p-h-4" onSubmit={this.submitForm}>
               <div class="gds-form-group" data-gds-form-group="">           
                 <div className={`gds-search-select ${isOptionOpen ? 'gds-search-select--open' : ''}`} data-gds-search-select="single" data-gds-search-select-size="md">
                   <div class="gds-search-select__control" data-gds-search-select-control="">
-                  <input onFocus={this.openOption} onChange={this.filterOptions} id="searcchselect-input-0" type="text" placeholder="Search Categories..." value={searchValue} className="gds-search-select__input--sm gds-search-select__input--has-tag-sm" data-gds-search-select-input autocomplete="off" />
+                  <input autoFocus onFocus={this.openOption} onChange={this.filterOptions} id="searcchselect-input-0" type="text" placeholder="Search Categories..." value={searchValue} className="gds-search-select__input--sm gds-search-select__input--has-tag-sm" data-gds-search-select-input autocomplete="off" />
                   <i onClick={this.submitForm} className="btl bt-search search-icon -color-tx-lt-4" style={{ 'position': 'absolute', 'top': '.6rem', 'right': '10px' }}></i>
                   </div>
                   <div class="gds-search-select__menu" data-gds-search-select-menu="">
