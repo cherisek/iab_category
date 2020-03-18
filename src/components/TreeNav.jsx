@@ -29,10 +29,10 @@ class TreeNav extends Component {
     });
   }; 
 
-  filteredDataByTerm = (term, data) => {
+  filteredDataByTerm = (term) => {
     term = term.toLowerCase();
     let openNode = {};
-    const filteredTree = data.filter(item => {
+    const filteredTree = this.props.data.filter(item => {
       if (item.title.toLowerCase().includes(term)) {
         return true;
       }
