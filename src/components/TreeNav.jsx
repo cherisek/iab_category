@@ -9,7 +9,8 @@ class TreeNav extends Component {
       toggleArrow: {
         [this.props.data[0].title]: true
       },
-      filteredData: this.props.data
+      filteredData: this.props.data,
+      color:  '#26b4d6'
     };
   }
 
@@ -29,7 +30,7 @@ class TreeNav extends Component {
     });
   }; 
 
-  filteredDataByTerm = (term) => {
+  filteredDataByTerm = (term, color) => {
     term = term.toLowerCase();
     let openNode = {};
     const filteredTree = this.props.data.filter(item => {

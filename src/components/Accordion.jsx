@@ -19,7 +19,7 @@ class Accordion extends Component {
         [category]: true
       }}, () => {
         setTimeout(() => {
-          this.refs[category].scrollIntoView({block: 'end', behavior: 'smooth'});
+          this.refs[category].scrollIntoView({block: 'start', behavior: 'smooth'});
         }, 1000)
       })
     }
@@ -39,7 +39,7 @@ class Accordion extends Component {
     
     this.setState({ toggle }, () => {
       setTimeout(() => {
-        this.refs[newProps.active[0]].scrollIntoView({block: 'end', behavior: 'smooth'});
+        this.refs[newProps.active[0]].scrollIntoView({block: 'start', behavior: 'smooth'});
       }, 1000)
     })
   }
