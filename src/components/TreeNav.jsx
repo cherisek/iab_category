@@ -10,65 +10,83 @@ class TreeNav extends Component {
         [this.props.data[0].title]: true
       },
       filteredData: this.props.data,
-      color:  '#26b4d6'
+      foundNodes: [],
     };
   }
 
   toggleCategory = ({ currentTarget }) => {
     const newArrowStatus = { ...this.state.toggleArrow, [currentTarget.dataset.title]: !this.state.toggleArrow[currentTarget.dataset.title] }
     this.setState({ toggleArrow: newArrowStatus })
-  } 
+  }
 
   handleSearchChange = ({ target: { value: searchTerm } }) => {
-    const { filteredData } = this.state; 
-    const { filteredTree, openNode } = this.filteredDataByTerm(searchTerm, filteredData);
+    const { filteredData } = this.state;
+    const { filteredTree, openNode, foundNodes } = this.filteredDataByTerm(searchTerm, filteredData);
     this.setState({
-      filteredData: !!searchTerm 
+      filteredData: !!searchTerm
         ? filteredTree
         : this.props.data,
-        toggleArrow: openNode
+      toggleArrow: openNode,
+      foundNodes
     });
-  }; 
+  };
+
+  highlight = (node) => {
+    return this.state.foundNodes.includes(node.toLowerCase()) ? '-color-tx-pri' : '';
+  }
 
   filteredDataByTerm = (term, color) => {
     term = term.toLowerCase();
     let openNode = {};
-    const filteredTree = this.props.data.filter(item => {
-      if (item.title.toLowerCase().includes(term)) {
-        return true;
-      }
-      if (item.categories) {
-        const filterCategory = item.categories.filter(cat => {
-          if (cat.title.toLowerCase().includes(term)) {
-            openNode = { ...openNode, [item.title]: true };
-            return true
-          }
-          if (cat.subcategories) {
-            const filterSubCat = cat.subcategories.filter(subCat => {
-              if (typeof subCat === 'string') {
-                if (subCat.toLowerCase().includes(term)) {
-                  openNode = { ...openNode, [item.title]: true, [cat.title]: true }
-                  return true
+    let filteredTree = [];
+    const foundNodes = [];
+    if (term) {
+      filteredTree = this.props.data.filter(item => {
+        let found = false;
+        if (item.title.toLowerCase().includes(term)) {
+          foundNodes.push(item.title.toLowerCase())
+          found = true;
+        }
+        if (item.categories) {
+          const filterCategory = item.categories.filter(cat => {
+            if (cat.title.toLowerCase().includes(term)) {
+              foundNodes.push(cat.title.toLowerCase())
+              openNode = { ...openNode, [item.title]: true };
+              found = true;
+            }
+            if (cat.subcategories) {
+              const filterSubCat = cat.subcategories.filter(subCat => {
+                if (typeof subCat === 'string') {
+                  if (subCat.toLowerCase().includes(term)) {
+                    foundNodes.push(subCat.toLowerCase())
+                    openNode = { ...openNode, [item.title]: true, [cat.title]: true }
+                    found = true;
+                  }
+                } else {
+                  const filteredGrandSub = subCat.grandsubcategories.filter(grand => grand.toLowerCase().includes(term))
+                  if (subCat.title.toLowerCase().includes(term) || filteredGrandSub.length) {
+                    openNode = { ...openNode, [item.title]: true, [cat.title]: true, [subCat.title]: true }
+                    if (subCat.title.toLowerCase().includes(term)) {
+                      foundNodes.push(subCat.title.toLowerCase())
+                    }
+                    foundNodes.concat(filteredGrandSub.map(a => a.toLowerCase))
+                    found = true;
+                  }
                 }
-              } else {
-                if (subCat.title.toLowerCase().includes(term)
-                || subCat.grandsubcategories.filter(grand => grand.toLowerCase().includes(term)).length) {
-                  openNode = { ...openNode, [item.title]: true, [cat.title]: true, [subCat.title]: true }
-                  return true;
-                }
-              }
-            })
-            return filterSubCat.length;
-          }
-        })
-        return filterCategory.length;
-      }
-     });
+              })
+            }
+          })
+        }
+        return found;
+      });
+    }
 
-     return {
-       filteredTree,
-       openNode
-     }
+
+    return {
+      filteredTree,
+      openNode,
+      foundNodes
+    }
   };
 
   render() {
@@ -84,10 +102,10 @@ class TreeNav extends Component {
               </h6>
               <div className="gds-form-group -m-a-3">
                 <div className="gds-search-select__control" data-gds-search-select="single">
-                  <input 
-                    className="gds-form-group__text-input gds-form-group__text-input--sm" 
-                    type="text" 
-                    placeholder="Search Categories"  
+                  <input
+                    className="gds-form-group__text-input gds-form-group__text-input--sm"
+                    type="text"
+                    placeholder="Search Categories"
                     onChange={this.handleSearchChange}
                   />
                   <i className="gds-form-group__text-input-icon gds-form-group__text-input-icon--sm btl bt-search"></i>
@@ -98,17 +116,17 @@ class TreeNav extends Component {
                 {filteredData.map((item, index) => {
                   return (
                     <li>
-                      <span onClick={(e) => 
-                        item.categories 
-                        ? this.toggleCategory(e) 
-                        : goTo(item.title)
-                        } 
-                        className="gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer" 
+                      <span onClick={(e) =>
+                        item.categories
+                          ? this.toggleCategory(e)
+                          : goTo(item.title)
+                      }
+                        className={`gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer ${this.highlight(item.title)}`}
                         data-title={item.title}
                       >
-                      {
-                        item.categories && <i className={!toggleArrow[item.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
-                      }
+                        {
+                          item.categories && <i className={!toggleArrow[item.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
+                        }
                         {item.title}
                       </span>
                       <ul className={`gds-tree__sub-nav ${toggleArrow[item.title] ? '' : '-none'}`}>
@@ -116,16 +134,16 @@ class TreeNav extends Component {
                           return (
                             category.subcategories
                               ? <>
-                                <span className="gds-tree__link -text-tr-cap -cursor--pointer" data-title={category.title} onClick={this.toggleCategory} style={{'fontSize': '0.64rem'}}>
+                                <span className={`gds-tree__link -text-tr-cap -cursor--pointer ${this.highlight(category.title)}`} data-title={category.title} onClick={this.toggleCategory} style={{ 'fontSize': '0.64rem' }}>
                                   <i className={!toggleArrow[category.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
-                                  {category.title} 
+                                  {category.title}
                                 </span>
                                 <ul className={`gds-tree__sub-nav ${toggleArrow[category.title] ? '' : '-none'}`}>
                                   {category.subcategories.map((subCat, index) => {
                                     return (
                                       typeof subCat !== 'string'
                                         ? <>
-                                          <span className="gds-tree__link -text-tr-cap -cursor--pointer" data-title={subCat.title} onClick={this.toggleCategory} style={{'fontSize': '0.64rem'}}>
+                                          <span className={`gds-tree__link -text-tr-cap -cursor--pointer ${this.highlight(subCat.title)}`} data-title={subCat.title} onClick={this.toggleCategory} style={{ 'fontSize': '0.64rem' }}>
                                             <i className={!toggleArrow[subCat.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-r-3 -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>
                                             {subCat.title}
                                           </span>
@@ -133,7 +151,7 @@ class TreeNav extends Component {
                                             {subCat.grandsubcategories && subCat.grandsubcategories.map((grandSubCat, index) => {
                                               return (
                                                 <li className="gds-tree__sub-item">
-                                                  <span className="gds-tree__link -text-tr-cap" onClick={(e) => goTo(grandSubCat, subCat.title, category.title, item.title)} style={{'fontSize': '0.64rem'}}>
+                                                  <span className={`gds-tree__link -text-tr-cap ${this.highlight(grandSubCat)}`} onClick={(e) => goTo(grandSubCat, subCat.title, category.title, item.title)} style={{ 'fontSize': '0.64rem' }}>
                                                     {grandSubCat}
                                                   </span>
                                                 </li>
@@ -142,16 +160,16 @@ class TreeNav extends Component {
                                           </ul>
                                         </>
                                         : <li className="gds-tree__sub-item">
-                                        <span className="gds-tree__link -text-tr-cap" onClick={(e) => goTo(subCat, category.title, item.title)} style={{'fontSize': '0.64rem'}}>
-                                          {subCat}
-                                        </span>
-                                      </li>
+                                          <span className={`gds-tree__link -text-tr-cap ${this.highlight(subCat)}`} onClick={(e) => goTo(subCat, category.title, item.title)} style={{ 'fontSize': '0.64rem' }}>
+                                            {subCat}
+                                          </span>
+                                        </li>
                                     )
                                   })}
                                 </ul>
                               </>
                               : <li className="gds-tree__sub-item">
-                                <span className="gds-tree__link gds-tree__link--primary -text-tr-cap" key={index} onClick={(e) => goTo(category.title, item.title)} style={{'fontSize': '0.64rem'}}>
+                                <span className={`gds-tree__link gds-tree__link--primary -text-tr-cap ${this.highlight(category.title)}`} key={index} onClick={(e) => goTo(category.title, item.title)} style={{ 'fontSize': '0.64rem' }}>
                                   {category.title}
                                 </span>
                               </li>
