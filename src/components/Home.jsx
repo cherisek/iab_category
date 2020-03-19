@@ -110,9 +110,7 @@ class Header extends React.Component {
                 </div>
               </div>
             </form>
-            <span className="gds-tooltip--dark gds-tooltip--right" data-tooltip="View All Categories" style={{ 'margin': '0 auto' }}>
-              <button className="gds-button gds-button--xs gds-button--white"  onClick={this.handleViewAll}>View All</button>
-            </span>
+              <button className="gds-button gds-button--xs gds-button--white" style={{ 'margin': '0 auto' }} onClick={this.handleViewAll}>View All</button>
           </header>
         </div>
         <div className="gds-layout__container">

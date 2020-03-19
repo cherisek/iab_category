@@ -35,7 +35,7 @@ class TreeNav extends Component {
     return this.state.foundNodes.includes(node.toLowerCase()) ? '-color-tx-pri' : '';
   }
 
-  filteredDataByTerm = (term, color) => {
+  filteredDataByTerm = (term) => {
     term = term.toLowerCase();
     let openNode = {};
     let filteredTree = [];
