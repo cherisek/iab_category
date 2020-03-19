@@ -94,7 +94,7 @@ class TreeNav extends Component {
     const { goTo } = this.props;
     return (
       <Fragment>
-        <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '20rem' }}>
+        <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '23rem' }}>
           <div className="gds-card">
             <div className="gds-card__block">
               <h6 className="gds-text--header-xs -m-v-3 -p-h-3 -text-tr-cap">

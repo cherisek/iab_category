@@ -43,7 +43,7 @@ const eventsData = [
 			{
 				title: 'gaming',
 				subcategories: [
-					'BAFTA video game awards'
+					'british academy video game awards (BAFTA) '
 				]
 			},
 			{
@@ -125,8 +125,8 @@ const eventsData = [
 			{
         title: 'fashion',
         subcategories: [
-          'LA fashion week',
-          'NY fashion week',
+          'los angles (LA) fashion week',
+          'new york (NY) fashion week',
           'victoria\'s secret fashion show'
         ]
 			}, 
@@ -135,7 +135,7 @@ const eventsData = [
 				subcategories: [
 					'comic-con',
           'sundance film festival',
-          'SXSW'
+          'South By Southwest (SXSW)'
 				]
 			}, 
 			{
@@ -277,8 +277,7 @@ const eventsData = [
           'NBA all-star game',
           'NBA finals',
           'NBA playoffs',
-          'NCAA final four (men)',
-          'NCAA final four (women)',
+          'NCAA final four (men / women)',
           'NCAA march madness'
         ]
       }, 
@@ -299,10 +298,10 @@ const eventsData = [
         subcategories: [
           'british open',
           'LPGA championship',
-          'PGA ryder cup',
+					'PGA ryder cup',
+					'president cup',
           'the masters',
           'the players championship',
-          'president cup',
           'US open',
           'US PGA Championship'
         ]
