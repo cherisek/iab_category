@@ -24,7 +24,7 @@ const eventsData = [
 		],
 		categories: [
 			{
-				title: 'film and tv',
+				title: 'film and tv awards',
 				subcategories: [
 					'academy awards (oscars)',
 					'BET awards',
@@ -33,7 +33,7 @@ const eventsData = [
 					'golden globes',
 					'MTV movie awards',
 					'NAACP awards',
-					'nicklodeon kids choice awards',
+					'nicklodeon kids\' choice awards',
 					'people\'s choice awards',
 					'primetime emmy awards',
 					'SAG awards',
@@ -47,7 +47,7 @@ const eventsData = [
 				]
 			},
 			{
-				title: 'music',
+				title: 'music awards',
 				subcategories: [
 					'american music awards',
 					'billboard latin music awards',
@@ -129,71 +129,19 @@ const eventsData = [
           'NY fashion week',
           'victoria\'s secret fashion show'
         ]
-      }
-		],
-	},
-	{
-		title: 'film and tv', 
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
-		images: [
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-		],
-		terms: [ 
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-		],
-		categories: [
+			}, 
 			{
-        title: 'film and tv',
-        subcategories: [
-          'comic-con',
+				title: 'film and tv', 
+				subcategories: [
+					'comic-con',
           'sundance film festival',
           'SXSW'
-        ]
-      }
-		],
-	},
-	{
-		title: 'music', 
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
-		images: [
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-			'https://picsum.photos/id/1071/250/150',
-		],
-		terms: [ 
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-			'placeholder text',
-		],
-		categories: [
+				]
+			}, 
 			{
-        title: 'music',
-        subcategories: [
-          'austin city limits music festival',
+				title: 'music shows and festivals', 
+				subcategories: [
+					'austin city limits music festival',
           'bonnaroo festival',
           'coachella',
           'electric daisy carnival',
@@ -207,8 +155,8 @@ const eventsData = [
           'stagecoach country music festival',
           'tomorrowland',
           'ultra music festival'
-        ]
-      }
+				]
+			}
 		],
 	},
 	{
