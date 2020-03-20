@@ -134,7 +134,7 @@ class Header extends React.Component {
               </p>
             </div>
             <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -p-h-4 -m-b-4">
-              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Events</h1>
+              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Threats</h1>
               <p className="gds-text--body-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -144,7 +144,7 @@ class Header extends React.Component {
                 </p>
             </div>
             <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -m-b-4 -p-h-4">
-              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Threats</h1>
+              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Events</h1>
               <p className="gds-text--body-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud

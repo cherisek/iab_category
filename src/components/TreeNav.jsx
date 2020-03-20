@@ -39,7 +39,7 @@ class TreeNav extends Component {
     term = term.toLowerCase();
     let openNode = {};
     let filteredTree = [];
-    const foundNodes = [];
+    let foundNodes = [];
     if (term) {
       filteredTree = this.props.data.filter(item => {
         let found = false;
@@ -69,7 +69,7 @@ class TreeNav extends Component {
                     if (subCat.title.toLowerCase().includes(term)) {
                       foundNodes.push(subCat.title.toLowerCase())
                     }
-                    foundNodes.concat(filteredGrandSub.map(a => a.toLowerCase))
+                    foundNodes = foundNodes.concat(filteredGrandSub.map(a => a.toLowerCase()))
                     found = true;
                   }
                 }
@@ -153,7 +153,7 @@ class TreeNav extends Component {
                                                 <li className="gds-tree__sub-item">
                                                   <span className={`gds-tree__link -text-tr-cap ${this.highlight(grandSubCat)}`} onClick={(e) => goTo(grandSubCat, subCat.title, category.title, item.title)} style={{ 'fontSize': '0.64rem' }}>
                                                     {grandSubCat}
-                                                  </span>
+                                                  </span> 
                                                 </li>
                                               )
                                             })}
