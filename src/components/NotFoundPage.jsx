@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'; 
-import Card from 'gumdrops/Card';
 
 class notFoundPage extends Component {
   render() {
     return (
-      <Card className="-p-a-2 gds-flex gds-flex--align-center" style={{ minHeight: 300 }}>
+      <div className="-p-a-2 gds-flex gds-flex--align-center" style={{'height': '100%'}}>
         <div className="gds-flex__item -text-center"> 
           <i
               className=
@@ -16,7 +15,7 @@ class notFoundPage extends Component {
           <p>Uh, Oh! The page you are looking for doesn't exist!</p>
           <Link to="/" className="-color-tx-pri">Go to Home</Link>
         </div> 
-     </Card>
+     </div>
     )
   }
 } 
