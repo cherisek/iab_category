@@ -1,29 +1,51 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import IabPage from "./IabPage";
-import ThreatsPage from "./ThreatsPage";
-import EventsPage from "./EventsPage";
-import SideNav from "./SideNav";
+import React, { Fragment, Component } from "react";
+import data from "../constants/Data";
+import TreeNav from "./TreeNav";
+import Accordion from "./Accordion";
 
 class Index  extends Component {
   constructor(props) {
     super(props);
-      this.state = {
-      }
+    this.state = {
+      active: [
+        data[0].title
+      ]
+    }
   }
 
-  render() {
+  componentWillMount() {
+    const { pathname } = this.props.location
+    const urlparts = pathname.split('/')
+    let category = urlparts[urlparts.length - 1];
+    if (category !== "index") {
+      category = category.replace(/\%20/g, ' ')
+      this.goTo(category)
+    }
+  }
+
+  goTo = (element, ...parents) => {
+    const active = [element, ...parents];
+    const category = active[active.length - 1]
+    this.props.history.push(`/index/${category}`);
+    this.setState({
+      active
+    });
+  }
+
+  render() { 
     return (
-      <Router>
+      <Fragment>
         <div className="gds-persist-nav -gds-persist-nav--page-header">
-          <SideNav />
-          <Switch>
-            <Route path="/index/iab" component={IabPage} />
-            <Route path="/index/threats" component={ThreatsPage} />
-            <Route path="/index/events" component={EventsPage} />
-          </Switch>
+          <TreeNav  data={data} goTo={this.goTo} />
+          <section className="gds-persist-nav__main-content">
+            <div className="gds-layout__container gds-layout__container--full-width">
+              <div className="gds-layout__row">
+                <Accordion data={data} active={this.state.active} title="Categories" />
+              </div>
+            </div>
+          </section>
         </div>
-      </Router>
+      </Fragment>
     );
   }
 } 

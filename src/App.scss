@@ -251,7 +251,7 @@ header {
 
 .gds2-nav-bar__logo {
     background-image: url('./images/new-logo.svg');
-    background-size: 100% auto;
+    background-size: 50% auto;
     background-repeat: no-repeat;
     background-position: center center;
     height: 4rem;
@@ -273,9 +273,45 @@ header {
     font-size: var(--font-xs);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     #tree {
-        display: none;
+        display: block;
+        position: absolute;
+        z-index: 10;
+        overflow-x: hidden;
+        top: 0;
+        left: 0;
+    }
+    .fa-arrow-circle-left {
+        float: right; 
+    }
+
+    .fa-arrow-circle-right {
+        // float: right; 
+        margin-left: -8px;
+    }
+
+    .gds-card--collapse {
+        width: 20px; 
+        overflow: hidden;
+    }
+
+    .gds-text-hedaer-md {
+       margin-left: 2rem;  
+    }
+
+    .gds-persist-nav__main-content {
+        overflow-y: unset; 
+    }
+} 
+
+@media screen and (min-width: 768px) {
+    .fa-arrow-circle-left {
+        display: none; 
+    } 
+
+    .fa-arrow-circle-right{
+        display: none; 
     }
 }
 

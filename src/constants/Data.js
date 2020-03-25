@@ -1,7 +1,7 @@
-const iabData = [
+const data = [
   {
     title: 'automotive', 
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+    description: 'Automotive would be within IAB category. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
     images: [
       'https://picsum.photos/id/1071/250/150',
       'https://picsum.photos/id/1071/250/150',
@@ -92,6 +92,73 @@ const iabData = [
     ],
   },
   {
+		title: 'awards', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+		categories: [
+			{
+				title: 'film and tv awards',
+				subcategories: [
+					'academy awards (oscars)',
+					'BET awards',
+					'critic\'s choice awards',
+					'daytime emmy awards',
+					'golden globes',
+					'MTV movie awards',
+					'NAACP awards',
+					'nicklodeon kids\' choice awards',
+					'people\'s choice awards',
+					'primetime emmy awards',
+					'SAG awards',
+					'teen choice awards'
+				]
+			}, 
+			{
+				title: 'gaming',
+				subcategories: [
+					'british academy video game awards (BAFTA) '
+				]
+			},
+			{
+				title: 'music awards',
+				subcategories: [
+					'american music awards',
+					'billboard latin music awards',
+					'billboard music awards',
+					'CMT music awards',
+					'grammy awards',
+					'MTV video music awards',
+					'tony awards'
+				]
+			},
+			{
+				title: 'sports awards',
+				subcategories: [
+					'ESPN ESPYS'
+				]
+			}
+		],
+	},
+  {
     title: 'books and literature', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
     images: [
@@ -143,7 +210,39 @@ const iabData = [
         title: 'young adult literature'
       }
     ],
-  },
+  }, 
+  {
+		title: 'business events', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+		categories: [
+			{
+        title: 'trade shows',
+        subcategories: [
+          'CES'
+        ]
+      }
+		],
+	},
   {
     title: 'business and finance', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
@@ -304,6 +403,78 @@ const iabData = [
       }
     ],
   }, 
+  {
+    title: 'criminal', 
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+    images: [
+      'https://picsum.photos/id/1071/250/150',
+      'https://picsum.photos/id/1071/250/150',
+      'https://picsum.photos/id/1071/250/150',
+      'https://picsum.photos/id/1071/250/150',
+      'https://picsum.photos/id/1071/250/150',
+      'https://picsum.photos/id/1071/250/150',
+      'https://picsum.photos/id/1071/250/150',
+      'https://picsum.photos/id/1071/250/150',
+    ],
+    terms: [ 
+      'placeholder text',
+      'placeholder text',
+      'placeholder text',
+      'placeholder text',
+      'placeholder text',
+      'placeholder text',
+      'placeholder text',
+      'placeholder text',
+    ]
+  },
+  {
+		title: 'disasters (natural / man-made)', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+  },
+  {
+		title: 'drugs and alcohol', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+	},
   {
     title: 'education', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
@@ -546,6 +717,67 @@ const iabData = [
     ]
   },
   {
+		title: 'festival and shows', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+		categories: [
+			{
+        title: 'fashion',
+        subcategories: [
+          'los angles (LA) fashion week',
+          'new york (NY) fashion week',
+          'victoria\'s secret fashion show'
+        ]
+			}, 
+			{
+				title: 'film and tv', 
+				subcategories: [
+					'comic-con',
+          'sundance film festival',
+          'South By Southwest (SXSW)'
+				]
+			}, 
+			{
+				title: 'music shows and festivals', 
+				subcategories: [
+					'austin city limits music festival',
+          'bonnaroo festival',
+          'coachella',
+          'electric daisy carnival',
+          'electric zoo festival',
+          'firefly',
+          'governor\'s ball',
+          'hardfest',
+          'lollapalooza',
+          'outside lands',
+          'sasquatch',
+          'stagecoach country music festival',
+          'tomorrowland',
+          'ultra music festival'
+				]
+			}
+		],
+	},
+  {
     title: 'fine art', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
     images: [
@@ -716,6 +948,30 @@ const iabData = [
     ]
   },
   {
+		title: 'hate logos', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+	},
+  {
     title: 'hobbies and interest', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
     images: [
@@ -875,6 +1131,30 @@ const iabData = [
     ]
   },
   {
+		title: 'malware', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+	},
+  {
     title: 'medical health', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
     images: [
@@ -966,7 +1246,31 @@ const iabData = [
         title: 'vaccines'
       }
     ]
-  },    
+  },  
+  {
+		title: 'medical / illness', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+	},  
   {
     title: 'movies', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
@@ -1218,6 +1522,30 @@ const iabData = [
     ]
   },
   {
+		title: 'obscene / disgust', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+	},
+  {
     title: 'personal finance', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
     images: [
@@ -1405,7 +1733,7 @@ const iabData = [
         title: 'humor and satire'
       }    
     ]
-  },
+  }, 
   {
     title: 'real estate', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
@@ -1521,6 +1849,100 @@ const iabData = [
       }
     ]
   },
+  {
+		title: 'seasonal', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+		categories: [
+			{
+        title: 'miscellaneous',
+        subcategories: [
+          'black friday',
+          'cinco de mayo',
+          'cyber monday',
+          'earth day',
+          'father\'s day',
+          'halloween',
+          'kwanzaa',
+          'mardi gras',
+          'mother\'s day',
+          'new year\'s eve',
+          'st. patrick\'s day',
+          'valentine\'s day'
+        ]
+			},
+			{
+        title: 'national holidays',
+        subcategories: [
+          'independence day',
+          'labor day',
+          'memorial day',
+          'thanksgiving'
+        ]
+      },
+      {
+        title: 'personal',
+        subcategories: [
+          'back to school',
+          'graduation',
+          'prom night',
+          'spring break',
+          'tax filing'
+        ]
+			},
+			{
+        title: 'religious holidays',
+        subcategories: [
+          'christmas',
+          'easter',
+          'hanukkah'
+        ]
+      }
+		],
+	},
+  {
+		title: 'sexually charged', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+	},
   {
     title: 'science', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
@@ -1832,6 +2254,142 @@ const iabData = [
       }
     ]
   },
+  {
+		title: 'sports events', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+		categories: [
+			{
+        title: 'american football event', 
+        subcategories: [
+          'BCS national championship',
+          'rose bowl',
+          'sugar bowl',
+          'super bowl'
+        ]
+      },
+      {
+        title: 'baseball event',
+        subcategories: [
+          'college world series',
+          'little league world series',
+          'MLB all-star game',
+          'MLB world series'
+        ]
+			},
+			{
+        title: 'basketball event',
+        subcategories: [
+          'NBA all-star game',
+          'NBA finals',
+          'NBA playoffs',
+          'NCAA final four (men / women)',
+          'NCAA march madness'
+        ]
+      }, 
+      {
+        title: 'car racing event',
+        subcategories: [
+          'NASCAR daytona 500'
+        ]
+      }, 
+      {
+        title: 'cycling event',
+        subcategories: [
+          'tour de france'
+        ]
+      }, 
+      {
+        title: 'golf event',
+        subcategories: [
+          'british open',
+          'LPGA championship',
+					'PGA ryder cup',
+					'president cup',
+          'the masters',
+          'the players championship',
+          'US open',
+          'US PGA Championship'
+        ]
+			},
+			{
+        title: 'horse racing event',
+        subcategories: [
+          'kentucky derby'
+        ]
+      },
+      {
+        title: 'ice hockey event',
+        subcategories: [
+          'NCAA frozen four',
+          'stanley cup'
+        ]
+      },
+      {
+        title: 'marathon event',
+        subcategories: [
+          'boston marathon',
+        ]
+      },
+      {
+        title: 'olympics event',
+        subcategories: [
+          'summer olympics',
+          'winter olympics'
+        ]
+			},
+			{
+        title: 'sailing event',
+        subcategories: [
+          'america\'s cup'
+        ]
+      },
+      {
+        title: 'soccer event',
+        subcategories: [
+          'FA cup',
+          'world cup'
+        ]
+      },
+      {
+        title: 'tennis event',
+        subcategories: [
+          'australian open',
+          'french open',
+          'wimbledon',
+          'US open'
+        ]
+      },
+      {
+        title: 'x games event',
+        subcategories: [
+          'summer x games',
+          'winter x games',
+          'x games asia',
+          'x games europe'
+        ]
+      }
+		],
+	},
   {
     title: 'style and fashion', 
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
@@ -2215,7 +2773,31 @@ const iabData = [
         ]
       }
     ]
-  }
+  },
+	{
+		title: 'violence and gore', 
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+		images: [
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+			'https://picsum.photos/id/1071/250/150',
+		],
+		terms: [ 
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+			'placeholder text',
+		],
+	}
 ]
 
-export default iabData; 
+export default data; 

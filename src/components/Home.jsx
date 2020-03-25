@@ -1,17 +1,14 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import logo from "../images/new-logo-v2.svg";
 import jumboImage from "../images/jumbotron_image.jpg";
-import IabData from "../constants/IabData";
-import EventsData from "../constants/EventsData";
-import ThreatsData from "../constants/ThreatsData";
+import data from "../constants/Data";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    const allOptions = IabData.map(each => ({text: each.title, type: "iab"}))
-                        .concat(EventsData.map(each => ({ text: each.title, type: "events" })),
-                          ThreatsData.map(each => ({ text: each.title, type: "threats" })));
+    const allOptions = data.map(each => ({text: each.title, type: "data"}));
+                        
     
     allOptions.sort((a, b) => {
       if (a.text < b.text) {
@@ -31,7 +28,7 @@ class Header extends React.Component {
   }
 
   handleViewAll() {
-    this.props.history.push('/index/iab');
+    this.props.history.push('/index');
   }
 
   handleOnChange = ({ target: { dataset } }) => {
@@ -40,7 +37,7 @@ class Header extends React.Component {
       type: dataset.type,
     }, () => {
       if (dataset.type) {
-        this.props.history.push(`/index/${dataset.type}?q=${dataset.value.toLowerCase()}`)
+        this.props.history.push(`/index/${dataset.value.toLowerCase()}`)
       }
     })
   };
@@ -108,8 +105,8 @@ class Header extends React.Component {
                     />
                     <i onClick={this.submitForm} className="btl bt-search search-icon -color-tx-lt-4" style={{ 'position': 'absolute', 'top': '.6rem', 'right': '10px' }}></i>
                   </div>
-                  <div class="gds-search-select__menu" data-gds-search-select-menu="">
-                    <ul class="gds-search-select__menu-items" data-gds-search-select-list="">
+                  <div className="gds-search-select__menu" data-gds-search-select-menu="">
+                    <ul className="gds-search-select__menu-items" data-gds-search-select-list="">
                     {
                       filteredOptions.map(each => <li onClick={this.handleOnChange} class="gds-search-select__menu-item -text-tr-cap" data-gds-search-select-item={each} data-type={each.type} data-value={each.text}>{ each.text }</li>)
                     }

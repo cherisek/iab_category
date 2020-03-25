@@ -44,9 +44,22 @@ class Accordion extends Component {
     })
   }
 
+  componentDidMount() {
+    const toggle = {
+      [this.props.active[0]]: true
+    }
+    this.setState({ toggle }, () => {
+      setTimeout(() => {
+        this.refs[this.props.active[0]].scrollIntoView({block: 'start', behavior: 'smooth'});
+      }, 1000)
+    })
+  }
+
   render() {
     const { toggle } = this.state;
-    const { title } = this.props;
+    const { title, active, data } = this.props;
+    // const current = active.length ? active[active.length - 1] : ''
+    const current = active[active.length - 1]
     return (
       <Fragment>
         <div className="gds-layout__column--md-12 -m-t-3">
@@ -55,7 +68,7 @@ class Accordion extends Component {
         <div className="gds-layout__column--lg-12 gds-layout__column--md-12 -m-v-3">
           <div className="gds-accordion gds-accordion--white" data-gds-accordion="">
             <ul className="gds-accordion-list">
-              {this.props.data.map((item, index) => {
+              {data.filter(each => !current || each.title === current).map((item, index) => {
                 return (
                   <li className={this.state.toggle[item.title] ? "gds-accordion__item gds-accordion__item--active" : "gds-accordion__item"} data-gds-accordion-item="">
                     <h4 ref={item.title} className="gds-accordion__item-title -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, item.title) }} data-gds-accordion-title="">
