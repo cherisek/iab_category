@@ -103,7 +103,6 @@ class TreeNav extends Component {
     this.setState ({
       expanded: !this.state.expanded
     });
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
   goTo = (...links) => {
