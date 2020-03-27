@@ -7,8 +7,7 @@ import data from "../constants/Data";
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    const allOptions = data.map(each => ({text: each.title, type: "data"}));
-                        
+    const allOptions = data.map(each => ({text: each.title, type: "data"}));                      
     
     allOptions.sort((a, b) => {
       if (a.text < b.text) {
@@ -23,13 +22,15 @@ class Header extends React.Component {
       iabDate: [],
       allOptions,
       filteredOptions: allOptions,
+      currentKey: "",
     }
     this.handleViewAll = this.handleViewAll.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleViewAll() {
     this.props.history.push('/index');
-  }
+  } 
 
   handleOnChange = ({ target: { dataset } }) => {
     this.setState({
@@ -40,7 +41,24 @@ class Header extends React.Component {
         this.props.history.push(`/index/${dataset.value.toLowerCase()}`)
       }
     })
-  };
+  }; 
+
+  handleKeyPress(e) {
+    this.setState({
+      currentKey: e.keyCode
+    }); 
+    if(e.keyCode === 27 ) {
+      console.log('you just escape!')
+    }
+  } 
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyPress); 
+  } 
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyPress);
+  }
 
   openOption = () => {
     this.setState({

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { withRouter } from 'react-router-dom';
-
+import Card from 'gumdrops/Card';
 
 class TreeNav extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class TreeNav extends Component {
       },
       filteredData: this.props.data,
       foundNodes: [],
-      expanded: true
+      expanded: true, 
     };
     this.handleHomePage = this.handleHomePage.bind(this);
   }
@@ -119,9 +119,8 @@ class TreeNav extends Component {
     const treeClass = this.state.expanded ? 'gds-card' : 'gds-card gds-card--collapse'; 
 
     return (
-      <Fragment>
-        <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '23rem' }}>
-          <div className={treeClass}>
+      <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '23rem' }}>
+        <Card className={treeClass}>
             <div className="gds-card__block">
               <a href="/">
                 <div className="gds2-nav-bar__logo -cursor--pointer"></div>
@@ -211,9 +210,8 @@ class TreeNav extends Component {
                 })}
               </ul>
             </div>
-          </div>
-        </div>
-      </Fragment>
+        </Card>
+      </div>
     );
   }
 }

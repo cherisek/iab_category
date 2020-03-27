@@ -277,32 +277,30 @@ header {
     #tree {
         display: block;
         position: absolute;
-        z-index: 10;
+        z-index: 1000;
         overflow-x: hidden;
         top: 0;
-        left: 0;
-    }
+        left: 0; 
+        width: 100% !important; 
+    } 
+
     .fa-arrow-circle-left {
         float: right; 
     }
 
     .fa-arrow-circle-right {
-        // float: right; 
         margin-left: -8px;
     }
 
     .gds-card--collapse {
         width: 20px; 
         overflow: hidden;
-    }
-
-    .gds-text-hedaer-md {
-       margin-left: 2rem;  
-    }
+        // position: fixed; 
+    } 
 
     .gds-persist-nav__main-content {
         overflow-y: unset; 
-    }
+    } 
 } 
 
 @media screen and (min-width: 768px) {

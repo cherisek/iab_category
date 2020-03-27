@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from "react";
 import data from "../constants/Data";
 import TreeNav from "./TreeNav";
-import Accordion from "./Accordion";
+import MainContent from "./MainContent";
 
 class Index  extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class Index  extends Component {
           <section className="gds-persist-nav__main-content">
             <div className="gds-layout__container gds-layout__container--full-width">
               <div className="gds-layout__row">
-                <Accordion data={data} active={this.state.active} title="Categories" />
+                <MainContent data={data} active={this.state.active} title="Categories" />
               </div>
             </div>
           </section>
