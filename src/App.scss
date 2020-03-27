@@ -281,7 +281,7 @@ header {
         overflow-x: hidden;
         top: 0;
         left: 0; 
-        width: 100% !important; 
+        width: auto !important; 
     } 
 
     .fa-arrow-circle-left {
@@ -295,12 +295,25 @@ header {
     .gds-card--collapse {
         width: 20px; 
         overflow: hidden;
-        // position: fixed; 
     } 
 
     .gds-persist-nav__main-content {
         overflow-y: unset; 
     } 
+
+    .overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        cursor: pointer;
+    }
 } 
 
 @media screen and (min-width: 768px) {
