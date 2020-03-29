@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import Card from 'gumdrops/Card';
 
@@ -102,7 +102,7 @@ class TreeNav extends Component {
   toggleTree = () => {
     this.setState ({
       expanded: !this.state.expanded
-    });
+    }); 
   }
 
   goTo = (...links) => {
@@ -117,8 +117,10 @@ class TreeNav extends Component {
   render() {
     const { toggleArrow, filteredData } = this.state;
     const treeClass = this.state.expanded ? 'gds-card' : 'gds-card gds-card--collapse'; 
+  
 
     return (
+      <>
       <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '23rem' }}>
         <Card className={treeClass}>
             <div className="gds-card__block">
@@ -211,8 +213,9 @@ class TreeNav extends Component {
               </ul>
             </div>
         </Card>
-        <div className="overlay" onClick={this.toggleTree}></div>
       </div>
+      <div className={this.state.expanded ? "overlay" : "overlay--collapsed"}  onClick={this.toggleTree}></div>
+      </>
     );
   }
 }
