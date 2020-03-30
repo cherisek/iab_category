@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import Card from 'gumdrops/Card';
 
 class mainContent extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentWillMount() {
     const category = this.props.active[0]
