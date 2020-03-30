@@ -44,6 +44,10 @@ class mainContent extends Component {
         this.refs[this.props.active[0]].scrollIntoView({block: 'start', behavior: 'smooth'});
       }, 1000)
     })
+  } 
+
+  toggleAccordion = (e, title) => {
+    this.setState({ toggle: { ...this.state.toggle, [title]: !this.state.toggle[title] } })
   }
 
   render() {
