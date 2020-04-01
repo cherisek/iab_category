@@ -62,7 +62,7 @@ class mainContent extends Component {
     // const current = active.length ? active[active.length - 1] : ''
     const current = active[active.length - 1]
     return (
-      <Card className="gds-layout__column--lg-12 gds-layout__column--md-12 -m-v-3"> 
+      <Card className="gds-layout__column--lg-12 gds-layout__column--md-12"> 
         <div className="gds-card__block -p-a-3">
           {data.filter(each => !current || each.title === current).map((item, index) => {
             return (
@@ -97,25 +97,30 @@ class mainContent extends Component {
                         className={`gds-accordion__item-title  gds-accordion__item-title--sm -text-tr-cap ${category.subcategories ? "-cursor--pointer": "-cursor--default"}`} 
                         onClick={(e) => { this.toggleAccordion(e, category.title) }} data-gds-accordion-title="">{category.title}
                       </h4>
-                        {category.subcategories && <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, category.title) }}></i>}
-                        <ul className="gds-accordion__child-items">
+                        {
+                          category.subcategories && 
+                          <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" 
+                            onClick={(e) => { this.toggleAccordion(e, category.title) }}>
+                          </i>
+                        }
+                        <ul className="gds-accordion__child-items gds-accordion__child-items--sm">
                           {
                             category.subcategories && category.subcategories.map(eachSub => {
                               return (
                                 <li className={`gds-accordion__item ${toggle[eachSub.title] ? 'gds-accordion__item--active' : ''}`} data-gds-accordion-item="">
-                                  <h4 ref={typeof eachSub === 'string' ? eachSub : eachSub.title} className={`gds-accordion__child-item-title gds-accordion__item-title--sm -text-tr-cap -p-h-3 -p-v-2  ${typeof eachSub === 'string' ? "-cursor--default -color-tx-dk-4": "-cursor--pointer"}`} onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}>
+                                  <h4 ref={typeof eachSub === 'string' ? eachSub : eachSub.title} className={`gds-accordion__child-item-title gds-accordion__child-item-title--sm -text-tr-cap -p-h-3 -p-v-2  ${typeof eachSub === 'string' ? "-cursor--default -color-tx-dk-4": "-cursor--pointer"}`} onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}>
                                     {typeof eachSub === 'string' ? eachSub : eachSub.title}
                                   </h4>
                                   {
                                     typeof eachSub !== 'string' &&
                                       <>
                                         <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}></i>
-                                        <ul className="gds-accordion__child-items gds-accordion--sm">
+                                        <ul className="gds-accordion__child-items gds-accordion__child-items--sm">
                                           {
                                             eachSub.grandsubcategories && eachSub.grandsubcategories.map(eachGrand => {
                                               return (
                                                 <li className="gds-accordion__child-item" ref={eachGrand}>
-                                                  <h4 className="gds-accordion__child-item-title gds-accordion__child-item-title--sm -text-tr-cap -cursor--default">{eachGrand}</h4>
+                                                  <h4 className="gds-accordion__child-item-title--sm -text-tr-cap -cursor--default">{eachGrand}</h4>
                                                 </li>
                                               )
                                             })

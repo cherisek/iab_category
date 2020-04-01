@@ -38,7 +38,7 @@ class Index  extends Component {
         <div className="gds-persist-nav -gds-persist-nav--page-header">
           <TreeNav  data={data} goTo={this.goTo} />
           <section className="gds-persist-nav__main-content">
-            <div className="gds-layout__container gds-layout__container--full-width">
+            <div className="gds-layout__container gds-layout__container--full-width" style={{'paddingTop': '1.5rem'}}>
               <div className="gds-layout__row">
                 <MainContent data={data} active={this.state.active} title="Categories" />
               </div>
