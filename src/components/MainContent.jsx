@@ -37,7 +37,7 @@ class mainContent extends Component {
     this.setState({ toggle }, () => {
       setTimeout(() => {
         this.refs[newProps.active[0]].scrollIntoView({block: 'start', behavior: 'smooth'});
-      }, 1000)
+      }, 100)
     })
   }
 
@@ -48,7 +48,7 @@ class mainContent extends Component {
     this.setState({ toggle }, () => {
       setTimeout(() => {
         this.refs[this.props.active[0]].scrollIntoView({block: 'start', behavior: 'smooth'});
-      }, 1000)
+      }, 100)
     })
   } 
 
