@@ -54,7 +54,7 @@ class mainContent extends Component {
 
   toggleAccordion = (e, title) => {
     this.setState({ toggle: { ...this.state.toggle, [title]: !this.state.toggle[title] } })
-  }
+  }  
 
   render() {
     const { toggle } = this.state;
@@ -93,14 +93,17 @@ class mainContent extends Component {
                   {item.categories && item.categories.map((category, index) => {
                     return ( 
                       <li className={`gds-accordion__item ${toggle[category.title] ? 'gds-accordion__item--active' : ''}`} data-gds-accordion-item="">
-                      <h4 ref={category.title} className="gds-accordion__item-title  gds-accordion__item-title--sm -text-tr-cap" onClick={(e) => { this.toggleAccordion(e, category.title) }} data-gds-accordion-title="">{category.title}</h4>
+                      <h4 ref={category.title} 
+                        className={`gds-accordion__item-title  gds-accordion__item-title--sm -text-tr-cap ${category.subcategories ? "-cursor--pointer": "-cursor--default"}`} 
+                        onClick={(e) => { this.toggleAccordion(e, category.title) }} data-gds-accordion-title="">{category.title}
+                      </h4>
                         {category.subcategories && <i className="gds-accordion__item-icon gds-accordion__item-icon--sm -cursor--pointer" onClick={(e) => { this.toggleAccordion(e, category.title) }}></i>}
                         <ul className="gds-accordion__child-items">
                           {
                             category.subcategories && category.subcategories.map(eachSub => {
                               return (
                                 <li className={`gds-accordion__item ${toggle[eachSub.title] ? 'gds-accordion__item--active' : ''}`} data-gds-accordion-item="">
-                                  <h4 ref={typeof eachSub === 'string' ? eachSub : eachSub.title} className="gds-accordion__child-item-title gds-accordion__item-title--sm -text-tr-cap -p-h-3 -p-v-2" onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}>
+                                  <h4 ref={typeof eachSub === 'string' ? eachSub : eachSub.title} className={`gds-accordion__child-item-title gds-accordion__item-title--sm -text-tr-cap -p-h-3 -p-v-2  ${typeof eachSub === 'string' ? "-cursor--default -color-tx-dk-4": "-cursor--pointer"}`} onClick={(e) => { this.toggleAccordion(e, eachSub.title) }}>
                                     {typeof eachSub === 'string' ? eachSub : eachSub.title}
                                   </h4>
                                   {
@@ -112,7 +115,7 @@ class mainContent extends Component {
                                             eachSub.grandsubcategories && eachSub.grandsubcategories.map(eachGrand => {
                                               return (
                                                 <li className="gds-accordion__child-item" ref={eachGrand}>
-                                                  <h4 className="gds-accordion__child-item-title gds-accordion__child-item-title--sm -text-tr-cap">{eachGrand}</h4>
+                                                  <h4 className="gds-accordion__child-item-title gds-accordion__child-item-title--sm -text-tr-cap -cursor--default">{eachGrand}</h4>
                                                 </li>
                                               )
                                             })
