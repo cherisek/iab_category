@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import props from "prop-types";
 import Home from "./components/Home";
 import Index from "./components/Index";
 import NotFoundPage from "./components/NotFoundPage";
@@ -14,7 +15,14 @@ class App extends Component {
 
   handleViewAll() {
     this.props.history.push('/index');
-  } 
+  }  
+
+  test() {
+    const categoryExist = props.categoryExist; 
+    if (!categoryExist) {
+      return <NotFoundPage />
+    }
+  }
 
   render() {
     return (
@@ -22,7 +30,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} /> 
             <Route path="/index" component={Index} /> 
-            <Route path="*" component={NotFoundPage} /> 
+            <Route path="*" component={NotFoundPage} test={this.test} /> 
           </Switch>
         </Router>
     )

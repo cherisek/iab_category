@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from 'gumdrops/Card';
+import NotFoundPage from "./NotFoundPage";
 
 class mainContent extends Component {
   constructor(props) {
@@ -54,7 +55,14 @@ class mainContent extends Component {
 
   toggleAccordion = (e, title) => {
     this.setState({ toggle: { ...this.state.toggle, [title]: !this.state.toggle[title] } })
-  }  
+  }   
+
+  test() {
+    const category = this.props; 
+    if (!category) {
+      return <NotFoundPage />
+    }
+  }
 
   render() {
     const { toggle } = this.state;

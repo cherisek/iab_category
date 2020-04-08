@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import logo from "../images/new-logo-v2.svg";
+import logo from "../images/old-logo-white.svg";
 import jumboImage from "../images/jumbotron_image.jpg";
 import data from "../constants/Data";
 

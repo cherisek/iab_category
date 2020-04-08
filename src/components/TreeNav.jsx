@@ -125,11 +125,11 @@ class TreeNav extends Component {
         <Card className={treeClass}>
             <div className="gds-card__block">
               <a href="/">
-                <div className="gds2-nav-bar__logo -cursor--pointer"></div>
+                <div className="gds2-nav-bar__logo -m-h-3 -cursor--pointer"></div>
               </a>
               <i className={this.state.expanded ? "fas fa-arrow-circle-left" : "fas fa-arrow-circle-right"} onClick={this.toggleTree}></i>
               <h6 className="gds-text--header-xs -m-v-3 -p-h-3 -text-tr-cap">
-                Category Browser
+                Iab Category Finder
               </h6>
               <div className="gds-form-group -m-a-3">
                 <div className="gds-search-select__control" data-gds-search-select="single">
