@@ -30,7 +30,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} /> 
             <Route path="/index" component={Index} /> 
-            <Route path="*" component={NotFoundPage} test={this.test} /> 
+            <Route component={NotFoundPage} test={this.test} /> 
           </Switch>
         </Router>
     )

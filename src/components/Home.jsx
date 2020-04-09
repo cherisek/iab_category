@@ -111,7 +111,7 @@ class Header extends React.Component {
             <form className="gds-form -m-b-5 -p-h-4" onSubmit={this.submitForm}>
               <div className="gds-form-group" data-gds-form-group="">           
                 <div className={`gds-search-select ${isOptionOpen ? 'gds-search-select--open' : ''}`} data-gds-search-select="single" data-gds-search-select-size="md">
-                  <div class="gds-search-select__control" data-gds-search-select-control="">
+                  <div className="gds-search-select__control" data-gds-search-select-control="">
                     <input 
                       onFocus={this.openOption} 
                       onChange={this.filterOptions} 
