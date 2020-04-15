@@ -7,14 +7,24 @@ class TreeNav extends Component {
     super(props);
     this.state = {
       toggle: false,
-      toggleArrow: {
-        [this.props.data[0].title]: true
-      },
+      toggleArrow: {},
       filteredData: this.props.data,
       foundNodes: [],
       expanded: true, 
     };
     this.handleHomePage = this.handleHomePage.bind(this);
+  }
+
+  componentWillMount() {
+    if (this.props.active) {
+      this.setState({
+        toggleArrow: { [this.props.active]: true }
+      }, () => {
+        setTimeout(() => {
+          this.refs[this.props.active].scrollIntoView({block: 'start', behavior: 'smooth'});
+        }, 1500)
+      });
+    }
   }
 
   toggleCategory = ({ currentTarget }) => {
@@ -51,14 +61,14 @@ class TreeNav extends Component {
           found = true;
         }
         if (item.categories) {
-          const filterCategory = item.categories.filter(cat => {
+          item.categories.filter(cat => {
             if (cat.title.toLowerCase().includes(term)) {
               foundNodes.push(cat.title.toLowerCase())
               openNode = { ...openNode, [item.title]: true };
               found = true;
             }
             if (cat.subcategories) {
-              const filterSubCat = cat.subcategories.filter(subCat => {
+              cat.subcategories.filter(subCat => {
                 if (typeof subCat === 'string') {
                   if (subCat.toLowerCase().includes(term)) {
                     foundNodes.push(subCat.toLowerCase())
@@ -154,6 +164,7 @@ class TreeNav extends Component {
                       }
                         className={`gds-tree__link gds-text--bold -text-tr-cap -cursor--pointer ${this.highlight(item.title)}`}
                         data-title={item.title}
+                        ref={item.title}
                       >
                         {
                           item.categories && <i className={!toggleArrow[item.title] ? "fas fa-angle-right fa-lg -color-tx-pri -m-t-1" : "fas fa-angle-down fa-lg -color-tx-pri -m-r-3 -m-t-1"}></i>

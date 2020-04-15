@@ -57,13 +57,6 @@ class mainContent extends Component {
     this.setState({ toggle: { ...this.state.toggle, [title]: !this.state.toggle[title] } })
   }   
 
-  test() {
-    const category = this.props; 
-    if (!category) {
-      return <NotFoundPage />
-    }
-  }
-
   render() {
     const { toggle } = this.state;
     const { title, active, data } = this.props;
