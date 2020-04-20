@@ -18,7 +18,7 @@ class mainContent extends Component {
       }}, () => {
         setTimeout(() => {
           this.refs[category].scrollIntoView({block: 'start', behavior: 'smooth'});
-        }, 1000)
+        }, 100)
       })
     }
   }

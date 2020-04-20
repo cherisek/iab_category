@@ -22,7 +22,7 @@ class TreeNav extends Component {
       }, () => {
         setTimeout(() => {
           this.refs[this.props.active].scrollIntoView({block: 'start', behavior: 'smooth'});
-        }, 1500)
+        }, 200)
       });
     }
   }
@@ -131,13 +131,19 @@ class TreeNav extends Component {
 
     return (
       <>
+      <div>
+        <span>
+          <i className={this.state.expanded ? "fas fa-chevron-left" : "fas fa-chevron-right"} onClick={this.toggleTree}></i>
+        </span>
+      </div>
       <div id="tree" className=" -overflow-x-scroll" style={{ 'height': '100%', 'width': '23rem' }}>
         <Card className={treeClass}>
             <div className="gds-card__block">
-              <a href="/">
-                <div className="gds2-nav-bar__logo -m-h-3 -cursor--pointer"></div>
-              </a>
-              <i className={this.state.expanded ? "fas fa-arrow-circle-left" : "fas fa-arrow-circle-right"} onClick={this.toggleTree}></i>
+              <div>
+                <a href="/">
+                  <div className="gds2-nav-bar__logo -m-h-3 -cursor--pointer"></div>
+                </a>
+              </div>
               <h6 className="gds-text--header-xs -m-v-3 -p-h-3 -text-tr-cap">
                 Iab Category Finder
               </h6>

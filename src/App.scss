@@ -57,7 +57,7 @@ body {
 
 body {
     background-color: var(--light-5);
-    font-family: poppins,sans-serif;
+    font-family: Public Sans,sans-serif;
     font-weight: 400;
     color: var(--dark-2);
 }
@@ -125,14 +125,27 @@ header {
         width: auto !important; 
     } 
 
-    .fa-arrow-circle-left {
+    .fa-chevron-left {
         float: right; 
-        cursor: pointer; 
+        cursor: pointer;
+        color: $grayDark4Color; 
+        background: white;  
+        border-radius: 15%;
+        padding: 0.5rem; 
+        top: 20px;
+        left: 309px;
+        z-index: 5000;
     }
 
-    .fa-arrow-circle-right {
-        margin-left: -8px;
+    .fa-chevron-right {
+        border-radius: 15%;
+        padding: 0.5rem; 
+        color: $grayDark4Color; 
+        background: white;  
         cursor: pointer; 
+        top: 20px;
+        left: 14px;
+        z-index: 5000;
     }
 
     .gds-card--collapse {
