@@ -107,7 +107,8 @@ class Header extends React.Component {
       <div onClick={this.closeOption}>
         <div className="-color-bg-lt-3 -color-bd-lt-3" style={{ 'backgroundImage': `url(${jumboImage})`, 'backgroundPosition': 'center center', 'backgroundSize': 'cover' }}>
           <header className="-m-b-6 -flex">
-            <img className="logo -m-b-5" src={logo} alt="gumgum logo" />
+            <h1 className="logo -m-b-2" style={{color: "#fff", fontWeight: "900", display: "flex", justifyContent: "center"}}>MVP App</h1>
+            {/* <img className="logo -m-b-5" src={logo} alt="gumgum logo" /> */}
             <form className="gds-form -m-b-5 -p-h-4" onSubmit={this.submitForm}>
               <div className="gds-form-group" data-gds-form-group="">           
                 <div className={`gds-search-select ${isOptionOpen ? 'gds-search-select--open' : ''}`} data-gds-search-select="single" data-gds-search-select-size="md">
@@ -149,7 +150,7 @@ class Header extends React.Component {
               </p>
             </div>
             <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -p-h-4 -m-b-4">
-              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Threats</h1>
+              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About Threats</h1>
               <p className="gds-text--body-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -159,7 +160,7 @@ class Header extends React.Component {
                 </p>
             </div>
             <div className="gds-layout__column--lg-4 gds-layout__column--md-4 -m-b-4 -p-h-4">
-              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About GumGum Events</h1>
+              <h1 className="gds-text--header-xs gds-text--bold -m-b-3 -text-center">About Events</h1>
               <p className="gds-text--body-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud

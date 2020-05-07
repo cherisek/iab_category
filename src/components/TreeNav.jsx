@@ -144,7 +144,7 @@ class TreeNav extends Component {
                   <div className="gds2-nav-bar__logo -m-h-3 -cursor--pointer"></div>
                 </a>
               </div>
-              <h6 className="gds-text--header-xs -m-v-3 -p-h-3 -text-tr-cap">
+              <h6 className="gds-text--header-xs -p-h-3 -text-tr-cap">
                 Iab Category Finder
               </h6>
               <div className="gds-form-group -m-a-3">

@@ -72,9 +72,9 @@ header {
   justify-content: center;
 }
 
-.logo {
-  height: 80px;
-}  
+// .logo {
+//   height: 80px;
+// }  
 
 .logo-index {
   height: 40px;
@@ -104,11 +104,12 @@ header {
 }
 
 .gds2-nav-bar__logo {
-    background-image: url('./images/old-logo-color.svg');
+    // background-image: url('./images/old-logo-color.svg');
+    background-image: url('./images/iab-logo-cropped.png');
     background-size: 50% auto;
     background-repeat: no-repeat;
     background-position: left;
-    height: 4rem;
+    height: 8rem;
     transition: var(--motion);
 }
 
@@ -133,7 +134,7 @@ header {
         border-radius: 15%;
         padding: 0.5rem; 
         top: 20px;
-        left: 309px;
+        left: 291px;
         z-index: 5000;
     }
 
