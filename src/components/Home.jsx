@@ -107,7 +107,7 @@ class Header extends React.Component {
       <div onClick={this.closeOption}>
         <div className="-color-bg-lt-3 -color-bd-lt-3" style={{ 'backgroundImage': `url(${jumboImage})`, 'backgroundPosition': 'center center', 'backgroundSize': 'cover' }}>
           <header className="-m-b-6 -flex">
-            <h1 className="logo -m-b-2" style={{color: "#fff", fontWeight: "900", display: "flex", justifyContent: "center"}}>MVP App</h1>
+            <h1 className="logo -m-b-2" style={{color: "#fff", fontWeight: "900", display: "flex", justifyContent: "center", fontSize: "2rem"}}>IAB App</h1>
             {/* <img className="logo -m-b-5" src={logo} alt="gumgum logo" /> */}
             <form className="gds-form -m-b-5 -p-h-4" onSubmit={this.submitForm}>
               <div className="gds-form-group" data-gds-form-group="">           
